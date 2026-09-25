@@ -1,0 +1,1575 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>중3 과학 정리노트</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Nanum+Pen+Script&display=swap');
+:root{
+  --ink:#1f2430; --sub:#5b6272; --line:#d9dde5; --paper:#ffffff; --soft:#f5f7fb;
+  --b:#1f9d62; --b-bg:#e9f7f0; --a:#2f6fd6; --a-bg:#eaf1fd; --d:#7b4bd1; --d-bg:#f2ecfd; --s:#d6453d; --s-bg:#fdecea;
+  --iv:#0e8a9c; --v1:#d9772b; --v2:#4f8f2e; --new:#b0356a;
+  --hl:#fff2a8;
+}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:#eceff4;color:var(--ink);font-family:'Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;font-size:10.5pt;line-height:1.62;word-break:keep-all}
+.page{max-width:210mm;margin:0 auto;background:var(--paper);padding:14mm 13mm 16mm}
+@media screen{.page{margin:12px auto;box-shadow:0 2px 12px rgba(0,0,0,.08);border-radius:6px}}
+@media screen and (max-width:760px){.page{padding:16px}body{font-size:10pt}}
+@page{size:A4;margin:11mm 10mm 12mm}
+@media print{body{background:#fff}.page{padding:0;max-width:none}}
+h1,h2,h3,h4{margin:0;line-height:1.3}
+b,strong{font-weight:700}
+.hl{background:linear-gradient(transparent 55%,var(--hl) 55%)}
+.red{color:var(--s);font-weight:700}.blue{color:var(--a);font-weight:700}.grn{color:var(--b);font-weight:700}.pur{color:var(--d);font-weight:700}
+.pen{font-family:'Nanum Pen Script',cursive;font-size:1.35em;color:#c0392b}
+.small{font-size:.88em;color:var(--sub)}
+
+/* cover */
+.cover{min-height:260mm;display:flex;flex-direction:column;justify-content:space-between;break-after:page}
+.cover .kicker{letter-spacing:.3em;color:var(--sub);font-weight:700;font-size:10pt}
+.cover h1{font-size:34pt;font-weight:900;margin:10px 0 6px;line-height:1.15}
+.cover h1 span{display:block;font-size:17pt;font-weight:500;color:var(--sub);margin-top:8px}
+.cover .scope{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
+.cover .scope div{border-radius:10px;padding:12px 14px;color:#fff}
+.cover .scope b{display:block;font-size:13pt}
+.cover .scope small{opacity:.92}
+.sc-iv{background:var(--iv)}.sc-v1{background:var(--v1)}.sc-v2{background:var(--v2)}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.legend span{border-radius:20px;padding:3px 12px;font-weight:700;font-size:9.5pt}
+.toc{border-top:2px solid var(--ink);padding-top:10px}
+.toc ol{margin:0;padding-left:20px;columns:2;column-gap:28px}
+.toc li{margin:3px 0;break-inside:avoid}
+.toc li small{color:var(--sub)}
+
+/* part headings */
+.part{break-before:page;margin-bottom:14px;border-radius:12px;padding:16px 18px;color:#fff}
+.part .pk{font-size:9.5pt;letter-spacing:.2em;opacity:.9;font-weight:700}
+.part h2{font-size:22pt;font-weight:900}
+.part p{margin:4px 0 0;opacity:.95}
+.part.iv{background:var(--iv)}.part.v1{background:var(--v1)}.part.v2{background:var(--v2)}.part.nw{background:var(--new)}.part.ap{background:#334}
+h2.sec{font-size:15pt;margin:20px 0 10px;padding-bottom:5px;border-bottom:2.5px solid var(--ink);break-after:avoid}
+h2.sec small{font-size:10pt;color:var(--sub);font-weight:500;margin-left:6px}
+h3.sub{font-size:12pt;margin:16px 0 8px;padding:5px 10px;background:var(--soft);border-left:5px solid var(--ink);border-radius:3px;break-after:avoid}
+h4{font-size:11pt;margin:12px 0 6px;break-after:avoid}
+
+/* levels */
+.level{border:1.5px solid var(--line);border-radius:10px;margin:14px 0;overflow:hidden}
+.lv-head{display:flex;align-items:center;gap:10px;padding:8px 12px;break-after:avoid}
+.lv-head h3{font-size:12.5pt}
+.lv-badge{border-radius:6px;padding:2px 10px;color:#fff;font-weight:900;font-size:10pt;letter-spacing:.05em}
+.lv-body{padding:4px 14px 12px}
+.lv-b{border-color:var(--b)}.lv-b .lv-head{background:var(--b-bg)}.lv-b .lv-badge{background:var(--b)}
+.lv-a{border-color:var(--a)}.lv-a .lv-head{background:var(--a-bg)}.lv-a .lv-badge{background:var(--a)}
+.lv-d{border-color:var(--d)}.lv-d .lv-head{background:var(--d-bg)}.lv-d .lv-badge{background:var(--d)}
+.lv-s{border-color:var(--s)}.lv-s .lv-head{background:var(--s-bg)}.lv-s .lv-badge{background:var(--s)}
+.legend .b{background:var(--b-bg);color:var(--b)}.legend .a{background:var(--a-bg);color:var(--a)}.legend .d{background:var(--d-bg);color:var(--d)}.legend .s{background:var(--s-bg);color:var(--s)}
+
+/* content blocks */
+ul.pt{margin:6px 0;padding-left:18px}ul.pt li{margin:2px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.two>*{min-width:0}
+@media screen and (max-width:760px){.two{grid-template-columns:1fr}}
+figure.fig{margin:8px auto;text-align:center;break-inside:avoid}
+figure.fig img{max-width:100%;max-height:240px;object-fit:contain;border-radius:4px}
+figure.fig figcaption{font-size:8.5pt;color:var(--sub)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:6px 0;font-weight:700;font-size:9.8pt}
+.flow span{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.flow span.k{background:#fff3cd;border-color:#f0c36d}
+.flow i{font-style:normal;color:var(--sub)}
+table.t{width:100%;border-collapse:collapse;margin:8px 0;font-size:9.6pt;break-inside:avoid}
+table.t th,table.t td{border:1px solid #c9ced8;padding:4px 6px;text-align:center;vertical-align:middle}
+table.t th{background:#eef1f6}
+table.t td.l{text-align:left}
+.box{border-radius:8px;margin:10px 0;break-inside:avoid;border:1px solid var(--line)}
+.box-t{font-weight:900;padding:5px 10px;font-size:10pt}
+.box-b{padding:6px 12px 8px}
+.box.tip{border-color:#f0c36d}.box.tip .box-t{background:#fff3cd;color:#8a5a00}
+.box.warn{border-color:#f1a3a0}.box.warn .box-t{background:var(--s-bg);color:var(--s)}
+.box.key{border-color:#9cc3ff}.box.key .box-t{background:var(--a-bg);color:var(--a)}
+.box.exp{border-color:#b9a4ec}.box.exp .box-t{background:var(--d-bg);color:var(--d)}
+svg{max-width:100%;height:auto}
+svg text{font-family:'Noto Sans KR',sans-serif}
+
+/* problems */
+.pgrid{columns:2;column-gap:18px;column-rule:1px solid var(--line)}
+@media screen and (max-width:760px){.pgrid{columns:1}}
+.prob{break-inside:avoid;margin:0 0 14px;padding-bottom:4px}
+.prob .q{font-weight:500}
+.num{display:inline-block;min-width:26px;margin-right:6px;font-weight:900;color:var(--ink)}
+.num.s{min-width:auto}
+.tag{display:inline-block;font-size:8pt;border-radius:4px;padding:0 5px;margin-right:5px;background:#333;color:#fff;vertical-align:1px}
+.tag.lvA{background:var(--a)}.tag.lvD{background:var(--d)}.tag.lvS{background:var(--s)}
+.pfig{text-align:center;margin:6px 0}
+.pfig img{max-width:100%;max-height:170px;margin:2px}
+.bogi{border:1px solid #9aa1ad;border-radius:6px;padding:10px 10px 4px;margin:8px 0;position:relative;font-size:9.8pt}
+.bogi-t{position:absolute;top:-9px;left:10px;background:#fff;padding:0 6px;font-weight:700;font-size:9pt}
+.bogi ul{margin:0;padding:0;list-style:none}.bogi li{margin:0 0 4px}
+ol.ch{list-style:none;padding:0;margin:6px 0;display:grid;gap:2px 10px;font-size:9.8pt}
+ol.ch.c5{grid-template-columns:repeat(5,auto)}ol.ch.c3{grid-template-columns:repeat(3,1fr)}ol.ch.c1{grid-template-columns:1fr}ol.ch.c2{grid-template-columns:1fr 1fr}
+.lines div{border-bottom:1px dashed #b9bfca;height:22px}
+.given{background:var(--soft);border-radius:6px;padding:6px 10px;margin:6px 0;font-size:9.8pt}
+ul.fills{list-style:none;padding:0;margin:4px 0}ul.fills li{margin:4px 0}
+.blank{display:inline-block;min-width:64px;border-bottom:1.3px solid var(--ink);margin:0 3px}
+.src{font-size:9pt;color:var(--sub);font-weight:500;margin-left:6px}
+
+/* answer key */
+.akey{break-before:page}
+.akey-h{font-size:14pt;margin:4px 0 8px;padding:6px 10px;background:#333;color:#fff;border-radius:6px}
+table.ak{width:100%;border-collapse:collapse;font-size:9pt}
+table.ak th{background:#eef1f6;border:1px solid #c9ced8;padding:3px}
+table.ak td{border:1px solid #d6dae2;padding:3px 6px;vertical-align:top}
+table.ak tr{break-inside:avoid}
+table.ak tr.grp td{background:#f3f4f7;font-weight:900;color:#333}
+td.al{width:52px;text-align:center;font-weight:700;white-space:nowrap}
+td.aa{width:22%;font-weight:700;color:var(--s)}
+td.ae{color:#333}
+
+/* appendix */
+.cheat{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media screen and (max-width:760px){.cheat{grid-template-columns:1fr}}
+.cheat .c{border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;break-inside:avoid}
+.cheat .c h4{margin:0 0 4px}
+.tmpl{border-left:4px solid var(--a);background:var(--a-bg);padding:6px 10px;margin:6px 0;border-radius:0 6px 6px 0}
+table.wrong td{height:30px}
+</style></head>
+<body><main class="page">
+<section class="cover"><div>
+<div class="kicker">3학년 과학 · 중간고사 대비</div>
+<h1>과학 정리노트<span>자극과 반응 · 생식과 유전</span></h1>
+<div class="scope"><div class="sc-iv"><b>Ⅳ-1 감각 기관</b><small>눈 · 귀 · 코 · 혀 · 피부</small></div>
+<div class="sc-v1"><b>Ⅴ-1 생장과 생식</b><small>세포 분열 · 감수 분열 · 발생</small></div>
+<div class="sc-v2"><b>Ⅴ-2 유전의 원리</b><small>멘델의 유전 원리</small></div></div>
+<p><b>개념 정리 4단계</b>로 기초부터 고난도까지 올라갑니다.</p>
+<div class="legend"><span class="b">기본 · 용어와 구조</span><span class="a">응용 · 과정과 상황 적용</span><span class="d">발전 · 탐구 해석과 비교</span><span class="s">심화 · 그래프·계산·함정</span></div>
+<p class="small">문제 구성: 하이탑(학습 Check · 탐구 확인 · 개념 확인 · 실력 강화 · 서술형 · 최상위 · 실전) + 교과서(탐구 · 해 보기 · 스스로 확인 · 스스로 정리 · 최종 점검) 전 문항, 이어서 조건을 바꾼 변형 문제 52개. 각 단원 끝에 정답과 해설.</p>
+</div>
+<div class="toc"><h3 style="margin-bottom:6px">목차</h3><ol>
+<li>Ⅳ-1 감각 기관 — 개념 정리 <small>기본·응용·발전·심화</small></li>
+<li>Ⅳ-1 감각 기관 — 문제 정리 <small>하이탑 · 교과서 · 정답</small></li>
+<li>Ⅴ-1 생장과 생식 — 개념 정리</li>
+<li>Ⅴ-1 생장과 생식 — 문제 정리</li>
+<li>Ⅴ-2 유전의 원리 — 개념 정리</li>
+<li>Ⅴ-2 유전의 원리 — 문제 정리</li>
+<li>변형 문제 52 <small>응용 · 발전 · 심화</small></li>
+<li>부록 <small>1장 요약 · 비교표 · 서술형 템플릿 · 공식 · 계획표</small></li></ol>
+<p class="small" style="margin-top:10px">범위: 자극과 반응 중 소단원 1(감각 기관), 생식과 유전 중 소단원 1(생장과 생식)·2(유전의 원리). 사람의 유전(가계도)은 범위에서 제외했습니다.<br>그림 출처: 하이탑 중학 과학 3, 중학교 과학 3 교과서 — 개인 학습용 정리.</p></div></section><header class="part iv"><div class="pk">Ⅳ. 자극과 반응 · 1</div><h2>감각 기관</h2><p>자극을 받아들이는 눈·귀·코·혀·피부의 구조와 기능</p></header><h2 class="sec">개념 정리 <small>기본 → 응용 → 발전 → 심화</small></h2><section class="level lv-b"><div class="lv-head"><span class="lv-badge">기본</span><h3>감각 기관의 구조와 기능 — 이름·기능·경로 외우기</h3></div><div class="lv-body"><p><b>감각 기관</b>: 환경 변화(자극)를 받아들이는 기관. 모든 감각은 공통 경로를 거친다.</p>
+<div class="flow"><span>자극</span><i>→</i><span class="k">감각 기관 (감각 세포)</span><i>→</i><span>감각 신경</span><i>→</i><span class="k">뇌 (감각을 느낌)</span></div>
+<table class="t"><tr><th>감각 기관</th><th>받아들이는 자극</th><th>감각 세포 / 감각점</th><th>감각 신경</th><th>감각</th></tr>
+<tr><td>눈</td><td>빛</td><td>시각 세포 (망막)</td><td>시각 신경</td><td>시각</td></tr>
+<tr><td rowspan="2">귀</td><td>소리 (공기의 진동)</td><td>청각 세포 (달팽이관)</td><td>청각 신경</td><td>청각</td></tr>
+<tr><td>몸의 기울어짐·회전</td><td>감각 세포 (전정 기관·반고리관)</td><td>평형 감각 신경</td><td>평형 감각</td></tr>
+<tr><td>코</td><td><b>기체</b> 상태의 화학 물질</td><td>후각 세포 (후각 상피)</td><td>후각 신경</td><td>후각</td></tr>
+<tr><td>혀</td><td><b>액체</b> 상태의 화학 물질</td><td>맛세포 (맛봉오리)</td><td>미각 신경</td><td>미각</td></tr>
+<tr><td>피부</td><td>접촉, 압력, 온도 변화, 통증</td><td>감각점 (촉점·압점·냉점·온점·통점)</td><td>피부 감각 신경</td><td>피부 감각</td></tr></table><h4>① 눈의 구조와 기능</h4><div class="two"><figure class="fig"><img src="img/iv_eye_structure.jpg" alt="눈의 구조"><figcaption>눈의 구조</figcaption></figure>
+<table class="t"><tr><th>구조</th><th>기능 (시험에 나오는 한 줄)</th></tr>
+<tr><td>각막</td><td class="l">눈 앞쪽의 <b>투명한 막</b>, 빛이 통과</td></tr>
+<tr><td>홍채</td><td class="l"><b>동공의 크기</b>를 조절 → 빛의 양 조절</td></tr>
+<tr><td>동공</td><td class="l">홍채 가운데 <b>구멍</b>, 빛이 들어가는 통로</td></tr>
+<tr><td>수정체</td><td class="l"><b>볼록 렌즈</b> 모양, 빛을 굴절시켜 망막에 상을 맺음</td></tr>
+<tr><td>섬모체</td><td class="l"><b>수정체의 두께</b>를 조절하는 근육</td></tr>
+<tr><td>유리체</td><td class="l">눈 속을 채우는 투명 물질, <b>눈의 형태 유지</b></td></tr>
+<tr><td>망막</td><td class="l">가장 안쪽 막, <b>시각 세포</b> 분포, <b>상이 맺히는 곳</b></td></tr>
+<tr><td>황반</td><td class="l">시각 세포 <b>밀집</b> → 상이 가장 뚜렷</td></tr>
+<tr><td>맹점</td><td class="l">시각 신경이 모여 나가는 곳, <b>시각 세포 없음</b> → 상이 맺혀도 안 보임</td></tr>
+<tr><td>맥락막</td><td class="l"><b>검은색 색소</b> → 눈 속을 어둡게 (암실)</td></tr>
+<tr><td>공막</td><td class="l">가장 바깥 <b>흰색 막</b> (흰자위), 눈 보호·형태 유지</td></tr>
+<tr><td>시각 신경</td><td class="l">시각 세포가 받은 자극을 <b>뇌로 전달</b></td></tr></table></div><h4>② 귀의 구조와 기능</h4><div class="two"><figure class="fig"><img src="img/iv_ear_structure.jpg" alt="귀의 구조"><figcaption>귀의 구조</figcaption></figure>
+<table class="t"><tr><th>구조</th><th>기능</th></tr>
+<tr><td>귓바퀴</td><td class="l">소리(음파)를 모음</td></tr>
+<tr><td>외이도</td><td class="l">소리가 고막까지 지나가는 통로</td></tr>
+<tr><td>고막</td><td class="l">얇은 막, 소리에 의해 <b>가장 먼저 진동</b></td></tr>
+<tr><td>귓속뼈</td><td class="l">작은 뼈 3개, 고막의 진동을 <b>증폭</b></td></tr>
+<tr><td>달팽이관</td><td class="l"><b>청각 세포</b> 분포 → 소리 자극 수용</td></tr>
+<tr><td>전정 기관</td><td class="l">몸의 <b>기울어짐</b> 감지</td></tr>
+<tr><td>반고리관</td><td class="l">몸의 <b>회전</b> 감지 (반원형 관 3개)</td></tr>
+<tr><td>귀인두관</td><td class="l">귀와 목구멍 연결 → 고막 안팎 <b>압력 조절</b></td></tr></table></div><h4>③ 코 · 혀 · 피부</h4><div class="two"><div><figure class="fig"><img src="img/iv_nose.jpg" alt="코의 구조"><figcaption>코의 구조</figcaption></figure>
+<ul class="pt"><li>콧속 윗부분 <b>후각 상피</b>에 후각 세포</li><li>자극: <b>기체 상태</b>의 화학 물질</li></ul></div><div><figure class="fig"><img src="img/iv_tongue.jpg" alt="혀의 구조"><figcaption>혀의 구조</figcaption></figure><ul class="pt"><li>혀 표면 돌기 = <b>유두</b>, 유두 옆면에 <b>맛봉오리</b>, 그 안에 <b>맛세포</b></li>
+<li>자극: <b>액체 상태</b>의 화학 물질 · 기본 맛 5가지: <b>단맛, 짠맛, 신맛, 쓴맛, 감칠맛</b></li></ul></div></div><div class="two"><figure class="fig"><img src="img/iv_skin.jpg" alt="피부의 감각점"><figcaption>피부의 감각점</figcaption></figure><div><ul class="pt">
+<li><b>촉점</b>: 가볍게 닿는 접촉 · <b>압점</b>: 누르는 압력</li>
+<li><b>냉점</b>: 온도가 <b>낮아지는</b> 변화 · <b>온점</b>: 온도가 <b>높아지는</b> 변화</li>
+<li><b>통점</b>: 매우 강한 자극(통증) — 분포 수 가장 많음</li>
+<li>감각점은 <b>감각 신경의 말단</b>이 특수하게 분화된 것</li></ul></div></div></div></section>
+<section class="level lv-a"><div class="lv-head"><span class="lv-badge">응용</span><h3>조절 작용과 감각 전달 과정 — 상황에 적용하기</h3></div><div class="lv-body"><h4>① 물체를 보는 과정</h4><div class="flow"><span>빛</span><i>→</i><span>각막</span><i>→</i><span>(동공)</span><i>→</i><span>수정체</span><i>→</i><span>유리체</span><i>→</i><span class="k">망막의 시각 세포</span><i>→</i><span>시각 신경</span><i>→</i><span class="k">뇌</span></div><figure class="fig"><img src="img/iv_vision_path.jpg" style="width:88%" alt="iv_vision_path"></figure><h4>② 눈의 조절 작용 (가장 많이 출제!)</h4>
+<svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="눈의 밝기 조절과 거리 조절 요약">
+ <style>.t{font-size:13px;font-weight:700;fill:#1f2430}.s{font-size:11.5px;fill:#5b6272}.h{font-size:14px;font-weight:900}</style>
+ <g transform="translate(90,70)">
+  <text class="h" x="0" y="-52" text-anchor="middle" fill="#d9772b">밝은 곳</text>
+  <ellipse rx="66" ry="36" fill="#fff" stroke="#999"/>
+  <circle r="30" fill="#8b5a2b"/><circle r="30" fill="none" stroke="#5a3a1a" stroke-width="2"/>
+  <circle r="8" fill="#111"/>
+  <text class="t" x="0" y="58" text-anchor="middle">홍채 확장 → 동공 작아짐</text>
+  <text class="s" x="0" y="76" text-anchor="middle">들어오는 빛의 양 감소</text>
+ </g>
+ <g transform="translate(270,70)">
+  <text class="h" x="0" y="-52" text-anchor="middle" fill="#334">어두운 곳</text>
+  <ellipse rx="66" ry="36" fill="#fff" stroke="#999"/>
+  <circle r="30" fill="#8b5a2b"/><circle r="30" fill="none" stroke="#5a3a1a" stroke-width="2"/>
+  <circle r="20" fill="#111"/>
+  <text class="t" x="0" y="58" text-anchor="middle">홍채 축소 → 동공 커짐</text>
+  <text class="s" x="0" y="76" text-anchor="middle">들어오는 빛의 양 증가</text>
+ </g>
+ <line x1="362" y1="10" x2="362" y2="190" stroke="#d9dde5" stroke-width="2" stroke-dasharray="5 4"/>
+ <g transform="translate(450,70)">
+  <text class="h" x="0" y="-52" text-anchor="middle" fill="#2f6fd6">가까운 곳</text>
+  <rect x="-8" y="-46" width="16" height="12" rx="3" fill="#e27d60"/><rect x="-8" y="34" width="16" height="12" rx="3" fill="#e27d60"/>
+  <line x1="0" y1="-34" x2="0" y2="-24" stroke="#999"/><line x1="0" y1="34" x2="0" y2="24" stroke="#999"/>
+  <ellipse rx="16" ry="25" fill="#bfe3ff" stroke="#2f6fd6" stroke-width="2"/>
+  <text class="s" x="30" y="-36">섬모체 수축</text>
+  <text class="t" x="0" y="58" text-anchor="middle">섬모체 수축 → 수정체 두꺼워짐</text>
+  <text class="s" x="0" y="76" text-anchor="middle">빛을 많이 굴절</text>
+ </g>
+ <g transform="translate(630,70)">
+  <text class="h" x="0" y="-52" text-anchor="middle" fill="#1f9d62">먼 곳</text>
+  <rect x="-8" y="-46" width="16" height="12" rx="3" fill="#f3b6a4"/><rect x="-8" y="34" width="16" height="12" rx="3" fill="#f3b6a4"/>
+  <line x1="0" y1="-34" x2="0" y2="-28" stroke="#999"/><line x1="0" y1="34" x2="0" y2="28" stroke="#999"/>
+  <ellipse rx="7" ry="28" fill="#bfe3ff" stroke="#1f9d62" stroke-width="2"/>
+  <text class="s" x="20" y="-36">섬모체 이완</text>
+  <text class="t" x="0" y="58" text-anchor="middle">섬모체 이완 → 수정체 얇아짐</text>
+  <text class="s" x="0" y="76" text-anchor="middle">빛을 적게 굴절</text>
+ </g>
+</svg>
+<table class="t"><tr><th>상황</th><th>홍채</th><th>동공</th><th>섬모체</th><th>수정체</th></tr>
+<tr><td>어두운 곳 → 밝은 곳</td><td>확장</td><td class="red">작아짐</td><td>-</td><td>-</td></tr>
+<tr><td>밝은 곳 → 어두운 곳</td><td>축소</td><td class="blue">커짐</td><td>-</td><td>-</td></tr>
+<tr><td>먼 곳 → 가까운 곳</td><td>-</td><td>-</td><td>수축</td><td class="red">두꺼워짐</td></tr>
+<tr><td>가까운 곳 → 먼 곳</td><td>-</td><td>-</td><td>이완</td><td class="blue">얇아짐</td></tr></table><div class="two"><figure class="fig"><img src="img/iv_light_adjust.jpg" alt="명암 조절"><figcaption>명암 조절</figcaption></figure><figure class="fig"><img src="img/iv_near_far.jpg" alt="원근 조절"><figcaption>원근 조절</figcaption></figure></div><div class="box tip"><div class="box-t">외우는 요령</div><div class="box-b"><b>"밝으면 작게, 가까우면 두껍게"</b> — 빛이 많으면 동공을 줄이고, 가까이 보면 렌즈를 두껍게 해서 많이 꺾는다. 홍채는 <u>동공과 반대</u>로 움직인다(홍채 확장 = 동공 축소).</div></div><h4>③ 소리를 듣는 과정 · 평형 감각</h4><div class="flow"><span>소리</span><i>→</i><span>귓바퀴</span><i>→</i><span>외이도</span><i>→</i><span class="k">고막 (진동)</span><i>→</i><span class="k">귓속뼈 (증폭)</span><i>→</i><span>달팽이관의 청각 세포</span><i>→</i><span>청각 신경</span><i>→</i><span>뇌</span></div><div class="two"><figure class="fig"><img src="img/iv_hearing_path.jpg" alt="소리를 듣는 과정"><figcaption>소리를 듣는 과정</figcaption></figure><figure class="fig"><img src="img/iv_balance.jpg" alt="평형 감각 기관"><figcaption>평형 감각 기관</figcaption></figure></div><table class="t"><tr><th></th><th>전정 기관</th><th>반고리관</th></tr>
+<tr><td>감지</td><td>몸의 <b>기울어짐</b> (중력 자극)</td><td>몸의 <b>회전</b></td></tr>
+<tr><td>예</td><td class="l">엘리베이터 출발·정지, 경사진 언덕에서 몸을 앞으로 기울임, 눈 감고 한 발로 서기</td><td class="l">제자리 돌기 후 어지러움, 회전의자·놀이기구, 피겨 스핀</td></tr></table><h4>④ 냄새 · 맛 · 피부 감각의 전달</h4><div class="flow"><span>기체 상태 화학 물질</span><i>→</i><span>후각 상피의 후각 세포</span><i>→</i><span>후각 신경</span><i>→</i><span>뇌</span></div><div class="flow"><span>액체 상태 화학 물질</span><i>→</i><span>맛봉오리의 맛세포</span><i>→</i><span>미각 신경</span><i>→</i><span>뇌</span></div><div class="flow"><span>자극</span><i>→</i><span>피부의 감각점</span><i>→</i><span>피부 감각 신경</span><i>→</i><span>뇌</span></div><ul class="pt"><li><b>후각</b>: 매우 예민(아주 적은 양도 감지)하지만 <b>쉽게 피로</b> → 같은 냄새를 계속 맡으면 못 느낌.</li>
+<li><b>매운맛·떫은맛은 맛이 아니다!</b> 매운맛 = 통점(+온점), 떫은맛 = 압점 → <b>피부 감각</b>.</li>
+<li>우리가 느끼는 음식 맛 = <b>미각 + 후각</b> (+ 온도·촉감) 을 <b>뇌</b>가 종합 → 코감기에 걸리면 맛을 잘 모름.</li>
+<li>피부 부위마다 민감도가 다른 까닭: <b>감각점의 분포 밀도(수)</b>가 다르기 때문 (손끝·입술 예민, 등 둔감).</li></ul></div></section>
+<section class="level lv-d"><div class="lv-head"><span class="lv-badge">발전</span><h3>탐구 결과 해석과 원리 설명 — 서술형 대비</h3></div><div class="lv-body"><h4>① 탐구 해석 모음</h4><table class="t"><tr><th style="width:24%">탐구</th><th>과정 핵심</th><th>결과 · 결론</th></tr><tr><td>맹점 확인 (교과서)</td><td class="l">한쪽 눈을 가리고 다른 눈으로 한 그림을 계속 주시하며 거리를 바꿈</td><td class="l">어느 순간 다른 그림이 안 보임 → 그 상이 <b>맹점</b>(시각 세포 없음)에 맺혔기 때문</td></tr><tr><td>빛의 밝기와 눈 (하이탑)</td><td class="l">손전등에 흰 종이(빛이 너무 강하지 않게) · 1분 눈 감았다 뜬 뒤 → 손전등 비춤 · <b>어두운 곳</b>에서 실험</td><td class="l">눈 뜬 직후: 홍채 축소·동공 확대 → 불빛 비추면: 홍채 확장·동공 축소</td></tr><tr><td>두 점 구별 (피부)</td><td class="l">이쑤시개 두 개 간격을 줄여가며 두 점으로 느끼는 최소 거리 측정</td><td class="l">최소 거리가 <b>짧을수록 촉점이 많고 예민</b> (손가락 끝 &gt; 손바닥 &gt; 이마 &gt; 팔뚝 &gt; 등)</td></tr><tr><td>온도 감각</td><td class="l">한 손 15℃, 다른 손 35℃ 물에 담갔다가 두 손 모두 25℃ 물로</td><td class="l">15℃ 손은 따뜻, 35℃ 손은 차갑게 느낌 → 온점·냉점은 <b>온도 변화(상대적)</b>를 감지</td></tr><tr><td>미각 + 후각</td><td class="l">눈을 가리고(+코를 막고) 과일 젤리/주스 맛보기</td><td class="l">코를 막으면 단맛·신맛만 느끼고 과일 종류 구분 못함 → 맛은 미각과 후각의 종합</td></tr><tr><td>소리 vs 피부 감각 (교과서 해보기)</td><td class="l">진동하는 스마트 기기를 매달고 귀마개/손바닥으로 비교</td><td class="l">소리는 <b>공기(매질)를 통해</b> 떨어져 있어도 전달, 진동 촉감은 <b>직접 닿아야</b> 느낌</td></tr></table><div class="two"><figure class="fig"><img src="img/iv_tamgu_eye_setup.jpg" alt="빛의 밝기에 따른 눈의 변화 관찰"><figcaption>빛의 밝기에 따른 눈의 변화 관찰</figcaption></figure><figure class="fig"><img src="img/iv_tamgu_eye_result.jpg" alt="결과"><figcaption>결과</figcaption></figure></div><h4>② 원리로 설명하기</h4><ul class="pt"><li><b>뼈 전도 이어폰</b>: 일반 이어폰은 공기 진동 → 고막 → 귓속뼈 → 달팽이관. 뼈 전도 이어폰은 <b>머리뼈의 진동이 직접 달팽이관</b>으로 전달(고막·귓속뼈를 거치지 않음) → 고막이 손상된 사람도 들을 수 있다.</li><li><b>언 아이스크림</b>은 처음엔 단맛이 약하다 → 맛세포는 <b>액체 상태</b> 물질만 받아들이므로 녹아야(침에 녹아야) 맛을 느낌.</li><li><b>높은 산·비행기</b>에서 귀가 먹먹 → 고막 안팎 압력 차이. 하품·침 삼키기 → <b>귀인두관</b>이 열려 압력이 같아짐.</li><li><b>시각 신경 손상</b>: 망막에 상이 맺혀도 뇌로 전달이 안 되어 볼 수 없다 (수정체·상의 위치 문제는 아님).</li><li><b>양쪽 눈을 뜨면 맹점을 못 느낀다</b>: 한쪽 눈의 맹점에 맺힌 부분을 다른 눈이 보완하고, 뇌가 주변 정보로 채움.</li></ul></div></section>
+<section class="level lv-s"><div class="lv-head"><span class="lv-badge">심화</span><h3>시력 이상 · 그래프 · 반고리관 — 고난도 대비</h3></div><div class="lv-body"><h4>① 시력 이상과 교정</h4><table class="t"><tr><th>종류</th><th>원인</th><th>증상 (상의 위치)</th><th>교정</th></tr><tr><td><b>근시</b></td><td class="l">수정체가 두꺼움 / 수정체~망막 거리가 멂</td><td class="l">먼 곳의 상이 <b>망막 앞</b> → 먼 곳이 흐림</td><td><b>오목</b> 렌즈 (빛을 퍼지게)</td></tr><tr><td><b>원시</b></td><td class="l">수정체가 얇음 / 수정체~망막 거리가 짧음</td><td class="l">가까운 곳의 상이 <b>망막 뒤</b> → 가까운 곳이 흐림</td><td><b>볼록</b> 렌즈 (빛을 모이게)</td></tr><tr><td>난시</td><td class="l">각막 표면이 고르지 않음</td><td class="l">빛이 한 점에 모이지 않아 흐림</td><td>특수(원기둥) 렌즈</td></tr><tr><td>노안</td><td class="l">나이가 들어 수정체 탄력 감소</td><td class="l">가까운 곳에 초점 맞추기 어려움</td><td>볼록 렌즈</td></tr></table><div class="two"><figure class="fig"><img src="img/iv_myopia.jpg" alt="근시 → 오목 렌즈"><figcaption>근시 → 오목 렌즈</figcaption></figure><figure class="fig"><img src="img/iv_hyperopia.jpg" alt="원시 → 볼록 렌즈"><figcaption>원시 → 볼록 렌즈</figcaption></figure></div><div class="box tip"><div class="box-t">오목 렌즈 안경으로 보면 글씨가 작아 보인다</div><div class="box-b">근시용 <b>오목 렌즈</b>는 빛을 퍼지게 하여 <b>실제보다 작은 상</b>을 만든다 → 근시인 사람의 안경을 통해 책을 보면 글씨가 작게 보인다 (하이탑 실전 1).</div></div><h4>② 수정체 두께 그래프 읽기</h4><ul class="pt"><li>그래프가 <b>올라감</b> = 수정체 두꺼워짐 = 섬모체 <b>수축</b> = 물체가 <b>가까워짐</b></li><li>그래프가 <b>내려감</b> = 수정체 얇아짐 = 섬모체 <b>이완</b> = 물체가 <b>멀어짐</b></li><li>그래프가 <b>일정</b> = 거리 변화 없음. 이때 정상 눈이면 상은 계속 <b>망막(황반)</b>에 맺힌다 (맹점·망막 앞 X).</li><li>물체가 가까워지면 망막에 맺히는 상의 크기는 커진다 (물체 크기가 변하는 것이 아님).</li></ul><h4>③ 반고리관의 원리 — 림프의 관성</h4><p>반고리관 3개는 <b>서로 직각</b>으로 배열되어 모든 방향의 회전을 감지한다. 관 속 <b>림프</b>가 흐르며 감각모를 휘게 해 감각 세포를 자극한다.</p>
+<svg viewBox="0 0 640 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="반고리관 림프의 관성">
+ <style>.t{font-size:12.5px;font-weight:700;fill:#1f2430}.s{font-size:11px;fill:#5b6272}</style>
+ <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d6453d"/></marker>
+ <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f6fd6"/></marker></defs>
+ <g transform="translate(110,78)">
+  <circle r="48" fill="none" stroke="#c9a15b" stroke-width="16"/>
+  <path d="M -40 -50 A 64 64 0 0 1 40 -50" fill="none" stroke="#333" stroke-width="2.5" marker-end="url(#ar)"/>
+  <path d="M 34 34 A 48 48 0 0 1 -34 34" fill="none" stroke="#2f6fd6" stroke-width="3" marker-end="url(#ab)"/>
+  <text class="t" x="0" y="82" text-anchor="middle">① 회전 시작</text>
+  <text class="s" x="0" y="-60" text-anchor="middle">몸(관) 회전 →</text>
+  <text class="s" x="0" y="6" text-anchor="middle">림프는 제자리</text><text class="s" x="0" y="20" text-anchor="middle">(반대로 흐르는 효과)</text>
+ </g>
+ <g transform="translate(320,78)">
+  <circle r="48" fill="none" stroke="#c9a15b" stroke-width="16"/>
+  <path d="M -40 -50 A 64 64 0 0 1 40 -50" fill="none" stroke="#333" stroke-width="2.5" marker-end="url(#ar)"/>
+  <path d="M -34 34 A 48 48 0 0 0 34 34" fill="none" stroke="#aaa" stroke-width="3" stroke-dasharray="4 3"/>
+  <text class="t" x="0" y="82" text-anchor="middle">② 일정하게 계속 회전</text>
+  <text class="s" x="0" y="6" text-anchor="middle">림프도 함께 돎</text><text class="s" x="0" y="20" text-anchor="middle">→ 회전 감각 약해짐</text>
+ </g>
+ <g transform="translate(530,78)">
+  <circle r="48" fill="none" stroke="#c9a15b" stroke-width="16"/>
+  <text class="s" x="0" y="-60" text-anchor="middle">몸(관) 정지 ■</text>
+  <path d="M -34 34 A 48 48 0 0 0 34 34" fill="none" stroke="#2f6fd6" stroke-width="3" marker-end="url(#ab)"/>
+  <text class="t" x="0" y="82" text-anchor="middle">③ 갑자기 멈춤</text>
+  <text class="s" x="0" y="6" text-anchor="middle">림프는 관성으로</text><text class="s" x="0" y="20" text-anchor="middle">계속 흐름 → 어지러움</text>
+ </g>
+</svg><p class="small">회전을 멈추어도 림프가 <b>관성</b>에 의해 원래 방향으로 계속 흘러 감각모를 휘게 하므로, 한동안 계속 도는 것처럼 어지럽다. (반고리관·전정 기관·달팽이관 모두 림프로 차 있다)</p><div class="box warn"><div class="box-t">실수 방지 체크리스트 (오답 1순위)</div><div class="box-b"><ul class="pt">
+<li>홍채 <b>확장</b> → 동공 <b>축소</b> (반대!) · 어두우면 홍채 <b>축소</b> → 동공 <b>확대</b></li>
+<li>빛의 경로에 <b>홍채·맥락막·공막은 없다</b> (각막 → 수정체 → 유리체 → 망막)</li>
+<li>시각 세포는 <b>망막</b>에만 · 맹점엔 없음 · <b>황반</b>에 가장 많음</li>
+<li>소리에 의해 <b>가장 먼저 진동하는 것은 고막</b> (귓속뼈는 증폭) · 청각 세포는 <b>달팽이관</b></li>
+<li><b>달팽이관 = 청각만</b>. 평형 감각은 전정 기관(기울기) + 반고리관(회전). 소리 들을 때 반고리관·전정 기관은 관여 X</li>
+<li>귀인두관은 소리 전달 X → <b>압력 조절</b></li>
+<li>후각은 미각보다 <b>쉽게 피로</b>해진다 (미각이 아니라 후각!)</li>
+<li>코 = <b>기체</b>, 혀 = <b>액체</b> 상태 화학 물질 · 기본 맛에 <b>매운맛 X</b></li>
+<li>온점·냉점은 <b>절대 온도가 아닌 온도 변화</b> · 온도가 낮아지면 <b>냉점</b></li>
+<li>통점은 촉점보다 <b>강한</b> 자극을 받아들임 · 감각점은 부위마다 <b>분포 수가 다름</b></li></ul></div></div></div></section><header class="part iv"><div class="pk">Ⅳ-1 감각 기관</div><h2>문제 정리</h2><p>하이탑 전 문항 + 교과서 전 문항</p></header><h3 class="sub">하이탑 ① 학습 내용 Check <span class="src">빈칸 채우기</span></h3><ul class="fills">
+<li><span class="num s">C1</span> 볼록 렌즈 모양으로 빛을 굴절시키는 구조는 <span class="blank"></span>이다.</li>
+<li><span class="num s">C2</span> 동공의 크기를 조절하는 구조는 <span class="blank"></span>이다.</li>
+<li><span class="num s">C3</span> <span class="blank"></span>은 눈의 가장 안쪽 막으로, 시각 세포가 분포한다.</li>
+<li><span class="num s">C4</span> 빛 → <span class="blank"></span> → 수정체 → 유리체 → 망막의 시각 세포 → 시각 신경 → <span class="blank"></span></li>
+<li><span class="num s">C5</span> 어두운 곳에서는 동공이 <span class="blank"></span>지고, 밝은 곳에서는 <span class="blank"></span>진다.</li>
+<li><span class="num s">C6</span> 먼 곳을 볼 때 수정체는 <span class="blank"></span>지고, 가까운 곳을 볼 때는 <span class="blank"></span>진다.</li>
+<li><span class="num s">C7</span> 소리 → 귓바퀴 → 외이도 → <span class="blank"></span> → 귓속뼈 → <span class="blank"></span>의 청각 세포 → 청각 신경 → 뇌</li>
+<li><span class="num s">C8</span> 귀의 구조 중 몸의 기울어짐을 감지하는 곳은 <span class="blank"></span>이다.</li>
+<li><span class="num s">C9</span> 귀의 구조 중 몸의 회전을 감지하는 곳은 <span class="blank"></span>이다.</li>
+<li><span class="num s">C10</span> 후각 세포는 콧속 윗부분의 <span class="blank"></span>에 분포한다.</li>
+<li><span class="num s">C11</span> 코는 <span class="blank"></span> 상태의 화학 물질을 받아들이며, 자극은 <span class="blank"></span>을 통해 뇌로 전달된다.</li>
+<li><span class="num s">C12</span> 유두 옆부분에 맛세포가 모여 있는 <span class="blank"></span>가 있다.</li>
+<li><span class="num s">C13</span> 혀는 <span class="blank"></span> 상태의 화학 물질을 받아들이며, 자극은 <span class="blank"></span>을 통해 뇌로 전달된다.</li>
+<li><span class="num s">C14</span> 맛세포가 감지하는 기본 맛: 단맛, 짠맛, 신맛, 쓴맛, <span class="blank"></span></li>
+<li><span class="num s">C15</span> 피부에서 접촉·압력·차가움·따뜻함·통증을 받아들이는 곳을 <span class="blank"></span>이라고 한다.</li>
+<li><span class="num s">C16</span> 누르는 자극은 <span class="blank"></span>에서, 강한 자극(통증)은 <span class="blank"></span>에서 받아들인다.</li>
+<li><span class="num s">C17</span> 피부에서 받아들인 자극은 피부 감각 신경을 통해 <span class="blank"></span>로 전달된다.</li>
+</ul>
+<h3 class="sub">하이탑 ② 탐구 확인 문제</h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">T1</span><b>[빛의 밝기에 따른 눈의 변화]</b> 손전등 앞부분에 흰 종이를 붙이고, 한 사람이 눈을 1분 동안 감았다 뜨면 다른 사람이 홍채와 동공을 관찰한 뒤, 손전등 불빛으로 눈을 비추고 변화를 관찰하였다. 옳은 것은 ○, 옳지 않은 것은 × 하시오.</div>
+<div class="given">(1) 손전등에 종이를 붙이는 것은 불빛을 밝게 하기 위함이다.<br>(2) 1분 동안 눈을 감고 있을 때는 홍채가 축소한다.<br>(3) 밝은 곳에서 실험하는 것이 효과적이다.<br>(4) 손전등 불빛을 비추면 홍채가 확장하는 것을 관찰할 수 있다.<br>(5) 손전등 불빛을 비추면 동공의 크기가 커진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">T2</span><span class="tag">적용</span>그림은 밝은 곳에 있다가 어두운 곳으로 이동했을 때 눈의 변화이다. 동공의 크기를 변하게 하는 눈의 구조를 쓰고, 그 조절 과정과 결과를 설명하시오.</div>
+<div class="pfig"><img src="img/iv_tq2.jpg" alt="iv_tq2"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">T3</span><b>[피부 감각]</b> 이쑤시개 두 개로 두 점을 구별하는 최소 거리를 측정했더니 손바닥 4 mm, 손등 8 mm였다. 또 오른손을 15℃, 왼손을 35℃ 물에 10초 담근 뒤 두 손을 25℃ 물에 넣었다. 옳은 것은 ○, 옳지 않은 것은 × 하시오.</div>
+<div class="given">(1) 촉점은 몸의 부위에 따라 분포하는 수가 다르다.<br>(2) 촉점이 많이 분포할수록 촉각이 둔감하다.<br>(3) 온점과 냉점은 절대적인 온도를 감각한다.<br>(4) 온도가 낮아지면 온점, 높아지면 냉점이 자극을 받는다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">T4</span><span class="tag">적용</span>두 점을 구별하는 최소 거리가 표와 같을 때, 가장 예민한 부위와 그렇게 판단한 근거를 설명하시오.</div>
+<table class="t"><tr><th>부위</th><td>손바닥</td><td>팔뚝</td><td>등</td><td>손가락 끝</td><td>이마</td></tr><tr><th>거리(mm)</th><td>10.3</td><td>38.4</td><td>39.5</td><td>2.7</td><td>17.0</td></tr></table>
+<div class="lines"><div></div><div></div></div>
+</div>
+</div>
+<h3 class="sub">하이탑 ③ 개념 확인 문제 <span class="src">01~21</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">01</span><span class="tag">중요</span>[01~02] 그림은 눈의 구조를 나타낸 것이다. 이에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<div class="pfig"><img src="img/iv_c01.jpg" alt="iv_c01"></div>
+<ol class="ch c1"><li>① A는 수정체의 두께를 조절한다.</li><li>② B와 C는 빛이 통과하는 통로이다.</li><li>③ D에는 시각 세포가 있다.</li><li>④ E와 G는 눈의 형태를 유지한다.</li><li>⑤ J는 빛을 굴절시켜 I에 상이 맺히도록 한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span>눈의 조절 작용에 대한 설명이다. 각 설명에 해당하는 구조를 위 그림에서 찾아 기호와 이름을 쓰시오.</div>
+<div class="given">(1) 주변의 밝기에 따라 동공의 크기를 조절한다.<br>(2) 물체와의 거리에 따라 두께가 변하여 상이 망막에 정확히 맺히도록 한다.<br>(3) 검은색 색소가 있어 눈의 내부를 어둡게 한다.<br>(4) 시각 세포에서 받아들인 자극을 뇌로 전달한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span>다음은 빛 자극이 전달되는 경로이다. (가)~(다)를 옳게 짝 지은 것은?</div>
+<div class="given">빛 → 각막 → (가) → (나) → (다)의 시각 세포 → 시각 신경 → 뇌</div>
+<ol class="ch c1"><li>① 맥락막 - 홍채 - 망막</li><li>② 맥락막 - 홍채 - 공막</li><li>③ 수정체 - 홍채 - 망막</li><li>④ 수정체 - 유리체 - 공막</li><li>⑤ 수정체 - 유리체 - 망막</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">04</span><span class="tag">중요</span>왼쪽 눈을 감고 오른쪽 눈으로 그림의 닭을 계속 주시하면서 책을 앞뒤로 움직이면 (가) 병아리가 보이지 않을 때가 있다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_c04.jpg" alt="iv_c04"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 오른쪽 눈의 망막에 닭의 상이 맺힌다.</li><li><b>ㄴ.</b> (가)에서 병아리의 상은 맹점에 맺힌다.</li><li><b>ㄷ.</b> (가)에서 병아리와 함께 닭도 보이지 않는다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">05</span><span class="tag">중요</span>그림은 어떤 사람의 눈의 변화를 나타낸 것이다. 눈의 상태가 (가)에서 (나)로 변할 때에 대한 설명으로 옳은 것은?</div>
+<div class="pfig"><img src="img/iv_c05.jpg" alt="iv_c05"></div>
+<ol class="ch c1"><li>① 홍채가 축소되었다.</li><li>② 동공의 크기가 커졌다.</li><li>③ 처음보다 주변이 밝아졌다.</li><li>④ 물체의 상이 맹점에 맺히게 되었다.</li><li>⑤ 가까운 곳의 물체를 더 잘 볼 수 있게 되었다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">06</span>그림은 어떤 사람의 눈이 (가)에서 (나)로 변한 것이다. (가)에서 (나)로 변한 까닭으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_c06.jpg" alt="iv_c06"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 섬모체가 이완하였다.</li><li><b>ㄴ.</b> 먼 곳을 보다가 가까운 곳을 보았다.</li><li><b>ㄷ.</b> 어두운 곳에서 밝은 곳으로 이동하였다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄱ, ㄴ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">07</span><span class="tag">중요</span>영희는 밤에 (가) 밝은 실내에서 책을 읽고 있다가 바깥으로 나가 (나) 캄캄한 마당에서 밤하늘의 별을 보았다. (가)와 (나)에서 영희의 눈의 상태를 비교한 것으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 홍채는 (가)일 때보다 (나)일 때 더 넓다.</li><li><b>ㄴ.</b> 동공의 크기는 (나)일 때 더 크다.</li><li><b>ㄷ.</b> 수정체의 두께는 (가)일 때보다 (나)일 때 더 얇다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">08</span>그림은 눈 구조의 일부를 나타낸 것이다. 이에 대한 설명으로 옳은 것은?</div>
+<div class="pfig"><img src="img/iv_c08.jpg" alt="iv_c08"></div>
+<ol class="ch c1"><li>① A는 검은색 색소를 함유하는 막이다.</li><li>② A에는 빛을 감지하는 세포가 분포한다.</li><li>③ B는 뇌로 연결된다.</li><li>④ B는 눈에서 받아들인 자극을 전달한다.</li><li>⑤ C에 상이 맺히면 가장 뚜렷하게 볼 수 있다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">09</span>귀에서 받아들일 수 있는 자극을 보기에서 모두 골라 기호로 쓰시오.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 빛</li><li><b>ㄴ.</b> 소리</li><li><b>ㄷ.</b> 온도 변화</li><li><b>ㄹ.</b> 몸의 회전</li><li><b>ㅁ.</b> 기체 물질</li><li><b>ㅂ.</b> 몸의 기울어짐</li></ul></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">10</span><span class="tag">중요</span>[10~13] 그림은 사람 귀의 구조를 나타낸 것이다. 이에 대한 설명으로 옳은 것은?</div>
+<div class="pfig"><img src="img/iv_c10.jpg" alt="iv_c10"></div>
+<ol class="ch c1"><li>① A는 소리에 의해 최초로 진동한다.</li><li>② B는 소리를 증폭시킨다.</li><li>③ D는 몸의 기울기를 감지한다.</li><li>④ H에는 청각 세포가 있다.</li><li>⑤ G는 소리를 전달한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">11</span>소리가 귀로 들어와 뇌로 전달되는 과정이다. 빈칸에 알맞은 구조를 위 그림에서 찾아 기호로 쓰시오.</div>
+<div class="given">소리 → 귓바퀴 → ( ㉠ ) → ( ㉡ ) → ( ㉢ ) → ( ㉣ ) → ( ㉤ ) → 뇌</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">12</span>소리를 듣는 것과 직접 관계가 없으며, 감각 세포가 있어 평형 감각과 관련된 자극을 받아들이는 귀의 구조를 위 그림에서 모두 골라 기호와 이름을 쓰시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">13</span>다음 현상과 가장 관련 깊은 귀의 구조를 위 그림에서 찾아 기호와 이름을 쓰시오.</div>
+<div class="given">높은 산에 올라갔을 때 귀가 먹먹하였지만 하품을 하고 침을 삼켰더니 먹먹하던 증상이 사라졌다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">14</span>그림은 사람 귀의 일부이고, 다음은 몸의 평형 감각과 관련된 두 가지 실험과 결과이다. (가), (나)와 가장 관련 있는 부분을 옳게 짝 지은 것은?</div>
+<div class="pfig"><img src="img/iv_c14.jpg" alt="iv_c14"></div>
+<div class="given">(가) 눈을 감고 한 발로 서서 몸의 균형을 잡으려 할 때 몸이 기울어지는 것을 느낀다.<br>(나) 눈을 감고 회전의자에 앉아 있을 때 다른 사람이 의자를 돌리면 몸이 어떤 방향으로 회전하는지를 느낀다.</div>
+<ol class="ch c3"><li>① (가) A, (나) B</li><li>② (가) A, (나) C</li><li>③ (가) B, (나) A</li><li>④ (가) B, (나) C</li><li>⑤ (가) C, (나) B</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">15</span>다음은 영희와 철수의 대화이다. 이에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="given">영희: 철수야, 귤 먹었니? / 철수: 응, 어떻게 알았어? / 영희: ㉠ 냄새가 나잖아. / 철수: 난 ㉡ 냄새를 못 느끼겠는데….</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> ㉠은 기체 물질이다.</li><li><b>ㄴ.</b> 영희가 귤 냄새를 알아내는 데 뇌가 관여한다.</li><li><b>ㄷ.</b> ㉡은 같은 냄새에 후각이 피로해져 나타나는 현상이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄴ</li><li>② ㄱ, ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">16</span>그림은 사람의 콧속 천장 부분을 확대하여 나타낸 것이다. 이에 대한 설명으로 옳은 것은?</div>
+<div class="pfig"><img src="img/iv_c16.jpg" alt="iv_c16"></div>
+<ol class="ch c1"><li>① A는 후각 세포이다.</li><li>② B는 후각 신경이다.</li><li>③ B가 느끼는 냄새의 종류는 5가지이다.</li><li>④ 기체 상태의 화학 물질이 B를 자극한다.</li><li>⑤ A가 받아들인 자극은 B를 거쳐 뇌로 전달된다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">17</span>그림은 사람의 혀를 확대하여 나타낸 것이다. 이에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<div class="pfig"><img src="img/iv_c17.jpg" alt="iv_c17"></div>
+<ol class="ch c1"><li>① A는 혀의 표면에 있는 돌기이다.</li><li>② B는 유두이다.</li><li>③ C는 액체 물질을 자극으로 받아들인다.</li><li>④ D는 맛을 느끼는 데 관여하는 신경이다.</li><li>⑤ 자극의 전달은 C에서 D로 일어난다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">18</span>혀의 맛세포에서 감각하는 기본 맛이 <u>아닌</u> 것은?</div>
+<ol class="ch c5"><li>① 단맛</li><li>② 쓴맛</li><li>③ 짠맛</li><li>④ 감칠맛</li><li>⑤ 매운맛</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">19</span><span class="tag">중요</span>후각과 미각에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<ol class="ch c1"><li>① 콧속 천장에 후각 세포가 있다.</li><li>② 미각은 후각에 비해 쉽게 피로해진다.</li><li>③ 혀에는 맛세포가 모인 맛봉오리가 있다.</li><li>④ 후각과 미각의 자극원은 모두 화학 물질이다.</li><li>⑤ 후각과 미각에는 감각 세포, 감각 신경, 뇌가 관여한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">20</span><span class="tag">중요</span>피부 감각에 대한 설명으로 옳은 것은?</div>
+<ol class="ch c1"><li>① 감각점은 상피 세포가 분화한 것이다.</li><li>② 통점은 촉점보다 강한 자극을 받아들인다.</li><li>③ 감각점은 피부의 모든 부위에 고르게 분포한다.</li><li>④ 온도 변화를 받아들이는 감각점은 한 종류이다.</li><li>⑤ 우리 몸에 가장 많이 분포하는 감각점은 압점이다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">21</span>사람의 피부에서 몸의 부위에 따라 자극에 대해 민감한 정도가 다른 까닭으로 옳은 것은?</div>
+<ol class="ch c1"><li>① 감각점의 분포 수가 다르기 때문이다.</li><li>② 감각점의 구조가 다르기 때문이다.</li><li>③ 감각점의 모양이 다르기 때문이다.</li><li>④ 감각 신경의 모양이 다르기 때문이다.</li><li>⑤ 감각점이 분포하는 몸의 부위가 정해져 있기 때문이다.</li></ol>
+</div>
+</div>
+<h3 class="sub">하이탑 ④ 실력 강화 문제 <span class="src">01~10</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">01</span>사람의 감각 기관에 대한 설명으로 옳은 것을 모두 고르면? (정답 2개)</div>
+<ol class="ch c1"><li>① 눈의 맥락막에는 시각 세포가 분포한다.</li><li>② 귀의 달팽이관에서는 평형 감각을 담당한다.</li><li>③ 귀의 반고리관 내부에는 감각 세포가 분포한다.</li><li>④ 혀와 코에는 화학 물질을 자극으로 받아들이는 감각 세포가 있다.</li><li>⑤ 피부 감각은 몸의 부위에 관계없이 자극을 민감하게 받아들이는 정도가 같다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span>[02~03] 그림은 사람 눈의 구조이다. 주변이 어두워질 경우 나타나는 눈의 변화로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_s02.jpg" alt="iv_s02"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 홍채가 축소하여 A가 커진다.</li><li><b>ㄴ.</b> 섬모체가 이완하고 B의 두께가 얇아진다.</li><li><b>ㄷ.</b> A의 크기 변화로 눈으로 들어오는 빛의 양이 감소한다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span>C와 D에 대한 설명으로 옳은 것은?</div>
+<ol class="ch c1"><li>① C는 황반이다.</li><li>② C와 D는 공막에 있다.</li><li>③ C에 상이 맺힐 때 가장 선명하게 보인다.</li><li>④ D에는 물체의 상이 맺히지 않는다.</li><li>⑤ D에는 시각 세포가 많이 분포하고 있다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">04</span>[04~05] 그림은 철수가 8초 동안 어떤 물체를 바라볼 때 일어나는 수정체의 두께 변화이다. (가) 구간에서 일어나는 섬모체의 변화를 설명한 것이다. 빈칸에 알맞은 단어를 쓰시오.</div>
+<div class="pfig"><img src="img/iv_s04.jpg" alt="iv_s04"></div>
+<div class="given">(가) 구간에서 섬모체가 (　　)하여 수정체의 두께가 두꺼워진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">05</span>위 그림에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 2~4초 동안 물체와 철수 사이의 거리가 가까워지고 있다.</li><li><b>ㄴ.</b> 4~8초 동안 물체의 상이 맺히는 위치는 맹점에 가까워진다.</li><li><b>ㄷ.</b> 물체의 크기는 2초일 때보다 8초일 때 더 크게 보인다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">06</span>시각 신경이 손상될 경우 나타날 수 있는 현상을 보기에서 모두 골라 기호로 쓰시오.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 물체의 상이 망막의 뒤에 맺힌다.</li><li><b>ㄴ.</b> 수정체에서 빛이 굴절되지 않는다.</li><li><b>ㄷ.</b> 망막에 상이 맺히더라도 물체를 볼 수 없다.</li></ul></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">07</span>그림은 귀의 구조를 나타낸 것이다. A~E에 대한 설명으로 옳은 것을 모두 고르면? (정답 2개)</div>
+<div class="pfig"><img src="img/iv_s07.jpg" alt="iv_s07"></div>
+<ol class="ch c1"><li>① A는 고막의 진동을 증폭시킨다.</li><li>② B는 몸이 기울어지는 자극을 받아들인다.</li><li>③ B와 C에는 감각 세포가 있다.</li><li>④ D는 청각과 평형 감각을 모두 담당한다.</li><li>⑤ E는 C에서 받아들인 자극을 뇌로 전달한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">08</span>다음은 사람의 감각에 대한 실험과 결과이다. 이에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_s08.jpg" alt="iv_s08"></div>
+<div class="given">(가) 스마트폰을 실로 스탠드에 매단 후 음악을 틀어 놓는다.<br>(나) 스마트폰에 손바닥을 대면 진동이 느껴지지만, 손바닥을 떼면 진동이 느껴지지 않는다.<br>(다) 귀마개로 귀를 막으면 소리가 들리지 않는다.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)의 스마트폰에서는 진동이 발생한다.</li><li><b>ㄴ.</b> (나)에서 손바닥에 느껴지는 진동은 감각점을 통한 피부 감각이다.</li><li><b>ㄷ.</b> (다)에서 귀마개는 소리에 의해 고막이 진동하는 것을 막는다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄷ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">09</span>다음은 음식의 맛을 구별하는 감각에 대한 실험과 결과이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_s09.jpg" alt="iv_s09"></div>
+<div class="given">(가) 눈을 가리고 사과주스와 포도주스를 각각 맛보면 잘 구별한다.<br>(나) 눈을 가린 채 코를 막은 후 맛보면 잘 구별하지 못한다.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)에서 두 주스의 맛을 구별할 때 미각만 관여한다.</li><li><b>ㄴ.</b> (나)에서 맛볼 때 신경 세포를 통한 자극 전달이 일어난다.</li><li><b>ㄷ.</b> 이 실험으로 음식의 맛을 구별하는 데는 미각과 시각이 중요한 역할을 한다는 것을 알 수 있다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">10</span>미각, 후각, 피부 감각에 대한 설명으로 옳은 것을 모두 고르면? (정답 2개)</div>
+<ol class="ch c1"><li>① 뇌에서 구별하는 음식의 맛은 5가지이다.</li><li>② 혀는 미각뿐 아니라 피부 감각도 감지한다.</li><li>③ 콧속 천장에 있는 후각 세포는 액체 물질을 자극으로 받아들인다.</li><li>④ 피부의 감각점은 감각 신경과 연결되어 있어 자극이 뇌로 전달된다.</li><li>⑤ 맛세포와 후각 세포에서 받아들인 자극은 같은 신경을 통해 뇌로 전달된다.</li></ol>
+</div>
+</div>
+<h3 class="sub">하이탑 ⑤ 서술형 문제 <span class="src">1~9</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">1</span>그림은 주변의 밝기에 따라 사람의 눈에서 동공의 크기가 변하는 과정이다. (가)에서 (나)로 변하는 까닭을 주변 밝기와 관련지어 설명하고, 이때 일어나는 눈의 조절 작용을 설명하시오. <span class="small">[Keyword] 밝은 곳, 어두운 곳, 홍채, 동공, 빛의 양</span></div>
+<div class="pfig"><img src="img/iv_w1.jpg" alt="iv_w1"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">2</span>영희는 가까운 곳의 물체는 잘 보이지만 먼 곳의 물체가 잘 보이지 않아 안과에 갔다. 의사는 먼 곳의 물체를 볼 때 상이 망막의 앞에 맺히기 때문이라고 하였다. 영희의 시력 교정을 위해서는 볼록 렌즈와 오목 렌즈 중 어떤 것을 사용해야 할지 쓰고, 그렇게 판단한 까닭을 물체를 보는 과정과 관련지어 설명하시오. <span class="small">[Keyword] 상, 망막, 시각 세포, 시각 신경, 뇌</span></div>
+<div class="pfig"><img src="img/iv_w2.jpg" alt="iv_w2"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">3</span>[3~4] 그림은 사람 눈의 구조이다. 먼 곳을 보다가 가까운 곳을 볼 때 일어나는 눈의 조절 작용을 기호와 이름을 써서 설명하시오. <span class="small">[Keyword] 섬모체, 수정체</span></div>
+<div class="pfig"><img src="img/iv_w3.jpg" alt="iv_w3"></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">4</span>책을 30 cm 정도 떨어지도록 든 다음 왼쪽 눈을 감고 오른쪽 눈으로 닭을 주시하면서 책을 가까이 또는 멀리 천천히 움직이다 보면 (가) 병아리가 보이지 않을 때가 있다. 이와 관련 있는 구조의 기호와 이름을 쓰고, (가)와 같은 현상이 나타나는 까닭을 설명하시오. <span class="small">[Keyword] 상, 맹점, 시각 세포, 시각 신경</span></div>
+<div class="pfig"><img src="img/iv_w4.jpg" alt="iv_w4"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">5</span>[5~6] 그림은 귀의 구조이다. 소리가 고막을 진동시키고 뇌로 전달되어 소리를 듣게 되는 과정을 기호와 이름을 써서 설명하시오. <span class="small">[Keyword] 소리, 고막, 진동, 증폭, 청각 세포, 청각 신경, 뇌</span></div>
+<div class="pfig"><img src="img/iv_w5.jpg" alt="iv_w5"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">6</span>제자리에서 돌기를 할 때 몸이 빙글빙글 도는 것을 느끼는 것과 관련 깊은 부분의 기호와 이름을 쓰고, 그 부분의 기능을 설명하시오. <span class="small">[Keyword] 반고리관, 회전 감각</span></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">7</span>혀의 맛세포를 통해 감각하는 기본 맛은 5가지이지만, 우리가 느끼는 음식의 맛은 이보다 훨씬 다양하다. 5가지 기본 맛을 쓰고, 이보다 다양한 맛을 느끼는 까닭을 설명하시오. <span class="small">[Keyword] 기본 맛, 뇌, 미각, 후각</span></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">8</span>다음은 철수가 음식을 먹었을 때의 느낌이다. "혀가 얼얼할 정도로 ㉠ 매운맛의 떡볶이를 먹고 난 후 아이스크림을 먹었더니 차갑고 ㉡ 달콤했다." (1) ㉠이 느껴지는 과정을 설명하시오. <span class="small">[Keyword] 매운맛, 피부 감각 신경</span> (2) ㉡이 느껴지는 과정을 설명하시오. <span class="small">[Keyword] 맛봉오리, 맛세포, 미각 신경, 뇌</span></div>
+<div class="pfig"><img src="img/iv_w8.jpg" alt="iv_w8"></div>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">9</span>그림과 같이 오른손은 35℃의 물에, 왼손은 25℃의 물에 10초 동안 담갔다가 두 손을 동시에 30℃의 물에 담그면 오른손은 시원해졌다고 느끼고, 왼손은 따뜻해졌다고 느낀다. 이를 통해 알 수 있는 피부 감각의 특징을 설명하시오. <span class="small">[Keyword] 온점, 냉점, 온도 변화</span></div>
+<div class="pfig"><img src="img/iv_w9.jpg" alt="iv_w9"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+</div>
+<h3 class="sub">하이탑 ⑥ 최상위권 도전 문제 · 실전 문제 <span class="src">감각 기관 관련 문항만</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">도1</span>그림은 어떤 사람이 한 물체를 주시하면서 움직일 때 이 사람 눈의 수정체의 두께 변화를 나타낸 것이다. 이에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_t1.jpg" alt="iv_t1"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 0~3초 동안 이 사람은 물체에서 멀어지고 있다.</li><li><b>ㄴ.</b> 0~3초 동안 이 사람의 눈에서는 섬모체가 수축하고 있다.</li><li><b>ㄷ.</b> 3~10초에 물체의 상은 망막의 앞에 맺힌다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">도3</span>그림은 A, B 두 사람이 물체를 볼 때 눈에서 상이 맺히는 위치를 나타낸 것이다. (단, 그림에서 •는 상이 맺히는 위치이다.) 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_t3.jpg" alt="iv_t3"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> A는 가까이 있는 물체가 잘 보이지 않는다.</li><li><b>ㄴ.</b> B는 오목 렌즈 안경으로 시력을 교정할 수 있다.</li><li><b>ㄷ.</b> A는 멀리 있는 물체를 볼 때, B는 가까이 있는 물체를 볼 때 상이 맹점에 맺힌다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">도4</span>오른쪽 그림은 귀에 있는 감각 기관의 구조이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/iv_t4.jpg" alt="iv_t4"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> A에서 몸이 회전하는 것을 느낄 수 있게 해 준다.</li><li><b>ㄴ.</b> B는 기압 변화에 민감하게 반응하여 귀 내부 압력을 조절한다.</li><li><b>ㄷ.</b> C에서 받아들인 자극은 감각 신경을 통해 소뇌로 전달된다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄷ</li><li>③ ㄱ, ㄴ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">실1</span><span class="tag">창의적 문제 해결형</span>철수는 시력이 좋지 않아 안경을 쓴다. 10 cm 정도의 거리를 두고 철수의 안경으로 책을 보면 안경을 통해 보이는 글씨는 크기가 실제보다 작게 보인다. 철수의 시력 이상은 무엇인지 쓰고, 안경을 통해 보이는 글씨의 크기가 작은 까닭을 설명하시오. <span class="small">[Keyword] 오목 렌즈, 상, 망막</span></div>
+<div class="pfig"><img src="img/iv_p1.jpg" alt="iv_p1"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">실2</span><span class="tag">논리적 서술형</span>반고리관은 귀 속에 위치하는 세 개의 관으로, 림프의 관성에 의하여 회전 방향을 느끼는 기관이다. 세 관은 서로 직각을 이루고 있어 각각 서로 다른 방향의 회전을 느끼게 한다. 평지에 정지해 있던 사람이 제자리에서 수평 반고리관에서 회전을 느끼는데, 계속 회전하다가 갑자기 멈추었을 때에도 여전히 회전하는 것 같은 어지러움을 느낀다. 회전을 멈추어도 한동안 몸이 계속 도는 것과 같은 어지러움을 느끼는 까닭을 수평 반고리관의 단면 그림을 활용하여 림프와 감각모의 움직임으로 설명하시오.</div>
+<div class="pfig"><img src="img/iv_p2.jpg" alt="iv_p2"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+</div><h3 class="sub">교과서 ① 탐구 · 해 보기 · 스스로 확인하기</h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">탐1</span><b>[탐구] 물체를 보는 과정</b> — 오른쪽 눈을 가린 채 왼쪽 눈으로 부록의 그림을 응시하며 차례로 숫자를 보았다. 물체에서 나온 빛이 동공으로 들어와 망막에 상이 맺히기까지의 경로를 쓰시오. <span class="small">(의사소통)</span></div>
+<div class="lines"><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">탐2</span>위 탐구에서 숫자를 차례로 보다가 어느 순간 그림이 보이지 않는 까닭을 설명하시오. <span class="small">(추리)</span></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해1</span><b>[해 보기] 주변 밝기가 변할 때 눈의 변화</b> — 전등을 켜서 밝게 한 뒤 5초 후 끄면서 친구의 눈을 촬영하였다. 주변이 밝아지거나 어두워질 때 눈에서 어떤 변화가 나타나는가?</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-1</span>빛 → 각막 → 수정체 → 유리체 → 망막의 (　　　) → 시각 신경 → 뇌</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-2</span>주변이 어두워지면 동공이 ( 커, 작아 )지고, 밝아지면 동공이 ( 커, 작아 )진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-3</span><span class="tag">과학적 사고력</span>낮에 어두운 극장에서 영화를 보다가 밝은 극장 밖으로 나가 하늘의 비행기를 볼 때 일어나는 눈의 변화를 설명하시오.</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해2</span><b>[해 보기] 소리를 듣는 과정과 피부 감각 비교</b> — 진동하며 소리를 내는 스마트 기기를 매달고 ① 귀마개를 했을 때와 안 했을 때, ② 손바닥을 댔을 때와 뗐을 때를 비교하였다. 두 감각의 가장 큰 차이점은?</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-1</span>소리 → 귓바퀴 → 외이도 → 고막 → 귓속뼈 → (　　　)의 청각 세포 → 청각 신경 → 뇌</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-2</span>자극 → 피부의 (　　　) → 감각 신경 → 뇌</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-3</span><span class="tag">과학적 사고력</span>뼈 전도 이어폰은 귓구멍에 꽂지 않고 귀 근처 뼈에 대어 착용한다. 뼈 전도 이어폰과 일반 이어폰으로 소리가 들리는 과정을 비교하시오.</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해3</span><b>[해 보기] 미각과 후각</b> — 코를 막고 과일 맛 젤리를 먹으면 단맛·신맛만 느껴지고, 코를 막지 않으면 과일 맛을 구별할 수 있다. 코감기에 걸리면 음식 맛을 제대로 느끼지 못하는 까닭은?</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확3-1</span>혀는 ( 기체, 액체 ) 상태의 화학 물질을 자극으로 받아들인다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확3-2</span>코는 ( 기체, 액체 ) 상태의 화학 물질을 자극으로 받아들인다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확3-3</span><span class="tag">과학적 사고력</span>꽁꽁 언 아이스크림을 입에 넣으면 처음에는 단맛이 잘 느껴지지 않다가 녹으면서 단맛이 느껴진다. 그 까닭을 설명하시오.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+</div>
+<h3 class="sub">교과서 ② 스스로 정리하기</h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">정1</span>눈에 대한 설명으로 옳은 것은 ○, 옳지 않은 것은 ×로 표시하시오.</div>
+<div class="given">(1) 빛은 동공을 통해 눈 안쪽으로 들어간다.<br>(2) 황반은 망막에서 시각 세포가 없는 곳이다.<br>(3) 멀리 있는 물체를 볼 때 수정체가 얇아진다.<br>(4) 주변이 밝아지면 동공이 커져 눈으로 들어오는 빛의 양이 줄어든다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">정2</span>귀와 피부에 대한 설명으로 옳은 것을 보기에서 모두 고르시오.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 고막의 진동이 귓속뼈를 지나면서 증폭된다.</li><li><b>ㄴ.</b> 피부에 얼음이 닿으면 냉점에서 자극을 받아들여 차가움을 느낀다.</li><li><b>ㄷ.</b> 소리를 들을 때는 반드시 반고리관과 전정 기관이 관여한다.</li></ul></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">정3</span>혀와 코에 대한 설명으로 옳은 것은 ○, 옳지 않은 것은 × 하시오.</div>
+<div class="given">(1) 후각 세포는 액체 물질을 자극으로 받아들인다.<br>(2) 혀 표면의 작은 돌기 옆면에 있는 맛봉오리에 맛세포가 모여 있다.</div>
+</div>
+</div>
+<h3 class="sub">교과서 ③ 스스로 최종 점검하기 <span class="src">감각 기관 관련 문항</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">점❶</span>물체에서 나온 빛은 눈의 (　　　)에 상을 맺는다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❷</span>어두운 곳에서 가까이 있는 물체를 보다가 밝은 곳에서 멀리 있는 물체를 보면 동공이 ( 커, 작아 )지고, 수정체는 ( 얇아, 두꺼워 )진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❸</span>귀에서 고막의 진동은 (　　　)를 지나면서 증폭된다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❹</span>피부의 (　　　)에서 열, 접촉 등 자극을 받아들인다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">01</span>그림은 사람의 눈 구조이다. 이에 대한 설명으로 옳은 것은?</div>
+<div class="pfig"><img src="img/tb_iv_f01.jpg" alt="tb_iv_f01"></div>
+<ol class="ch c1"><li>① (가)는 눈으로 들어오는 빛의 양을 조절한다.</li><li>② (나)는 물체의 상이 맺히는 부분이다.</li><li>③ (다)는 망막이다.</li><li>④ (라)는 맹점으로, 상이 맺히면 물체가 잘 보인다.</li><li>⑤ (마)는 황반으로, 시각 신경 (바)가 모여 나간다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span>그림은 사람의 귀 구조이다. (가)~(마) 중 청각 세포가 있는 부분의 기호와 이름을 쓰시오.</div>
+<div class="pfig"><img src="img/tb_iv_f02.jpg" alt="tb_iv_f02"></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span>미각과 후각에 대한 설명으로 옳은 것을 보기에서 모두 고르시오.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 미각은 기체 물질을 자극으로 받아들인다.</li><li><b>ㄴ.</b> 우리가 평상시 느끼는 음식 맛은 미각과 후각이 합쳐진 것이다.</li><li><b>ㄷ.</b> 후각 세포에서 받아들인 자극이 후각 신경을 통해 뇌로 전달되어 냄새를 맡는다.</li></ul></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">06</span><span class="tag">과학적 사고력</span>그림은 주변의 밝기에 따라 사람의 눈에서 동공의 크기가 변한 모습이다. 동공의 크기가 (가)에서 (나)로 변하는 과정을 눈의 구조 및 주변의 밝기와 관련지어 설명하시오.</div>
+<div class="pfig"><img src="img/tb_iv_f06.jpg" alt="tb_iv_f06"></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+</div><section class="akey"><h3 class="akey-h">Ⅳ-1 감각 기관 · 정답과 해설</h3><table class="ak"><thead><tr><th>번호</th><th>정답</th><th>해설 · 포인트</th></tr></thead><tbody><tr class="grp"><td colspan="3">하이탑 · 학습 내용 Check</td></tr><tr><td class="al">C1</td><td class="aa">수정체</td><td class="ae"></td></tr><tr><td class="al">C2</td><td class="aa">홍채</td><td class="ae"></td></tr><tr><td class="al">C3</td><td class="aa">망막</td><td class="ae"></td></tr><tr><td class="al">C4</td><td class="aa">각막, 뇌</td><td class="ae"></td></tr><tr><td class="al">C5</td><td class="aa">커, 작아</td><td class="ae"></td></tr><tr><td class="al">C6</td><td class="aa">얇아, 두꺼워</td><td class="ae"></td></tr><tr><td class="al">C7</td><td class="aa">고막, 달팽이관</td><td class="ae"></td></tr><tr><td class="al">C8</td><td class="aa">전정 기관</td><td class="ae"></td></tr><tr><td class="al">C9</td><td class="aa">반고리관</td><td class="ae"></td></tr><tr><td class="al">C10</td><td class="aa">후각 상피</td><td class="ae"></td></tr><tr><td class="al">C11</td><td class="aa">기체, 후각 신경</td><td class="ae"></td></tr><tr><td class="al">C12</td><td class="aa">맛봉오리</td><td class="ae"></td></tr><tr><td class="al">C13</td><td class="aa">액체, 미각 신경</td><td class="ae"></td></tr><tr><td class="al">C14</td><td class="aa">감칠맛</td><td class="ae"></td></tr><tr><td class="al">C15</td><td class="aa">감각점</td><td class="ae"></td></tr><tr><td class="al">C16</td><td class="aa">압점, 통점</td><td class="ae"></td></tr><tr><td class="al">C17</td><td class="aa">뇌</td><td class="ae"></td></tr><tr class="grp"><td colspan="3">하이탑 · 탐구 확인 문제</td></tr><tr><td class="al">T1</td><td class="aa">(1)× (2)○ (3)× (4)○ (5)×</td><td class="ae">종이는 빛이 너무 강하지 않게 하려고 붙인다. 어두운 곳에서 해야 변화가 뚜렷하다. 빛을 비추면 홍채 확장 → 동공 축소.</td></tr><tr><td class="al">T2</td><td class="aa">홍채</td><td class="ae">어두운 곳으로 가면 홍채가 축소하여 동공이 커지고, 눈으로 들어오는 빛의 양이 증가한다.</td></tr><tr><td class="al">T3</td><td class="aa">(1)○ (2)× (3)× (4)×</td><td class="ae">촉점이 많을수록 예민. 온점·냉점은 온도 "변화"를 감지하고, 온도가 낮아지면 냉점·높아지면 온점이 자극을 받는다. (25℃ 물에서 오른손은 따뜻, 왼손은 차갑게 느낌)</td></tr><tr><td class="al">T4</td><td class="aa">손가락 끝</td><td class="ae">두 점을 구별하는 최소 거리가 가장 짧아 촉점이 가장 조밀하게(많이) 분포하기 때문이다.</td></tr><tr class="grp"><td colspan="3">하이탑 · 개념 확인 문제</td></tr><tr><td class="al">01</td><td class="aa">③</td><td class="ae">A 섬모체, B 각막, C 동공, D 홍채, E 유리체, F 시각 신경, G 공막, H 맥락막, I 망막, J 수정체. 시각 세포는 망막(I)에 있다.</td></tr><tr><td class="al">02</td><td class="aa">(1) D 홍채 (2) J 수정체 (3) H 맥락막 (4) F 시각 신경</td><td class="ae"></td></tr><tr><td class="al">03</td><td class="aa">⑤</td><td class="ae">빛은 홍채·맥락막·공막을 지나지 않는다.</td></tr><tr><td class="al">04</td><td class="aa">③</td><td class="ae">주시하는 닭은 황반 근처에 상이 맺혀 잘 보인다. 병아리만 맹점에 맺혀 안 보임.</td></tr><tr><td class="al">05</td><td class="aa">③</td><td class="ae">(가) 동공 큼 → (나) 동공 작음: 주변이 밝아져 홍채가 확장하고 동공이 작아졌다.</td></tr><tr><td class="al">06</td><td class="aa">②</td><td class="ae">수정체가 두꺼워짐 = 섬모체 수축 = 가까운 곳을 봄. 밝기와 수정체 두께는 무관.</td></tr><tr><td class="al">07</td><td class="aa">⑤</td><td class="ae">(나) 어둡고 멀다 → 홍채 축소(좁음)·동공 확대, 섬모체 이완·수정체 얇음.</td></tr><tr><td class="al">08</td><td class="aa">②</td><td class="ae">A 망막(시각 세포), B 맥락막(검은 색소), C 맹점(시각 세포 없음 → 안 보임).</td></tr><tr><td class="al">09</td><td class="aa">ㄴ, ㄹ, ㅂ</td><td class="ae">소리(달팽이관), 회전(반고리관), 기울어짐(전정 기관).</td></tr><tr><td class="al">10</td><td class="aa">④</td><td class="ae">A 귓속뼈, B 반고리관, C 전정 기관, D 청각 신경, E 외이도, F 고막, G 귀인두관, H 달팽이관.</td></tr><tr><td class="al">11</td><td class="aa">㉠E ㉡F ㉢A ㉣H ㉤D</td><td class="ae">외이도 → 고막 → 귓속뼈 → 달팽이관 → 청각 신경</td></tr><tr><td class="al">12</td><td class="aa">B 반고리관, C 전정 기관</td><td class="ae"></td></tr><tr><td class="al">13</td><td class="aa">G 귀인두관</td><td class="ae">고막 안팎의 압력을 같게 조절한다.</td></tr><tr><td class="al">14</td><td class="aa">③</td><td class="ae">A 반고리관(회전), B 전정 기관(기울어짐), C 달팽이관.</td></tr><tr><td class="al">15</td><td class="aa">⑤</td><td class="ae"></td></tr><tr><td class="al">16</td><td class="aa">④</td><td class="ae">A 후각 신경, B 후각 세포. 자극은 B(후각 세포) → A(후각 신경) → 뇌.</td></tr><tr><td class="al">17</td><td class="aa">②</td><td class="ae">A 유두, B 맛봉오리, C 맛세포, D 미각 신경.</td></tr><tr><td class="al">18</td><td class="aa">⑤</td><td class="ae">매운맛은 통점이 자극을 받는 피부 감각.</td></tr><tr><td class="al">19</td><td class="aa">②</td><td class="ae">쉽게 피로해지는 것은 후각.</td></tr><tr><td class="al">20</td><td class="aa">②</td><td class="ae">감각점은 신경 말단이 분화한 것, 부위마다 분포 다름, 온점·냉점 두 종류, 가장 많은 것은 통점.</td></tr><tr><td class="al">21</td><td class="aa">①</td><td class="ae"></td></tr><tr class="grp"><td colspan="3">하이탑 · 실력 강화 문제</td></tr><tr><td class="al">01</td><td class="aa">③, ④</td><td class="ae"></td></tr><tr><td class="al">02</td><td class="aa">①</td><td class="ae">A 동공, B 수정체, C 맹점, D 황반. 밝기는 수정체와 무관, 동공이 커지면 빛의 양 증가.</td></tr><tr><td class="al">03</td><td class="aa">⑤</td><td class="ae">C 맹점, D 황반 — 둘 다 망막에 있다.</td></tr><tr><td class="al">04</td><td class="aa">수축</td><td class="ae"></td></tr><tr><td class="al">05</td><td class="aa">①</td><td class="ae">4~8초는 두께 일정 → 거리 일정, 상은 계속 망막에. 물체 자체의 크기가 변하는 것은 아니다.</td></tr><tr><td class="al">06</td><td class="aa">ㄷ</td><td class="ae"></td></tr><tr><td class="al">07</td><td class="aa">①, ③</td><td class="ae">A 귓속뼈, B 반고리관, C 전정 기관, D 달팽이관, E 청각 신경.</td></tr><tr><td class="al">08</td><td class="aa">⑤</td><td class="ae"></td></tr><tr><td class="al">09</td><td class="aa">②</td><td class="ae">(가)에서는 미각과 후각이 함께 관여. 이 실험은 미각과 "후각"의 중요성을 보여 준다.</td></tr><tr><td class="al">10</td><td class="aa">②, ④</td><td class="ae">뇌는 미각·후각을 종합해 훨씬 다양한 맛을 구별. 후각=기체. 미각 신경과 후각 신경은 다른 신경.</td></tr><tr class="grp"><td colspan="3">하이탑 · 서술형 문제</td></tr><tr><td class="al">1</td><td class="aa">서술형</td><td class="ae">밝은 곳에서 어두운 곳으로 이동하였기 때문이다. 어두운 곳에서는 홍채가 축소하여 동공이 커지고, 눈으로 들어오는 빛의 양이 증가한다.</td></tr><tr><td class="al">2</td><td class="aa">오목 렌즈</td><td class="ae">상이 망막 앞에 맺히면 망막의 시각 세포가 선명한 상을 받아들이지 못한다. 오목 렌즈로 빛을 퍼지게 하면 상이 뒤로 이동해 망막에 맺히고, 시각 세포가 받아들인 자극이 시각 신경을 통해 뇌로 전달되어 선명하게 볼 수 있다.</td></tr><tr><td class="al">3</td><td class="aa">서술형</td><td class="ae">A 섬모체가 수축하여 B 수정체가 두꺼워진다.</td></tr><tr><td class="al">4</td><td class="aa">C 맹점</td><td class="ae">병아리의 상이 맹점에 맺혔기 때문이다. 맹점은 시각 신경이 모여 나가는 곳으로 시각 세포가 없어 자극이 시각 신경을 통해 뇌로 전달되지 않는다.</td></tr><tr><td class="al">5</td><td class="aa">서술형</td><td class="ae">소리에 의해 고막이 진동하면 A 귓속뼈가 진동을 증폭시켜 E 달팽이관으로 전달하고, 달팽이관의 청각 세포가 자극을 받아들여 D 청각 신경을 통해 뇌로 전달한다.</td></tr><tr><td class="al">6</td><td class="aa">B 반고리관</td><td class="ae">몸의 회전을 감지한다(회전 감각).</td></tr><tr><td class="al">7</td><td class="aa">단맛, 짠맛, 신맛, 쓴맛, 감칠맛</td><td class="ae">음식의 맛은 미각과 후각(음식 냄새) 등을 뇌에서 종합하여 느끼기 때문이다.</td></tr><tr><td class="al">8</td><td class="aa">서술형</td><td class="ae">(1) 매운맛은 혀와 입속 피부의 통점(감각점)이 자극을 받아 피부 감각 신경을 통해 뇌로 전달되어 느끼는 피부 감각이다. (2) 녹은(액체 상태) 아이스크림의 화학 물질이 맛봉오리의 맛세포를 자극하고, 미각 신경을 통해 뇌로 전달된다.</td></tr><tr><td class="al">9</td><td class="aa">서술형</td><td class="ae">온점과 냉점은 절대적인 온도가 아니라 상대적인 온도 변화를 감지한다. 오른손은 온도가 낮아져 냉점이, 왼손은 온도가 높아져 온점이 자극을 받는다.</td></tr><tr class="grp"><td colspan="3">하이탑 · 최상위권 도전 / 실전 문제</td></tr><tr><td class="al">도1</td><td class="aa">②</td><td class="ae">두께 증가 = 섬모체 수축 = 가까워짐. 정상인은 초점 조절 후 상이 망막에 맺힌다.</td></tr><tr><td class="al">도3</td><td class="aa">③</td><td class="ae">A: 가까운 물체의 상이 망막 뒤 → 원시. B: 먼 물체의 상이 망막 앞 → 근시(오목 렌즈). 맹점과는 무관.</td></tr><tr><td class="al">도4</td><td class="aa">①</td><td class="ae">A 반고리관, B 전정 기관(기울어짐), C 달팽이관(청각 → 대뇌). 압력 조절은 귀인두관.</td></tr><tr><td class="al">실1</td><td class="aa">근시</td><td class="ae">근시는 먼 곳의 상이 망막 앞에 맺혀 오목 렌즈로 교정한다. 오목 렌즈는 빛을 퍼지게 하여 실제보다 작은 상을 만들기 때문에 글씨가 작게 보인다.</td></tr><tr><td class="al">실2</td><td class="aa">서술형</td><td class="ae">회전을 멈추면 반고리관(관)은 멈추지만 관 속의 림프는 관성에 의해 원래 회전 방향으로 계속 흐른다. 이 림프가 감각모를 휘게 하여 감각 세포를 계속 자극하므로 회전하는 것처럼 느낀다.</td></tr><tr class="grp"><td colspan="3">교과서 · 탐구 / 해 보기 / 스스로 확인하기</td></tr><tr><td class="al">탐1</td><td class="aa">빛 → 각막 → 동공 → 수정체 → 유리체 → 망막</td><td class="ae"></td></tr><tr><td class="al">탐2</td><td class="aa">서술형</td><td class="ae">그림의 상이 맹점에 맺혔기 때문이다. 맹점에는 시각 세포가 없어 상이 맺혀도 볼 수 없다.</td></tr><tr><td class="al">해1</td><td class="aa">서술형</td><td class="ae">밝아지면 홍채가 확장하여 동공이 작아지고, 어두워지면 홍채가 축소하여 동공이 커진다.</td></tr><tr><td class="al">확1-1</td><td class="aa">시각 세포</td><td class="ae"></td></tr><tr><td class="al">확1-2</td><td class="aa">커, 작아</td><td class="ae"></td></tr><tr><td class="al">확1-3</td><td class="aa">서술형</td><td class="ae">밝아지므로 홍채가 확장하여 동공이 작아져 들어오는 빛의 양이 줄고, 먼 곳을 보므로 섬모체가 이완하여 수정체가 얇아진다.</td></tr><tr><td class="al">해2</td><td class="aa">서술형</td><td class="ae">소리는 공기(매질)의 진동으로 전달되므로 떨어져 있어도 들리지만, 진동의 촉감(피부 감각)은 피부가 직접 닿아야 느낄 수 있다.</td></tr><tr><td class="al">확2-1</td><td class="aa">달팽이관</td><td class="ae"></td></tr><tr><td class="al">확2-2</td><td class="aa">감각점</td><td class="ae"></td></tr><tr><td class="al">확2-3</td><td class="aa">서술형</td><td class="ae">일반 이어폰: 공기의 진동 → 고막 → 귓속뼈 → 달팽이관(청각 세포). 뼈 전도 이어폰: 머리뼈의 진동이 고막과 귓속뼈를 거치지 않고 직접 달팽이관으로 전달된다.</td></tr><tr><td class="al">해3</td><td class="aa">서술형</td><td class="ae">음식의 맛은 미각과 후각을 뇌에서 종합하여 느끼는데, 코감기로 후각이 제대로 작용하지 못하기 때문이다.</td></tr><tr><td class="al">확3-1</td><td class="aa">액체</td><td class="ae"></td></tr><tr><td class="al">확3-2</td><td class="aa">기체</td><td class="ae"></td></tr><tr><td class="al">확3-3</td><td class="aa">서술형</td><td class="ae">맛세포는 액체 상태의 화학 물질을 자극으로 받아들이므로, 아이스크림이 녹아(침에 녹아) 액체가 되어야 맛세포를 자극할 수 있다.</td></tr><tr class="grp"><td colspan="3">교과서 · 스스로 정리하기</td></tr><tr><td class="al">정1</td><td class="aa">(1)○ (2)× (3)○ (4)×</td><td class="ae">시각 세포가 없는 곳은 맹점. 밝아지면 동공이 작아진다.</td></tr><tr><td class="al">정2</td><td class="aa">ㄱ, ㄴ</td><td class="ae"></td></tr><tr><td class="al">정3</td><td class="aa">(1)× (2)○</td><td class="ae"></td></tr><tr class="grp"><td colspan="3">교과서 · 스스로 최종 점검하기 (감각 기관 문항)</td></tr><tr><td class="al">점❶</td><td class="aa">망막</td><td class="ae"></td></tr><tr><td class="al">점❷</td><td class="aa">작아, 얇아</td><td class="ae"></td></tr><tr><td class="al">점❸</td><td class="aa">귓속뼈</td><td class="ae"></td></tr><tr><td class="al">점❹</td><td class="aa">감각점</td><td class="ae"></td></tr><tr><td class="al">01</td><td class="aa">①</td><td class="ae">(가) 홍채, (나) 각막, (마) 맹점, (바) 시각 신경. 상은 망막에 맺히고(각막 X), 맹점에 상이 맺히면 보이지 않으며, 시각 신경이 모여 나가는 곳은 황반이 아니라 맹점이다.</td></tr><tr><td class="al">02</td><td class="aa">(라) 달팽이관</td><td class="ae">(가) 귓속뼈, (나) 반고리관, (다) 고막, (라) 달팽이관, (마) 청각 신경</td></tr><tr><td class="al">03</td><td class="aa">ㄴ, ㄷ</td><td class="ae"></td></tr><tr><td class="al">06</td><td class="aa">서술형</td><td class="ae">주변이 어두워지면 홍채가 축소하여 동공이 커지고, 눈으로 들어오는 빛의 양이 많아진다.</td></tr></tbody></table></section><header class="part v1"><div class="pk">Ⅴ. 생식과 유전 · 1</div><h2>생장과 생식</h2><p>세포 분열 · 체세포 분열 · 생식세포 분열 · 수정과 발생</p></header><h2 class="sec">개념 정리 <small>기본 → 응용 → 발전 → 심화</small></h2><section class="level lv-b"><div class="lv-head"><span class="lv-badge">기본</span><h3>세포 분열 · 염색체 · 생식 기관 — 용어 확실히</h3></div><div class="lv-body"><h4>① 세포 분열이 필요한 까닭</h4><p>생물이 자랄 때(<b>생장</b>) 세포가 계속 커지는 것이 아니라 <b>세포의 수가 늘어난다</b>. 세포가 커지면 <b>부피가 증가하는 비율보다 표면적이 증가하는 비율이 작아</b> 부피에 대한 표면적의 비(표면적/부피)가 작아지고, 표면을 통한 <b>물질 교환이 비효율적</b>이 된다. → 어느 정도 커지면 분열한다.</p><table class="t"><tr><th>정육면체 한 변</th><th>1 cm</th><th>2 cm</th><th>3 cm</th></tr><tr><td>표면적 (6×한 변²)</td><td>6</td><td>24</td><td>54</td></tr><tr><td>부피 (한 변³)</td><td>1</td><td>8</td><td>27</td></tr><tr><td><b>표면적/부피</b></td><td class="red">6</td><td>3</td><td>2</td></tr></table><p class="small">용어: 분열 전 세포 = <b>모세포</b>, 분열로 생긴 세포 = <b>딸세포</b>.</p><h4>② 염색체 · DNA · 유전자</h4><div class="two"><div><figure class="fig"><img src="img/v_chrom_structure.jpg" alt="염색체의 구조"><figcaption>염색체의 구조</figcaption></figure><figure class="fig"><img src="img/v_homologous.jpg" style="width:60%" alt="상동 염색체와 염색 분체"><figcaption>상동 염색체와 염색 분체</figcaption></figure></div><div><ul class="pt"><li><b>염색체</b> = <b>DNA + 단백질</b>. 분열하지 않을 때는 핵 속에 실처럼 풀어져 있다가, <b>분열할 때 응축되어 막대 모양</b>으로 보인다.</li><li><b>염색 분체</b>: 하나의 염색체를 이루는 두 가닥. 분열 전 <b>DNA가 복제</b>되어 만들어졌으므로 <b>유전 정보가 같다</b>.</li><li><b>유전자</b>: DNA에서 유전 정보를 저장하고 있는 특정 부위. (정보막대=염색체, 저장된 파일=유전자)</li><li><b>상동 염색체</b>: 모양과 크기가 같은 한 쌍. <b>부모에게서 하나씩</b> 물려받으므로 유전 정보는 서로 <b>다를 수 있다</b>.</li><li><b>상염색체</b>: 남녀 공통 (사람 1~22번, 44개) · <b>성염색체</b>: 성 결정 (X, Y)</li><li>사람 체세포: <b>46개 = 23쌍</b>. 여자 <b>44+XX</b>, 남자 <b>44+XY</b>.<br>남자의 X는 <b>어머니</b>, Y는 <b>아버지</b>에게서. 여자의 X는 부모에게서 하나씩.</li><li>핵상 표기: 상동 염색체 쌍이 있으면 <b>2n</b>(사람 2n=46), 없으면 <b>n</b>(생식세포 n=23).</li></ul></div></div><div class="two"><figure class="fig"><img src="img/v_karyotype.jpg" alt="여자 44+XX / 남자 44+XY"><figcaption>여자 44+XX / 남자 44+XY</figcaption></figure><table class="t"><tr><th>생물</th><th>염색체 수</th><th>생물</th><th>염색체 수</th></tr><tr><td>사람</td><td>46</td><td>초파리</td><td>8</td></tr><tr><td>개</td><td>78</td><td>벼</td><td>24</td></tr><tr><td>고양이</td><td>38</td><td>완두</td><td>14</td></tr><tr><td>침팬지</td><td>48</td><td>감자</td><td>48</td></tr></table></div><div class="box warn"><div class="box-t">주의</div><div class="box-b">염색체 수가 많다고 더 진화한 생물이 아니다. 침팬지와 감자는 48개로 같지만 염색체의 모양과 크기가 다르다. 같은 종이면 생식세포를 제외한 모든 세포의 염색체 수가 같다.</div></div><h4>③ 생식 기관과 생식세포</h4><div class="two"><figure class="fig"><img src="img/v_repro_organs.jpg" alt="남자와 여자의 생식 기관"><figcaption>남자와 여자의 생식 기관</figcaption></figure><table class="t">
+<tr><th></th><th>정자</th><th>난자</th></tr><tr><td>생성 장소</td><td>정소</td><td>난소</td></tr><tr><td>염색체 수</td><td>23</td><td>23</td></tr>
+<tr><td>크기</td><td>작다</td><td>크다</td></tr><tr><td>양분(세포질)</td><td>거의 없다</td><td>많다</td></tr><tr><td>운동성</td><td>있다 (꼬리)</td><td>없다</td></tr></table></div>
+<ul class="pt"><li>정소(정자 생성) → 부정소(정자가 잠시 머물며 성숙) → 수정관(정자 이동 통로)</li><li>난소(난자 생성·배란) → 수란관(수정이 일어나는 곳, 난자·수정란 이동) → 자궁(태아가 자라는 곳) → 질</li></ul></div></section>
+<section class="level lv-a"><div class="lv-head"><span class="lv-badge">응용</span><h3>체세포 분열 · 생식세포 분열 · 발생 — 과정 순서대로</h3></div><div class="lv-body"><h4>① 체세포 분열 — 염색체 수 유지 (2n → 2n)</h4><p><b>세포 주기</b> = 간기 + 분열기. <b>간기</b>: 세포가 자라고 <b>DNA 복제</b>, 세포 주기의 대부분을 차지, 핵막이 뚜렷하고 염색체는 안 보인다.</p><figure class="fig"><img src="img/v_mitosis_table.jpg" alt="체세포 분열 과정 (하이탑)"><figcaption>체세포 분열 과정 (하이탑)</figcaption></figure>
+<table class="t"><tr><th>시기</th><th>핵심 한 줄</th></tr>
+<tr><td>전기</td><td class="l"><b>핵막이 사라지고</b>, 두 가닥의 염색 분체로 된 <b>막대 모양 염색체</b>가 나타남, 방추사 형성</td></tr>
+<tr><td>중기</td><td class="l">염색체가 <b>세포 가운데 배열</b> → 염색체 관찰에 가장 좋은 시기</td></tr>
+<tr><td>후기</td><td class="l"><b>염색 분체가 분리</b>되어 양 끝(양극)으로 이동</td></tr>
+<tr><td>말기</td><td class="l">염색체가 풀어지고 <b>핵막이 다시 나타나</b> 2개의 핵 → 세포질 분열</td></tr></table><div class="two"><figure class="fig"><img src="img/v_cytokinesis.jpg" alt="세포질 분열"><figcaption>세포질 분열</figcaption></figure><ul class="pt"><li><b>동물 세포</b>: 세포막이 바깥에서 안쪽으로 <b>잘록하게 함입</b></li><li><b>식물 세포</b>: 두 핵 사이에 <b>세포판</b>이 생겨 안에서 바깥으로 자람</li><li><b>결과·의의</b>: 모세포와 <b>염색체 수·유전 정보가 같은</b> 딸세포 2개 → <b>생장</b>(다세포), <b>재생</b>(도마뱀 꼬리, 상처), <b>번식</b>(단세포 생물: 아메바·짚신벌레·세균의 분열법)</li><li>관찰 장소: 식물 <b>뿌리 끝·줄기 끝 생장점, 형성층</b> / 동물 온몸</li></ul></div><h4>② 생식세포 분열 (감수 분열) — 염색체 수 절반 (2n → n)</h4><figure class="fig"><img src="img/v_bivalent.jpg" style="width:38%" alt="상동 염색체가 접합한 2가 염색체"><figcaption>상동 염색체가 접합한 2가 염색체</figcaption></figure><figure class="fig"><img src="img/v_meiosis1.jpg" alt="감수 1분열"><figcaption>감수 1분열</figcaption></figure><figure class="fig"><img src="img/v_meiosis2.jpg" alt="감수 2분열"><figcaption>감수 2분열</figcaption></figure>
+<table class="t"><tr><th></th><th>감수 1분열</th><th>감수 2분열</th></tr>
+<tr><td>핵심 사건</td><td>전기에 <b>2가 염색체</b> 형성 → 후기에 <b>상동 염색체 분리</b></td><td>간기 없이(<b>DNA 복제 없이</b>) 바로 시작 → 후기에 <b>염색 분체 분리</b></td></tr>
+<tr><td>염색체 수</td><td class="red">2n → n (절반)</td><td>n → n (변화 없음)</td></tr>
+<tr><td>DNA양 (핵 1개당)</td><td>4 → 2</td><td>2 → 1</td></tr>
+<tr><td>결과</td><td>딸세포 2개</td><td>딸세포 4개 (정자·난자)</td></tr></table><div class="box key"><div class="box-t">생식세포 분열의 의의</div><div class="box-b">① 염색체 수가 절반인 생식세포가 수정하므로 <b>세대를 거듭해도 자손의 염색체 수가 일정</b>하게 유지된다 (23+23=46).<br>② 감수 1분열 중기에 상동 염색체 쌍이 <b>무작위로 배열·분리</b> → 유전적으로 <b>다양한 생식세포</b> → 자손의 다양성.</div></div><figure class="fig"><img src="img/v_chrom_constant.jpg" style="width:70%" alt="세대를 거듭해도 염색체 수 유지"><figcaption>세대를 거듭해도 염색체 수 유지</figcaption></figure><h4>③ 수정과 발생</h4><figure class="fig"><img src="img/v_early_dev.jpg" style="width:78%" alt="사람의 초기 발생 과정"><figcaption>사람의 초기 발생 과정</figcaption></figure>
+<div class="flow"><span>배란 (난소)</span><i>→</i><span class="k">수정 (수란관)</span><i>→</i><span>난할 (수란관을 따라 이동)</span><i>→</i><span class="k">착상 (수정 약 1주 후, 포배 상태로 자궁 안쪽 벽)</span><i>→</i><span>태반 형성 · 태아 발생</span><i>→</i><span>출산 (수정 약 266일=38주)</span></div>
+<ul class="pt"><li><b>수정란</b>: 정자(23) + 난자(23) → <b>46</b> (체세포와 같다)</li>
+<li><b>난할</b>: 수정란의 초기 세포 분열 (체세포 분열의 일종). 딸세포가 <b>자라지 않고</b> 빠르게 분열 → 세포 수 ↑, 세포 하나 크기 ↓, 염색체 수 그대로, 배아 전체 크기는 수정란과 비슷</li>
+<li><b>포배</b>: 속이 빈 공 모양의 배 · <b>임신</b>: 착상된 때부터 · <b>태아</b>: 수정 후 8주 이후(사람의 모습)</li>
+<li><b>태반</b>: 모체와 태아 사이 물질 교환 (영양소·산소 → 태아, 이산화 탄소·노폐물 → 모체)</li>
+<li><b>발생</b>: 수정란이 세포 분열을 하며 조직·기관을 형성하여 하나의 개체가 되는 과정 (세포 수 증가 + 세포의 종류가 다양해짐)</li></ul><div class="two"><figure class="fig"><img src="img/v_cleavage_model.jpg" alt="난할 과정 모형"><figcaption>난할 과정 모형</figcaption></figure><figure class="fig"><img src="img/v_fetus.jpg" alt="태아의 발생 (6주·8주·16주·24주)"><figcaption>태아의 발생 (6주·8주·16주·24주)</figcaption></figure></div></div></section>
+<section class="level lv-d"><div class="lv-head"><span class="lv-badge">발전</span><h3>탐구 · 비교 · 난할 — 표로 정리</h3></div><div class="lv-body"><h4>① 탐구 3종 완벽 정리</h4><div class="two"><div><figure class="fig"><img src="img/v_agar.jpg" alt="세포의 표면적과 부피 (하이탑)"><figcaption>세포의 표면적과 부피 (하이탑)</figcaption></figure><ul class="pt"><li>A: 2 cm 정육면체 1개 / B: 1 cm 정육면체 8개 → <b>총부피 같음(8)</b>, 표면적 A 24, B <b>48</b></li>
+<li>식용 색소에 10분 → B는 중심까지 물들고 A는 중심이 흰색</li><li>결론: 작을수록 <b>표면적/부피</b>가 커서 물질 교환에 유리 → 세포 분열로 수를 늘려 생장</li>
+<li>교과서: 4×2×2 cm 직육면체(부피 16, 표면적 40) vs 2 cm 정육면체 2개(부피 16, 표면적 48)</li></ul></div><div><figure class="fig"><img src="img/v_onion_steps.jpg" alt="양파 뿌리 끝 체세포 분열 관찰"><figcaption>양파 뿌리 끝 체세포 분열 관찰</figcaption></figure><table class="t"><tr><th>과정</th><th>약품·조작</th><th>목적</th></tr>
+<tr><td>고정</td><td class="l">에탄올:아세트산 = 3:1</td><td class="l">세포를 <b>살아 있을 때 모습</b>으로 유지</td></tr>
+<tr><td>해리</td><td class="l">묽은 염산, 55~60℃ 물중탕</td><td class="l">조직을 <b>연하게</b> → 세포가 잘 분리</td></tr>
+<tr><td>염색</td><td class="l">아세트산 카민 용액</td><td class="l"><b>핵과 염색체</b>를 붉게</td></tr>
+<tr><td>분리</td><td class="l">해부 침으로 잘게 찢기</td><td class="l">세포를 서로 떼어 놓기</td></tr>
+<tr><td>압착</td><td class="l">거름종이 위로 엄지로 누름</td><td class="l">세포를 <b>한 층으로 얇게</b> 펴기</td></tr></table>
+<p class="small">관찰 결과: <b>간기 세포가 가장 많다</b> → 간기가 세포 주기에서 가장 긴 시기. 뿌리 끝 <b>생장점</b>에서 관찰.</p></div></div><figure class="fig"><img src="img/v_lily.jpg" style="width:80%" alt="백합 꽃밥에서 생식세포 분열 관찰 (고정·염색 방법은 양파와 같음)"><figcaption>백합 꽃밥에서 생식세포 분열 관찰 (고정·염색 방법은 양파와 같음)</figcaption></figure><h4>② 체세포 분열 vs 생식세포 분열 한눈에</h4><figure class="fig"><img src="img/v_mito_vs_meio.jpg" style="width:82%" alt="v_mito_vs_meio"></figure>
+<table class="t"><tr><th>구분</th><th>체세포 분열</th><th>생식세포 분열</th></tr>
+<tr><td>분열 횟수</td><td>1회</td><td>연속 2회</td></tr><tr><td>딸세포 수</td><td>2개</td><td>4개</td></tr>
+<tr><td>2가 염색체</td><td>형성 안 됨</td><td>감수 1분열 전기에 형성</td></tr>
+<tr><td>염색체 수 변화</td><td>변화 없음 (2n → 2n)</td><td>절반 (2n → n)</td></tr>
+<tr><td>딸세포 유전자 구성</td><td>모세포와 같다</td><td>모세포와 다르며 다양</td></tr>
+<tr><td>분열 결과</td><td>생장, 재생, 단세포 생물 번식</td><td>생식세포 형성</td></tr>
+<tr><td>분열 장소</td><td>동물: 몸 전체 / 식물: 생장점, 형성층</td><td>동물: 정소, 난소 / 식물: 꽃밥, 밑씨</td></tr>
+<tr><td>공통점</td><td colspan="2">분열 전 간기에 DNA 복제 · 분열기에 염색체 응축 · 염색 분체 분리가 일어남</td></tr></table><h4>③ 난할의 특징 표</h4><table class="t"><tr><th>구분</th><th>수정란</th><th>2세포배</th><th>4세포배</th><th>8세포배</th><th>16세포배</th></tr><tr><td>세포 수</td><td>1</td><td>2</td><td>4</td><td>8</td><td>16</td></tr><tr><td>세포 하나의 상대적 크기</td><td>1</td><td>1/2</td><td>1/4</td><td>1/8</td><td>1/16</td></tr><tr><td>세포 하나의 염색체 수</td><td>46</td><td>46</td><td>46</td><td>46</td><td>46</td></tr><tr><td>배 전체 크기</td><td colspan="5">거의 일정 (세포 수 × 세포 크기)</td></tr></table></div></section>
+<section class="level lv-s"><div class="lv-head"><span class="lv-badge">심화</span><h3>그래프 · 수 세기 · 시기 판단 — 고난도 대비</h3></div><div class="lv-body"><h4>① DNA 상대량 그래프</h4>
+<svg viewBox="0 0 700 215" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="세포 분열 중 핵 1개당 DNA 상대량 변화">
+ <style>.ax{stroke:#1f2430;stroke-width:1.4}.gd{stroke:#e3e6ec}.t{font-size:11.5px;fill:#5b6272}.h{font-size:13.5px;font-weight:900;fill:#1f2430}.v{font-size:11px;fill:#1f2430}</style>
+ <g transform="translate(20,20)">
+  <text class="h" x="160" y="0" text-anchor="middle">체세포 분열</text>
+  <line class="gd" x1="30" y1="40" x2="310" y2="40"/><line class="gd" x1="30" y1="70" x2="310" y2="70"/><line class="gd" x1="30" y1="100" x2="310" y2="100"/><line class="gd" x1="30" y1="130" x2="310" y2="130"/>
+  <line class="ax" x1="30" y1="160" x2="312" y2="160"/><line class="ax" x1="30" y1="20" x2="30" y2="160"/>
+  <text class="v" x="22" y="44" text-anchor="end">4</text><text class="v" x="22" y="104" text-anchor="end">2</text><text class="v" x="22" y="134" text-anchor="end">1</text>
+  <polyline points="30,100 85,100 130,40 235,40 235,100 310,100" fill="none" stroke="#d9772b" stroke-width="3"/>
+  <line x1="130" y1="30" x2="130" y2="160" stroke="#aab" stroke-dasharray="3 3"/><line x1="235" y1="30" x2="235" y2="160" stroke="#aab" stroke-dasharray="3 3"/>
+  <text class="t" x="80" y="176" text-anchor="middle">간기 (DNA 복제)</text><text class="t" x="182" y="176" text-anchor="middle">분열기 (전·중·후·말)</text><text class="t" x="272" y="176" text-anchor="middle">딸세포</text>
+  <text class="t" x="160" y="196" text-anchor="middle">염색체 수: 2n → 2n (변화 없음) · DNA: 2 → 4 → 2</text>
+ </g>
+ <g transform="translate(360,20)">
+  <text class="h" x="160" y="0" text-anchor="middle">생식세포 분열 (감수 분열)</text>
+  <line class="gd" x1="30" y1="40" x2="310" y2="40"/><line class="gd" x1="30" y1="70" x2="310" y2="70"/><line class="gd" x1="30" y1="100" x2="310" y2="100"/><line class="gd" x1="30" y1="130" x2="310" y2="130"/>
+  <line class="ax" x1="30" y1="160" x2="312" y2="160"/><line class="ax" x1="30" y1="20" x2="30" y2="160"/>
+  <text class="v" x="22" y="44" text-anchor="end">4</text><text class="v" x="22" y="104" text-anchor="end">2</text><text class="v" x="22" y="134" text-anchor="end">1</text>
+  <polyline points="30,100 70,100 110,40 175,40 175,100 245,100 245,130 310,130" fill="none" stroke="#7b4bd1" stroke-width="3"/>
+  <line x1="110" y1="30" x2="110" y2="160" stroke="#aab" stroke-dasharray="3 3"/><line x1="175" y1="30" x2="175" y2="160" stroke="#aab" stroke-dasharray="3 3"/><line x1="245" y1="30" x2="245" y2="160" stroke="#aab" stroke-dasharray="3 3"/>
+  <text class="t" x="70" y="176" text-anchor="middle">간기 (복제)</text><text class="t" x="142" y="176" text-anchor="middle">감수 1분열</text><text class="t" x="210" y="176" text-anchor="middle">감수 2분열</text><text class="t" x="280" y="176" text-anchor="middle">생식세포</text>
+  <text class="t" x="160" y="196" text-anchor="middle">염색체 수: 2n → n (감수1) → n (감수2) · DNA: 2 → 4 → 2 → 1</text>
+ </g>
+</svg><ul class="pt"><li>그래프가 <b>2 → 4로 올라가는 구간 = 간기(DNA 복제)</b></li><li>체세포: 4 → 2 한 번 · 생식세포: 4 → 2 → 1 두 번 (두 번째 감소 = 감수 2분열)</li>
+<li>염색체 <b>수</b>는 감수 1분열에서만 절반. 감수 2분열은 염색체 수 그대로, DNA양만 절반.</li></ul><h4>② 사람 세포의 수 세기 (2n = 46)</h4><table class="t"><tr><th>시기</th><th>염색체 수</th><th>염색 분체 수</th><th>DNA 상대량</th><th>상동 염색체</th></tr><tr><td>간기 (복제 전)</td><td>46</td><td>–</td><td>2</td><td>있음</td></tr><tr><td>체세포 분열 전기·중기</td><td>46</td><td>92</td><td>4</td><td>있음 (2가 X)</td></tr><tr><td>감수 1분열 전기·중기</td><td>46 (2가 23개)</td><td>92</td><td>4</td><td>있음 (2가 O)</td></tr><tr><td>감수 2분열 전기·중기</td><td>23</td><td>46</td><td>2</td><td class="red">없음</td></tr><tr><td>정자·난자</td><td>23</td><td>–</td><td>1</td><td class="red">없음</td></tr></table><p class="small">2n=2k인 생물의 생식세포 염색체 조합 수 = 2<sup>k</sup> (예: 2n=4 → 4가지, 2n=6 → 8가지, 사람 → 2<sup>23</sup>가지)</p><h4>③ 세포 그림 보고 시기 판단하기</h4><ol class="pt"><li><b>핵막이 있고 염색체가 안 보임</b> → 간기</li><li>상동 염색체끼리 <b>붙어 있다(2가 염색체)</b> → 감수 1분열 (전기·중기)</li><li>세포 안에 모양·크기가 같은 쌍이 있는데 <b>2가가 아님</b>, 한 줄로 배열 → 체세포 분열 중기</li><li>모든 염색체의 <b>모양이 서로 다름(상동 없음)</b> + 두 가닥 → 감수 2분열</li><li>양극으로 이동하는 것이 <b>두 가닥 염색체</b> → 감수 1분열 후기 / <b>한 가닥</b>인데 한쪽 극에 상동 쌍 있음 → 체세포 후기, 상동 쌍 없음 → 감수 2분열 후기</li></ol><h4>④ 난할의 세포 주기 (심화)</h4><div class="two"><figure class="fig"><img src="img/v_cycle_rings.jpg" alt="(가) 일반 체세포 (나) 난할"><figcaption>(가) 일반 체세포 (나) 난할</figcaption></figure><figure class="fig"><img src="img/v_cleavage_graph.jpg" alt="난할 시 DNA양·세포 수·세포 크기"><figcaption>난할 시 DNA양·세포 수·세포 크기</figcaption></figure></div><p>세포 주기의 간기 = G<sub>1</sub>기(생장) + S기(DNA 복제) + G<sub>2</sub>기(분열 준비). 일반 체세포는 90% 이상이 간기지만, <b>난할은 G<sub>1</sub>·G<sub>2</sub>기가 거의 없어</b> 세포가 생장하지 않고 DNA 복제 후 바로 분열한다 → 분열이 빠르고, 세포 크기가 점점 작아진다. 세포 1개당 DNA양과 염색체 수는 일정하게 유지.</p><p class="small">난자는 <b>감수 1분열까지만 마친 상태로 배란</b>되고, 정자가 들어오면 감수 2분열을 완료한다 (하이탑 최상위 4번).</p><div class="box warn"><div class="box-t">실수 방지 체크리스트</div><div class="box-b"><ul class="pt">
+<li>염색 분체 두 가닥 = <b>같은</b> 유전 정보 / 상동 염색체 두 개 = 부모에게서 온 <b>다를 수 있는</b> 유전 정보</li>
+<li>체세포 분열에서도 <b>상동 염색체는 존재</b>하지만 접합(2가)하지 않는다</li>
+<li>상동 염색체 <b>분리 = 감수 1분열</b>, 염색 분체 분리 = 체세포 분열·감수 2분열</li>
+<li>감수 1분열과 2분열 사이에 <b>DNA 복제 없음</b></li>
+<li>양파 뿌리 끝 = 체세포 분열 관찰 (감수 분열 X) · 꽃밥 = 생식세포 분열</li>
+<li>염산 처리는 세포 분열 촉진이 아니라 <b>조직을 연하게(해리)</b> · 아세트산 카민은 방추사가 아니라 <b>핵·염색체</b> 염색</li>
+<li>난할이 진행돼도 세포 하나의 <b>염색체 수는 줄지 않는다</b> · 세포질 양은 감소</li>
+<li>남자의 X 염색체는 반드시 <b>어머니</b>에게서, Y는 <b>아버지</b>에게서</li>
+<li>세포 주기 분열기의 구분 기준은 <b>염색체의 모양과 행동</b></li></ul></div></div></div></section><header class="part v1"><div class="pk">Ⅴ-1 생장과 생식</div><h2>문제 정리</h2><p>하이탑 전 문항 + 교과서 전 문항</p></header><h3 class="sub">하이탑 ① 학습 내용 Check <span class="src">빈칸 채우기</span></h3><ul class="fills">
+<li><span class="num s">C1</span> 생장은 몸을 구성하는 <span class="blank"></span>의 수가 증가하여 일어난다.</li>
+<li><span class="num s">C2</span> 세포 분열 전의 세포는 <span class="blank"></span>, 분열하여 만들어진 2개의 세포는 <span class="blank"></span>라고 한다.</li>
+<li><span class="num s">C3</span> 세포는 크기가 ( 클, 작을 )수록 물질 교환이 효율적으로 일어난다.</li>
+<li><span class="num s">C4</span> 핵 속에 실처럼 풀어져 있다가 세포가 분열할 때 응축되어 나타나는 막대 모양의 구조는 <span class="blank"></span>이다.</li>
+<li><span class="num s">C5</span> 하나의 염색체는 유전 정보가 같은 두 가닥의 <span class="blank"></span>로 구성된다.</li>
+<li><span class="num s">C6</span> 체세포에 있는 모양과 크기가 같은 한 쌍의 염색체를 <span class="blank"></span>라고 한다.</li>
+<li><span class="num s">C7</span> 사람의 염색체는 총 <span class="blank"></span>개이며, 이 중 상염색체는 <span class="blank"></span>개, 성염색체는 <span class="blank"></span>개이다.</li>
+<li><span class="num s">C8</span> 세포 분열을 끝낸 세포가 자라서 다시 분열을 마치기까지의 과정을 <span class="blank"></span>라고 한다.</li>
+<li><span class="num s">C9</span> 세포 주기 중 핵 속의 DNA가 복제되는 시기는 <span class="blank"></span>이다.</li>
+<li><span class="num s">C10</span> 핵분열 전기에는 <span class="blank"></span>이 사라지고, 두 가닥의 염색 분체로 이루어진 <span class="blank"></span>가 나타난다.</li>
+<li><span class="num s">C11</span> 핵분열의 <span class="blank"></span>에는 염색체가 세포 가운데에 배열되고, <span class="blank"></span>에는 염색 분체가 분리되어 양 끝으로 이동한다.</li>
+<li><span class="num s">C12</span> 식물 세포는 두 핵 사이에 <span class="blank"></span>이 만들어지면서 세포질이 분리된다.</li>
+<li><span class="num s">C13</span> 체세포 분열 결과 생긴 딸세포의 염색체 수와 유전 정보는 모세포와 ( 같다, 다르다 ).</li>
+<li><span class="num s">C14</span> 감수 1분열 전기에는 <span class="blank"></span> 염색체가 접합하여 <span class="blank"></span> 염색체를 형성한다.</li>
+<li><span class="num s">C15</span> 감수 1분열에는 <span class="blank"></span>가 분리되고, 감수 2분열에는 <span class="blank"></span>가 분리된다.</li>
+<li><span class="num s">C16</span> 생식세포 분열에서는 세포 분열이 연속으로 <span class="blank"></span>회 일어나 염색체 수가 모세포의 <span class="blank"></span>인 딸세포가 형성된다.</li>
+<li><span class="num s">C17</span> 체세포 분열에서는 ( 2, 4 )개, 생식세포 분열에서는 ( 2, 4 )개의 딸세포가 만들어진다.</li>
+<li><span class="num s">C18</span> 정자는 <span class="blank"></span>에서, 난자는 <span class="blank"></span>에서 만들어진다.</li>
+<li><span class="num s">C19</span> 수정란이 난할을 거듭할수록 세포의 수는 ( 많아, 적어 )지고, 각 세포의 크기는 ( 커, 작아 )진다.</li>
+<li><span class="num s">C20</span> 수정란이 속이 빈 공 모양의 <span class="blank"></span>가 되어 자궁 내벽에 붙는 현상을 <span class="blank"></span>이라고 한다.</li>
+<li><span class="num s">C21</span> 수정 후 약 <span class="blank"></span>일이 지나면 태아가 모체 밖으로 나오는 <span class="blank"></span>이 일어난다.</li>
+</ul>
+<h3 class="sub">하이탑 ② 탐구 확인 문제</h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">T1</span><b>[세포의 표면적과 부피]</b> 한 변이 2 cm인 정육면체 우무 조각 두 개를 준비하여 A는 그대로 두고, B는 한 변이 1 cm가 되도록 8등분한 뒤 식용 색소 용액에 10분 동안 담가 두었다. 옳은 것은 ○, 옳지 않은 것은 × 하시오.</div>
+<div class="pfig"><img src="img/v_agar.jpg" alt="v_agar"></div>
+<div class="given">(1) 과정 ①에서 우무 조각의 전체 부피는 A가 B의 2배이다.<br>(2) 과정 ①에서 우무 조각의 전체 표면적은 B가 A의 2배이다.<br>(3) 과정 ②에서 식용 색소 용액은 우무 조각이 모두 잠길 정도로 넣는다.<br>(4) 과정 ③에서 우무 조각의 크기가 클수록 색소가 중심까지 물든다.<br>(5) 과정 ③에서 A와 B의 우무 조각 전체로 스며든 식용 색소의 양은 같다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">T2</span><span class="tag">적용</span>한 변의 길이가 1 cm인 정육면체 A와 2 cm인 정육면체 B를 비교한 표이다. (1) ㉠~㉢을 쓰시오. (2) 정육면체가 세포라고 할 때 물질 교환의 효율이 더 높은 것은 A와 B 중 어느 것인지 근거를 들어 설명하시오.</div>
+<table class="t"><tr><th></th><th>A (1 cm)</th><th>B (2 cm)</th></tr><tr><td>표면적(cm²)</td><td>6</td><td>㉠</td></tr><tr><td>부피(cm³)</td><td>1</td><td>㉡</td></tr><tr><td>표면적/부피</td><td>6</td><td>㉢</td></tr></table>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">T3</span><b>[체세포 분열 관찰]</b> 양파 뿌리 끝으로 체세포 분열을 관찰하였다. 옳은 것은 ○, 옳지 않은 것은 × 하시오.</div>
+<div class="pfig"><img src="img/v_onion_steps.jpg" alt="v_onion_steps"></div>
+<div class="given">(1) 과정 ①은 세포를 살아 있을 때의 모습으로 유지하기 위한 것이다.<br>(2) 과정 ②에서 세포 분열이 촉진된다.<br>(3) 과정 ③에서 핵과 염색체가 붉은색으로 염색된다.<br>(4) 과정 ④는 세포벽을 부드럽게 하기 위한 것이다.<br>(5) 과정 ⑤는 세포를 한 층으로 얇게 펴기 위한 것이다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">T4</span><span class="tag">적용</span>그림 (가)와 (나)는 양파 뿌리를 재료로 체세포 분열을 관찰하는 실험 과정의 일부이다. (가)와 (나)를 생략할 경우 각각 어떤 문제점이 생길지 설명하시오.</div>
+<div class="pfig"><img src="img/v_w2.jpg" alt="v_w2"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+</div>
+<h3 class="sub">하이탑 ③ 개념 확인 문제 <span class="src">01~20</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">01</span>세포 분열에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 하나의 세포가 둘로 나누어지는 것이다.</li><li><b>ㄴ.</b> 세포의 크기가 커지면 표면적/부피 값이 작아진다.</li><li><b>ㄷ.</b> 다세포 생물은 세포 분열로 세포 수를 늘려 생장한다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span><span class="tag">중요</span>다음은 우무를 이용한 실험과 그 결과이다. (가) 한 변의 길이가 1 cm와 2 cm인 정육면체 모양의 두 우무 조각을 붉은 식용 색소 용액에 담가 두었다. (나) 10분 정도 지난 후 우무 조각의 가운데 부분을 잘라 단면을 비교해 보았다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_c02.jpg" alt="v_c02"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 우무 조각의 단면에서 색소가 이동한 거리는 A보다 B가 길다.</li><li><b>ㄴ.</b> 우무를 세포로 가정할 때, 물질 교환의 효율은 B보다 A가 높다.</li><li><b>ㄷ.</b> 표면적/부피 값은 B보다 A가 크다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span>[03~04] 그림은 염색체의 구조를 나타낸 것이다. 염색체를 구성하는 A와 B의 이름을 쓰시오.</div>
+<div class="pfig"><img src="img/v_c03.jpg" alt="v_c03"></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">04</span><span class="tag">중요</span>(가)~(다)에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<ol class="ch c1"><li>① (가)는 상동 염색체이다.</li><li>② (나)는 염색체이다.</li><li>③ (나)는 분열하는 세포에서 관찰된다.</li><li>④ (다)에는 유전 정보가 저장되어 있다.</li><li>⑤ (다)는 (나)에 포함되어 있다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">05</span>오른쪽 그림은 어떤 생물의 체세포에 들어 있는 상동 염색체 (가), (나)를 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_c05.jpg" alt="v_c05"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 간기의 세포를 관찰한 것이다.</li><li><b>ㄴ.</b> (가)가 복제되어 (나)가 형성된다.</li><li><b>ㄷ.</b> (가)를 어머니로부터 받았다면, (나)는 아버지로부터 받은 것이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄷ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">06</span><span class="tag">중요</span>그림은 사람의 체세포에서 관찰한 염색체를 나타낸 것이다. 이에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<div class="pfig"><img src="img/v_c06.jpg" alt="v_c06"></div>
+<ol class="ch c1"><li>① 사람의 체세포에는 44개의 상염색체가 있다.</li><li>② (가)는 남자, (나)는 여자의 염색체 구성이다.</li><li>③ (가)에서 A는 아버지에게서, B는 어머니에게서 물려받은 것이다.</li><li>④ (나)에는 23쌍의 상동 염색체가 있다.</li><li>⑤ (나)의 성염색체 중 하나는 아버지에게서 물려받은 것이다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">07</span>그림은 세포 주기를 나타낸 것이다. 이에 대한 설명으로 옳은 것은?</div>
+<div class="pfig"><img src="img/v_c07.jpg" alt="v_c07"></div>
+<ol class="ch c1"><li>① 간기에는 염색체가 관찰된다.</li><li>② 간기는 분열기에 비해 소요 시간이 짧다.</li><li>③ 유전 물질의 복제는 간기에 일어난다.</li><li>④ 세포질 분열이 일어난 후에 핵분열이 일어난다.</li><li>⑤ 분열기는 세포의 행동에 따라 전기, 중기, 후기, 말기로 구분한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">08</span>[08~09] 그림은 체세포 분열 과정을 진행되는 순서에 관계없이 나타낸 것이다. 간기부터 체세포 분열이 진행되는 순서대로 기호를 나열하시오.</div>
+<div class="pfig"><img src="img/v_c08.jpg" alt="v_c08"></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">09</span><span class="tag">중요</span>각 시기의 특징을 옳게 설명한 것은?</div>
+<ol class="ch c1"><li>① (가) 상동 염색체가 분리된다.</li><li>② (나) 핵막이 사라지고 염색체가 나타난다.</li><li>③ (다) 염색체가 풀어진다.</li><li>④ (라) 유전 물질이 복제된다.</li><li>⑤ (마) 핵막이 다시 나타나고 세포질 분열이 일어난다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">10</span>그림은 식물 세포와 동물 세포의 세포질 분열을 순서 없이 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_c10.jpg" alt="v_c10"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)는 세포질이 함입된다.</li><li><b>ㄴ.</b> A는 세포판이다.</li><li><b>ㄷ.</b> (가)는 동물 세포이고, (나)는 식물 세포이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">11</span><span class="tag">중요</span>그림은 양파 뿌리에서 일어나는 체세포 분열을 관찰하는 과정을 순서 없이 나타낸 것이다. 옳은 것은?</div>
+<div class="pfig"><img src="img/v_c11.jpg" alt="v_c11"></div>
+<ol class="ch c1"><li>① (가)는 세포를 살아 있을 때와 같은 모습으로 고정하는 과정이다.</li><li>② (나)에 의해 방추사가 붉게 염색된다.</li><li>③ (다)는 세포 분열을 촉진하는 과정이다.</li><li>④ (라)와 (마)에 의해 세포벽이 연하게 된다.</li><li>⑤ 실험은 (다) → (가) → (나) → (라) → (마)의 순으로 진행한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">12</span>생식세포 분열에 대한 설명으로 옳은 것은?</div>
+<ol class="ch c1"><li>① 감수 1분열 과정에서 염색 분체가 분리된다.</li><li>② 감수 1분열 전기에 2가 염색체가 나타난다.</li><li>③ 감수 1분열이 끝난 후 감수 2분열 전에 유전 물질의 복제가 일어난다.</li><li>④ 감수 2분열에서 상동 염색체가 분리된다.</li><li>⑤ 감수 2분열 과정에서 염색체의 수가 반으로 줄어든다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">13</span>[13~14] 그림은 어떤 동물의 수컷에서 일어나는 생식세포 분열 과정을 간단히 나타낸 것이다. 이와 같은 세포 분열이 일어나는 장소를 쓰시오.</div>
+<div class="pfig"><img src="img/v_c13.jpg" alt="v_c13"></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">14</span><span class="tag">중요</span>이에 대한 설명으로 옳은 것은?</div>
+<ol class="ch c1"><li>① (가)에서 염색체 수가 2배로 증가한다.</li><li>② (나)에서 유전 물질의 양이 2배가 된다.</li><li>③ (다)에서 염색체 수가 반으로 줄어든다.</li><li>④ (라)에서 상동 염색체가 분리된다.</li><li>⑤ (라)에서 DNA양은 변화 없다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">15</span>체세포 분열과 생식세포 분열을 비교한 것으로 옳지 <u>않은</u> 것은?</div>
+<table class="t"><tr><th></th><th>구분</th><th>체세포 분열</th><th>생식세포 분열</th></tr><tr><td>①</td><td>분열 횟수</td><td>1회</td><td>2회</td></tr><tr><td>②</td><td>딸세포 수</td><td>2개</td><td>4개</td></tr><tr><td>③</td><td>2가 염색체</td><td>나타나지 않음</td><td>나타남</td></tr><tr><td>④</td><td>염색 분체 분리</td><td>일어남</td><td>일어남</td></tr><tr><td>⑤</td><td>염색체 수</td><td>절반으로 감소</td><td>변화 없음</td></tr></table>
+</div>
+<div class="prob">
+<div class="q"><span class="num">16</span><span class="tag">중요</span>그림 (가)와 (나)는 어떤 식물체에서 일어나는 두 종류의 세포 분열 과정을 간단히 나타낸 것이다. 옳지 <u>않은</u> 것은?</div>
+<div class="pfig"><img src="img/v_c16.jpg" alt="v_c16"></div>
+<ol class="ch c1"><li>① (가)는 생장할 때 활발히 일어난다.</li><li>② A 과정에서 염색 분체가 분리된다.</li><li>③ (나)는 뿌리 끝에서 활발하게 일어난다.</li><li>④ B 과정에서 2가 염색체가 나타난다.</li><li>⑤ C 과정의 결과 세포당 유전 물질의 양이 반으로 줄어든다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">17</span>[17~18] 오른쪽 그림은 어떤 생물의 체세포에 들어 있는 염색체를 나타낸 것이다. 체세포 분열을 거쳐 형성된 딸세포의 염색체 구성이 될 수 있는 것을 보기에서 모두 골라 기호로 쓰시오.</div>
+<div class="pfig"><img src="img/v_c17b.jpg" alt="v_c17b"><img src="img/v_c17.jpg" alt="v_c17"></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">18</span>생식세포 분열을 거쳐 형성된 딸세포의 염색체 구성이 될 수 있는 것을 보기에서 모두 골라 기호로 쓰시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">19</span>그림 (가)와 (나)는 사람의 생식세포를 나타낸 것이다. (가)와 (나)를 비교한 것으로 옳지 <u>않은</u> 것은?</div>
+<div class="pfig"><img src="img/v_c19.jpg" alt="v_c19"></div>
+<ol class="ch c1"><li>① (가)는 (나)보다 양분이 적다.</li><li>② (가)는 (나)보다 세포질의 양이 적다.</li><li>③ (가)는 (나)보다 염색체의 수가 많다.</li><li>④ (가)는 정소에서, (나)는 난소에서 생성된다.</li><li>⑤ (가)는 운동성이 있고, (나)는 운동성이 없다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">20</span><span class="tag">중요</span>그림은 수정란의 발생 초기에 세포 분열(난할)이 일어남에 따라 배의 모습이 변하는 과정이다. 난할이 거듭되면서 나타나는 현상으로 옳지 <u>않은</u> 것은?</div>
+<div class="pfig"><img src="img/v_c20.jpg" alt="v_c20"></div>
+<ol class="ch c1"><li>① 세포 한 개의 크기는 점점 작아진다.</li><li>② 세포 한 개의 세포질 양은 점점 감소한다.</li><li>③ 세포 한 개의 염색체 수가 점점 감소한다.</li><li>④ 배 전체의 크기는 거의 일정하게 유지된다.</li><li>⑤ 배를 구성하는 세포의 수가 점점 증가한다.</li></ol>
+</div>
+</div>
+<h3 class="sub">하이탑 ④ 실력 강화 문제 <span class="src">01~08</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">01</span>그림 (가)와 (나)는 한 변의 길이가 1 cm, 2 cm인 정육면체이고, (다)는 한 변의 길이가 2 cm인 정육면체를 한 변의 길이가 1 cm인 정육면체 8개가 되도록 자른 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_s01.jpg" alt="v_s01"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 총부피는 (가) &lt; (나) = (다)이다.</li><li><b>ㄴ.</b> 총표면적/총부피 값은 (가) = (다) &gt; (나)이다.</li><li><b>ㄷ.</b> 정육면체를 세포라고 하면, 세포에서의 물질 교환 효율은 (나)가 가장 크다.</li></ul></div>
+<ol class="ch c5"><li>① ㄷ</li><li>② ㄱ, ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span>그림은 어떤 생물의 체세포에 있는 한 쌍의 상동 염색체를 나타낸 것이다. 옳은 것을 모두 고르면? (정답 2개)</div>
+<div class="pfig"><img src="img/v_s02.jpg" alt="v_s02"></div>
+<ol class="ch c1"><li>① 염색체는 4개이다.</li><li>② A와 B는 복제되어 형성된다.</li><li>③ C와 D는 동일한 유전 정보를 갖고 있다.</li><li>④ 체세포 분열 시 (가)와 (나)는 접합하였다가 분리된다.</li><li>⑤ (가)와 (나)는 부모 중 어느 한쪽으로부터 모두 물려받은 것이다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span>그림은 어떤 사람 체세포의 염색체 구성을 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_s03.jpg" alt="v_s03"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> ⓐ와 ⓑ는 복제되어 형성된 것이다.</li><li><b>ㄴ.</b> 이 사람은 어머니에게서 X 염색체를, 아버지에게서 Y 염색체를 물려받았다.</li><li><b>ㄷ.</b> 위에서 관찰된 상염색체의 염색 분체 수는 88개이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">04</span>그림 (가)~(라)는 어떤 식물의 체세포 분열 과정 중에 있는 세포들을 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_s04.jpg" alt="v_s04"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)에서 염색 분체가 분리되어 양끝으로 이동한다.</li><li><b>ㄴ.</b> (나) 시기에 2가 염색체가 관찰된다.</li><li><b>ㄷ.</b> 체세포 분열은 (라) → (나) → (다) → (가)의 순서로 일어난다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">05</span>그림 (가)~(다)는 각각 어떤 동물의 수컷에서 일어나는 체세포 분열과 생식세포 분열 중 한 시기를 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_s05.jpg" alt="v_s05"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)는 정소에서 관찰된다.</li><li><b>ㄴ.</b> (나)의 분열 결과 생긴 딸세포에는 상동 염색체가 있다.</li><li><b>ㄷ.</b> (다)의 분열 결과 생긴 딸세포의 염색체 수는 모세포의 절반이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">06</span>그림 (가)와 (나)는 어떤 식물에서 일어나는 두 종류의 세포 분열을 간단히 나타낸 것이다. 옳은 것을 모두 고르면? (정답 2개)</div>
+<div class="pfig"><img src="img/v_s06.jpg" alt="v_s06"></div>
+<ol class="ch c1"><li>① A에는 2가 염색체가 있다.</li><li>② A가 B로 될 때 상동 염색체가 분리된다.</li><li>③ C가 D로 될 때 염색체 수가 반으로 줄어든다.</li><li>④ C의 유전 물질의 양은 E의 4배이다.</li><li>⑤ (가)의 세포 분열은 꽃밥에서, (나)의 세포 분열은 뿌리 끝에서 관찰할 수 있다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">07</span>그림은 사람의 임신이 이루어지는 과정을 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_s07.jpg" alt="v_s07"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)의 난소에서 배출되는 세포의 염색체 수는 23개이다.</li><li><b>ㄴ.</b> (나) 과정에서 DNA가 복제되지 않으므로 세포 분열이 빠르게 일어난다.</li><li><b>ㄷ.</b> (다)가 일어날 때 배의 발생 단계는 포배이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">08</span>그림 (가)~(다)는 수정란의 발생 초기에 일어나는 세포 분열 횟수에 따른 배의 크기, 세포 수, 세포 1개의 크기 변화를 순서 없이 나타낸 것이다. (가)~(다)를 옳게 짝 지은 것은? (배의 크기 - 세포 수 - 세포 1개의 크기)</div>
+<div class="pfig"><img src="img/v_s08.jpg" alt="v_s08"></div>
+<ol class="ch c3"><li>① (가) - (나) - (다)</li><li>② (가) - (다) - (나)</li><li>③ (나) - (다) - (가)</li><li>④ (다) - (가) - (나)</li><li>⑤ (다) - (나) - (가)</li></ol>
+</div>
+</div>
+<h3 class="sub">하이탑 ⑤ 서술형 문제 <span class="src">1~8</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">1</span>그림은 체세포 분열을 나타낸 것이다. (1) 세포는 크기가 어느 정도 이상 커지면 세포 분열을 하는데, 세포 분열을 하여 작은 세포로 나누어지는 것이 생명 활동에 더 효율적이다. 그 까닭을 표면적, 부피, 물질 교환의 측면에서 설명하시오. (2) 세포 분열로 형성된 딸세포의 염색체 구성을 그리고, 그렇게 표현한 까닭을 설명하시오. <span class="small">[Keyword] 표면적, 부피, 물질 교환 / 체세포 분열, 염색 분체</span></div>
+<div class="pfig"><img src="img/v_w1.jpg" alt="v_w1"></div>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">2</span>그림은 양파의 뿌리 끝을 재료로 체세포 분열을 관찰하는 실험 과정의 일부이다. (가)~(다) 과정을 거치는 까닭을 각각 설명하시오. <span class="small">[Keyword] 고정, 해리, 염색, 핵, 염색체</span></div>
+<div class="pfig"><img src="img/v_w2.jpg" alt="v_w2"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">3</span>그림은 어떤 사람의 염색체 구성을 나타낸 것이다. 이 사람의 성별을 쓰고, 그렇게 생각한 까닭을 설명하시오. <span class="small">[Keyword] 성염색체</span></div>
+<div class="pfig"><img src="img/v_w3.jpg" alt="v_w3"></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">4</span>다음은 생물의 몸에서 일어나는 몇 가지 현상이다. 이 현상들의 공통점은 무엇인지 설명하시오. <span class="small">[Keyword] 재생, 생장, 체세포 분열</span></div>
+<div class="given">• 상처 난 부위에 새살이 돋아난다.<br>• 갓 태어난 아기는 몸무게가 3.5 kg, 키는 50 cm 정도였지만, 1년 후 몸무게는 10 kg, 키는 76 cm 정도가 되었다.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">5</span>그림은 체세포 분열 과정을 순서대로 나타낸 것이다. (가)~(라) 시기의 이름을 각각 쓰고, 각 시기의 특징을 핵막의 유무와 염색체의 행동을 중심으로 설명하시오. <span class="small">[Keyword] 핵막, 염색체, 염색 분체</span></div>
+<div class="pfig"><img src="img/v_w5.jpg" alt="v_w5"></div>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">6</span>오른쪽 그림은 어떤 동물의 몸에서 일어나는 생식세포 분열 과정 중의 한 시기를 나타낸 것이다. (1) 생식세포 분열 중 어느 시기에 해당하는지 쓰고, 그렇게 생각한 까닭을 설명하시오. (2) 감수 1분열과 감수 2분열의 차이점을 염색체의 분리, 세포당 염색체 수와 유전 물질(DNA) 양의 변화 측면에서 설명하시오. (3) 이 세포가 생식세포 분열을 완료하였을 때 형성될 수 있는 생식세포의 염색체 조합을 모두 그리시오.</div>
+<div class="pfig"><img src="img/v_w6.jpg" alt="v_w6"></div>
+<div class="lines"><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">7</span>생식세포 분열의 의의를 염색체 수와 유전 정보의 측면에서 설명하시오. <span class="small">[Keyword] 암수 생식세포, 자손, 염색체 수, 유전 정보</span></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">8</span>그림은 사람에서 수정이 일어난 후 수정란이 분열하여 16세포배가 될 때까지를 나타낸 것이다. (1) 수정에 참여하는 정자와 난자의 차이점을 크기, 운동성의 측면에서 설명하시오. (2) 수정란의 염색체 수와 상대적 크기를 기준으로 각 배를 구성하는 세포 하나의 염색체 수와 상대적 크기를 표의 빈칸에 쓰고, 그렇게 생각한 까닭을 설명하시오.</div>
+<div class="pfig"><img src="img/v_w8.jpg" alt="v_w8"></div>
+<table class="t"><tr><th>구분</th><th>수정란</th><th>2세포배</th><th>4세포배</th><th>8세포배</th></tr><tr><td>염색체 수(개)</td><td>46</td><td>㉠</td><td>㉡</td><td>㉢</td></tr><tr><td>세포의 크기(상댓값)</td><td>1</td><td>㉣</td><td>㉤</td><td>㉥</td></tr></table>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+</div>
+<h3 class="sub">하이탑 ⑥ 최상위권 도전 문제 · 실전 문제 <span class="src">생장과 생식 관련 문항</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">도1</span>오른쪽 그림은 염색체의 구조를 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_t1.jpg" alt="v_t1"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> A는 DNA와 단백질로 이루어져 있다.</li><li><b>ㄴ.</b> B는 세포 주기의 간기에 관찰된다.</li><li><b>ㄷ.</b> ㉠과 ㉡의 같은 위치에 대립유전자가 있다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">도2</span>그림 (가)와 (나)는 동물의 몸에서 두 종류의 세포 분열이 일어나는 동안 핵 1개당 유전 물질의 상대량 변화를 나타낸 것이고, (다)는 A~E의 어느 한 시기에 관찰되는 세포를 나타낸 것이다. 옳은 것을 모두 고르면? (정답 2개)</div>
+<div class="pfig"><img src="img/v_t2.jpg" alt="v_t2"></div>
+<ol class="ch c1"><li>① A와 D 시기에 염색체가 가장 응축되어 나타난다.</li><li>② (다)는 B 시기 중에 관찰될 수 있는 세포이다.</li><li>③ C와 E 시기에 염색 분체의 분리가 일어난다.</li><li>④ (가)는 온몸에서, (나)는 정소와 난소에서 일어나는 세포 분열이다.</li><li>⑤ B 시기에 형성된 딸세포와 E 시기에 형성된 딸세포의 염색체 수는 같다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">도3</span>그림 (가)는 어떤 동물에서 세포 ㉠으로부터 정자가 형성되는 과정을, (나)는 세포 ⓐ~ⓒ의 핵 1개당 DNA양과 세포 1개당 염색체 수를 나타낸 것이다. ⓐ~ⓒ는 각각 세포 ㉡~㉣ 중 하나이다. (단, ㉠은 DNA 복제 전의 간기 상태의 세포이다.) 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_t3.jpg" alt="v_t3"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> ㉠의 염색체 수는 ⓑ와 같다.</li><li><b>ㄴ.</b> ⓐ는 ㉢이고, ⓒ는 ㉣이다.</li><li><b>ㄷ.</b> ㉡에서 ㉢이 형성될 때 염색체 수와 DNA양이 모두 반으로 줄어든다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">도4</span>그림 (가)는 여자의 몸에서 일어나는 배란에서 착상까지의 과정을, (나)는 사람의 체세포에 들어 있는 염색체 중 두 쌍의 상동 염색체만을 나타낸 것이다. (가)의 A와 B에서 관찰할 수 있는 (나)의 염색체가 배열된 상태를 보기에서 골라 각각 옳게 짝 지은 것은? (단, 난자는 감수 1분열만 마친 상태로 배란된다.)</div>
+<div class="pfig"><img src="img/v_t4.jpg" alt="v_t4"><img src="img/v_t4b.jpg" alt="v_t4b"></div>
+<ol class="ch c3"><li>① A - ㄱ, B - ㄴ</li><li>② A - ㄱ, B - ㄷ</li><li>③ A - ㄴ, B - ㄱ</li><li>④ A - ㄴ, B - ㄷ</li><li>⑤ A - ㄷ, B - ㄱ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">도5</span>그림은 수정란의 초기 발생 과정 중 배와 배를 구성하는 세포의 특징 변화를 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/v_t5.jpg" alt="v_t5"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 배 전체의 크기 변화는 A와 같다.</li><li><b>ㄴ.</b> 세포 1개당 세포질의 양 변화는 B와 같다.</li><li><b>ㄷ.</b> 세포 1개당 염색체 수 변화는 C와 같다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄷ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">실1</span><span class="tag">창의적 문제 해결형</span>오른쪽 그림은 어떤 동물 수컷에서 얻은 세포 (가)에 들어 있는 모든 염색체를 나타낸 것이다. 이 동물의 성염색체 구성은 사람과 같다. (가)를 참고하여 이 동물의 체세포의 염색체 수, 상염색체 수, 성염색체 구성에 대해 설명하시오. <span class="small">[Keyword] 상동 염색체, 상염색체, X 염색체, Y 염색체</span></div>
+<div class="pfig"><img src="img/v_p1.jpg" alt="v_p1"></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">실2</span><span class="tag">단계적 문제 해결형</span>그림은 정원세포가 정자를 형성하는 과정에서의 핵 1개당 DNA양의 변화를 나타낸 것이다(정원세포는 체세포 분열과 생식세포 분열을 한다). 체세포의 염색체 수가 4개인 동물의 정소에서 관찰할 수 있는 A~D 4개 세포의 염색체 배열이 다음과 같을 때 A~D는 (가)~(라) 중 각각 어느 시기에 관찰할 수 있는지 쓰고, 그렇게 판단한 근거를 설명하시오.</div>
+<div class="pfig"><img src="img/v_p2.jpg" alt="v_p2"><img src="img/v_p2b.jpg" alt="v_p2b"></div>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+</div><h3 class="sub">교과서 ① 탐구 · 해 보기 · 스스로 확인하기</h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">탐1</span><b>[탐구] 세포의 표면적과 부피 사이의 관계</b> — 가로 4 cm, 세로 2 cm, 높이 2 cm인 직육면체 우무 조각 2개 중 1개는 가운데를 잘라 정육면체 조각 2개로 만들고, 식용 색소 용액에 10분 동안 넣었다. 큰 우무 조각과 작은 우무 조각 2개 중 식용 색소에 물든 면적이 더 큰 것은?</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">탐정1</span>큰 우무 조각의 부피 및 표면적을 작은 우무 조각 2개의 전체 부피 및 표면적과 비교해 보자.</div>
+<div class="lines"><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">탐정2</span><span class="tag">의사소통</span>큰 우무 조각과 작은 우무 조각 2개가 식용 색소에 물든 면적이 다른 까닭을 이야기해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">탐정3</span><span class="tag">추리</span>우무 조각을 세포라 하고, 식용 색소를 세포에 필요한 영양소라고 할 때 세포 분열이 필요한 까닭을 설명해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-1</span>세포 1개가 2개로 나누어지는 것을 무엇이라고 하는가?</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-2</span>세포는 크기가 계속 커지는 것보다 어느 정도 커지면 나누어지는 것이 부피에 대한 표면적의 비가 상대적으로 ( 커, 작아 )서 물질 교환에 유리하다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-3</span><span class="tag">과학적 사고력</span>한 변의 길이가 1 cm, 2 cm, 3 cm인 정육면체 모양의 세포가 있을 때 각각의 표면적/부피 값을 계산하여 비교해 보자.</div>
+<div class="lines"><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해1</span><b>[해 보기] 염색체와 유전자의 관계</b> — "정보막대가 염색체라면 정보막대에 저장된 각 파일은 유전자이다." 정보막대 외에 생활에서 이용하는 다른 물건으로 염색체와 유전자의 관계를 비유해 보자.</div>
+<div class="lines"><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">발문</span>체세포 분열로 만들어진 딸세포가 모세포와 염색체 수가 같은 까닭은 무엇인가?</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">탐2</span><b>[탐구] 체세포 분열 관찰</b> — 양파 뿌리 끝을 에탄올과 아세트산을 섞은 용액에 담근 뒤, 묽은 염산에 넣어 55~60℃로 물중탕하고, 아세트산 카민 용액으로 처리하여 현미경으로 관찰하였다. (1) 아세트산 카민 용액으로 염색된 것은? (2) 관찰 결과에서 체세포 분열의 각 단계를 찾아보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-1</span>분열 중인 세포에서는 유전 물질이 꼬이고 뭉쳐서 막대 모양의 (　　　)가 나타난다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-2</span>체세포 분열 결과 만들어진 2개의 딸세포는 각각 모세포와 염색체 수가 ( 같다, 다르다 ).</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-3</span><span class="tag">과학적 사고력</span>세포 분열이 일어날 때 염색체가 실처럼 풀어진 상태로 분리된다면 어떤 문제가 있을지 설명해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">발문2</span>감수 1분열과 감수 2분열에서 각각 세포 1개에 들어 있는 염색체 수의 변화를 비교해 보자.</div>
+<div class="lines"><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해2</span><b>[해 보기] 감수 분열과 체세포 분열 비교하기</b> — 모루 끈과 자석으로 만든 염색체 모형으로 두 분열을 표현하였다. 감수 분열과 체세포 분열의 차이점을 염색체와 관련지어 토의해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확3-1</span>감수 1분열에서는 (　　　)가 서로 결합했다가 분리된다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확3-2</span>감수 분열에서는 세포 분열이 ( 2, 4 )회 연속해서 일어나 ( 2, 4 )개의 딸세포가 만들어진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확3-3</span><span class="tag">과학적 사고력</span>생식세포의 염색체 수가 모세포에 비해 절반인 까닭을 감수 분열과 관련지어 설명해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해3</span><b>[해 보기] 발생 과정 표현하기</b> — 고무찰흙으로 발생 과정 모형을 만들었다. 난할이 일반적인 체세포 분열과 다른 점은 무엇인가?</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확4-1</span>수정란은 ( 체세포, 생식세포 )와 염색체 수가 같다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확4-2</span>수정란에서 초기에 빠르게 일어나는 세포 분열을 (　　　)이라고 한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확4-3</span><span class="tag">과학적 사고력</span>수정란이 개체로 되는 과정에서 세포 수와 세포의 종류는 어떻게 변하는지 설명해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+</div>
+<h3 class="sub">교과서 ② 스스로 정리하기</h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">정1</span>세포 분열과 염색체에 대한 설명으로 옳은 것은 ○, 옳지 않은 것은 ×로 표시하시오.</div>
+<div class="given">(1) 세포 분열은 1개의 세포가 2개로 나누어지는 것이다.<br>(2) 세포가 커지면 표면적/부피 값이 커진다.<br>(3) 세포 분열이 일어날 때 염색체는 실처럼 가늘게 풀어진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">정2</span>체세포 분열에 대한 설명은 "체", 감수 분열에 대한 설명은 "감"이라고 쓰시오.</div>
+<div class="given">(1) 4개의 딸세포가 만들어진다.<br>(2) 세포 분열이 1회만 일어난다.<br>(3) 모세포와 딸세포에 들어 있는 염색체 수가 같다.<br>(4) 상동 염색체가 결합했다가 나누어져 서로 다른 딸세포로 들어간다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">정3</span>난할에 대한 설명으로 옳은 것을 보기에서 모두 고르시오.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 체세포 분열에 해당한다.</li><li><b>ㄴ.</b> 난할이 진행될수록 세포의 크기가 점점 커진다.</li><li><b>ㄷ.</b> 난할로 만들어진 세포는 체세포와 염색체 수가 같다.</li></ul></div>
+</div>
+</div>
+<h3 class="sub">교과서 ③ 스스로 최종 점검하기 <span class="src">생식 관련 문항</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">점❶</span>다세포 생물은 세포 분열로 (　　　)를 늘려 생장한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❷</span>DNA에 담긴 각각의 유전 정보를 (　　　)라고 한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❸</span>체세포 1개가 2개로 나누어지는 것을 (　　　)이라고 한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❹</span>1개의 모세포가 감수 분열을 거치면 딸세포 (　　　)개가 만들어진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❺</span>수정란이 세포 분열을 하면서 여러 과정을 거쳐 개체가 되는 것을 (　　　)이라고 한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">01</span>염색체에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 염색체를 이루는 유전 물질은 DNA이다.</li><li><b>ㄴ.</b> 세포 분열이 일어날 때 염색체를 관찰할 수 없다.</li><li><b>ㄷ.</b> 한 염색체를 이루는 두 가닥의 염색 분체는 서로 같은 유전 정보를 지닌다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span>체세포 분열과 감수 분열에 대한 설명으로 옳은 것은?</div>
+<ol class="ch c1"><li>① 세포 분열은 모두 1회만 일어난다.</li><li>② 다세포 생물은 감수 분열을 통해 생장한다.</li><li>③ 생식세포는 염색체 수가 체세포의 절반이다.</li><li>④ 양파 뿌리의 생장점에서 감수 분열을 관찰할 수 있다.</li><li>⑤ 체세포 분열이 일어날 때 상동 염색체가 서로 결합했다가 분리된다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">05</span><span class="tag">과학적 사고력</span>세포 분열이 필요한 까닭을 세포의 부피와 표면적의 관계 및 세포 표면에서 일어나는 물질 교환과 관련지어 설명하시오.</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">06</span><span class="tag">과학적 사고력</span>수정란에서 난할이 진행될 때의 특징을 딸세포의 수와 크기, 딸세포에 들어 있는 염색체 수와 관련지어 설명하시오.</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+</div><section class="akey"><h3 class="akey-h">Ⅴ-1 생장과 생식 · 정답과 해설</h3><table class="ak"><thead><tr><th>번호</th><th>정답</th><th>해설 · 포인트</th></tr></thead><tbody><tr class="grp"><td colspan="3">하이탑 · 학습 내용 Check</td></tr><tr><td class="al">C1</td><td class="aa">세포</td><td class="ae"></td></tr><tr><td class="al">C2</td><td class="aa">모세포, 딸세포</td><td class="ae"></td></tr><tr><td class="al">C3</td><td class="aa">작을</td><td class="ae"></td></tr><tr><td class="al">C4</td><td class="aa">염색체</td><td class="ae"></td></tr><tr><td class="al">C5</td><td class="aa">염색 분체</td><td class="ae"></td></tr><tr><td class="al">C6</td><td class="aa">상동 염색체</td><td class="ae"></td></tr><tr><td class="al">C7</td><td class="aa">46, 44, 2</td><td class="ae"></td></tr><tr><td class="al">C8</td><td class="aa">세포 주기</td><td class="ae"></td></tr><tr><td class="al">C9</td><td class="aa">간기</td><td class="ae"></td></tr><tr><td class="al">C10</td><td class="aa">핵막, 염색체</td><td class="ae"></td></tr><tr><td class="al">C11</td><td class="aa">중기, 후기</td><td class="ae"></td></tr><tr><td class="al">C12</td><td class="aa">세포판</td><td class="ae"></td></tr><tr><td class="al">C13</td><td class="aa">같다</td><td class="ae"></td></tr><tr><td class="al">C14</td><td class="aa">상동, 2가</td><td class="ae"></td></tr><tr><td class="al">C15</td><td class="aa">상동 염색체, 염색 분체</td><td class="ae"></td></tr><tr><td class="al">C16</td><td class="aa">2, 절반</td><td class="ae"></td></tr><tr><td class="al">C17</td><td class="aa">2, 4</td><td class="ae"></td></tr><tr><td class="al">C18</td><td class="aa">정소, 난소</td><td class="ae"></td></tr><tr><td class="al">C19</td><td class="aa">많아, 작아</td><td class="ae"></td></tr><tr><td class="al">C20</td><td class="aa">포배, 착상</td><td class="ae"></td></tr><tr><td class="al">C21</td><td class="aa">266, 출산</td><td class="ae"></td></tr><tr class="grp"><td colspan="3">하이탑 · 탐구 확인 문제</td></tr><tr><td class="al">T1</td><td class="aa">(1)× (2)○ (3)○ (4)× (5)×</td><td class="ae">부피는 8로 같고 표면적은 24 vs 48. 작을수록 중심까지 물들고, 표면적이 큰 B에 색소가 더 많이 스며든다.</td></tr><tr><td class="al">T2</td><td class="aa">(1) ㉠24 ㉡8 ㉢3 (2) A</td><td class="ae">A가 부피에 대한 표면적의 비가 커서 물질 교환에 유리하다.</td></tr><tr><td class="al">T3</td><td class="aa">(1)○ (2)× (3)○ (4)× (5)○</td><td class="ae">②는 해리(조직을 연하게), ④는 세포를 서로 분리.</td></tr><tr><td class="al">T4</td><td class="aa">서술형</td><td class="ae">(가) 묽은 염산 처리(해리)를 생략하면 조직이 단단하여 세포가 잘 분리되지 않고 겹쳐 관찰이 어렵다. (나) 아세트산 카민 염색을 생략하면 핵과 염색체가 염색되지 않아 관찰하기 어렵다.</td></tr><tr class="grp"><td colspan="3">하이탑 · 개념 확인 문제</td></tr><tr><td class="al">01</td><td class="aa">⑤</td><td class="ae"></td></tr><tr><td class="al">02</td><td class="aa">④ (ㄴ, ㄷ)</td><td class="ae">색소가 이동한 거리는 같다. 작은 A가 표면적/부피가 커 효율이 높다.</td></tr><tr><td class="al">03</td><td class="aa">A 단백질, B DNA</td><td class="ae"></td></tr><tr><td class="al">04</td><td class="aa">①</td><td class="ae">(가)는 염색 분체, (나) 염색체, (다) DNA.</td></tr><tr><td class="al">05</td><td class="aa">② (ㄷ)</td><td class="ae">막대 모양 염색체는 분열기에 관찰. (가)와 (나)는 상동 염색체이지 복제된 것이 아니다.</td></tr><tr><td class="al">06</td><td class="aa">③</td><td class="ae">(가)에서 A는 X(어머니에게서), B는 Y(아버지에게서).</td></tr><tr><td class="al">07</td><td class="aa">③</td><td class="ae">분열기는 "염색체"의 모양과 행동에 따라 구분한다.</td></tr><tr><td class="al">08</td><td class="aa">(나) → (라) → (다) → (가) → (마)</td><td class="ae">(나) 간기, (라) 전기, (다) 중기, (가) 후기, (마) 말기</td></tr><tr><td class="al">09</td><td class="aa">⑤</td><td class="ae">(가) 염색 분체 분리, (나) 간기(DNA 복제), (다) 중기(가운데 배열), (라) 전기(핵막 소실).</td></tr><tr><td class="al">10</td><td class="aa">⑤</td><td class="ae"></td></tr><tr><td class="al">11</td><td class="aa">①</td><td class="ae">순서는 (가)고정 → (다)해리 → (나)염색 → (라)분리 → (마)압착.</td></tr><tr><td class="al">12</td><td class="aa">②</td><td class="ae"></td></tr><tr><td class="al">13</td><td class="aa">정소</td><td class="ae"></td></tr><tr><td class="al">14</td><td class="aa">③</td><td class="ae">(가) DNA 복제(염색체 수 불변), (나) 2가 형성, (다) 감수 1분열(상동 분리 → 염색체 수 반), (라) 감수 2분열(염색 분체 분리, DNA 반).</td></tr><tr><td class="al">15</td><td class="aa">⑤</td><td class="ae">체세포 분열은 변화 없음, 생식세포 분열은 절반으로 감소.</td></tr><tr><td class="al">16</td><td class="aa">③</td><td class="ae">(나)는 생식세포 분열 → 꽃밥·밑씨에서.</td></tr><tr><td class="al">17</td><td class="aa">ㄹ</td><td class="ae">체세포 분열 → 모세포와 같은 4개.</td></tr><tr><td class="al">18</td><td class="aa">ㄱ, ㄴ</td><td class="ae">상동 염색체 쌍마다 하나씩(긴 것 1개 + 짧은 것 1개). ㄷ은 긴 염색체만 둘(상동 쌍) → 불가.</td></tr><tr><td class="al">19</td><td class="aa">③</td><td class="ae">정자와 난자의 염색체 수는 23개로 같다.</td></tr><tr><td class="al">20</td><td class="aa">③</td><td class="ae"></td></tr><tr class="grp"><td colspan="3">하이탑 · 실력 강화 문제</td></tr><tr><td class="al">01</td><td class="aa">② (ㄱ, ㄴ)</td><td class="ae">(가)·(다)는 6, (나)는 3. 효율은 (나)가 가장 작다.</td></tr><tr><td class="al">02</td><td class="aa">②, ③</td><td class="ae">염색체는 2개(염색 분체 4개). 접합은 감수 1분열에서만. 상동 염색체는 부모에게서 하나씩.</td></tr><tr><td class="al">03</td><td class="aa">④ (ㄴ, ㄷ)</td><td class="ae">ⓐⓑ는 상동 염색체. 상염색체 44개 × 2가닥 = 88.</td></tr><tr><td class="al">04</td><td class="aa">④ (ㄱ, ㄷ)</td><td class="ae">(가) 후기, (나) 전기, (다) 중기, (라) 간기. 체세포 분열에서 2가 염색체는 없다.</td></tr><tr><td class="al">05</td><td class="aa">⑤</td><td class="ae">(가) 감수 2분열 후기, (나) 체세포 분열 후기, (다) 감수 1분열 후기.</td></tr><tr><td class="al">06</td><td class="aa">③, ④</td><td class="ae">(가) 체세포 분열, (나) 생식세포 분열. C(DNA 4) → E(DNA 1).</td></tr><tr><td class="al">07</td><td class="aa">③ (ㄱ, ㄷ)</td><td class="ae">난할에서도 DNA는 복제된다(세포가 생장하지 않을 뿐).</td></tr><tr><td class="al">08</td><td class="aa">④</td><td class="ae">배 크기 일정(다), 세포 수 증가(가), 세포 1개 크기 감소(나).</td></tr><tr class="grp"><td colspan="3">하이탑 · 서술형 문제</td></tr><tr><td class="al">1</td><td class="aa">서술형</td><td class="ae">(1) 세포가 커지면 부피가 증가하는 비율보다 표면적이 증가하는 비율이 작아 부피에 대한 표면적의 비가 작아져 물질 교환이 비효율적이다. 작은 세포로 나누어지면 표면적/부피가 커져 물질 교환이 효율적이다. (2) 딸세포 2개 모두 모세포와 같은 염색체 구성(큰 것·작은 것 각 한 쌍, 총 4개). 체세포 분열에서는 염색 분체가 분리되어 각 딸세포로 들어가므로 염색체 수와 구성이 모세포와 같다.</td></tr><tr><td class="al">2</td><td class="aa">서술형</td><td class="ae">(가) 에탄올과 아세트산 용액: 세포를 살아 있을 때 모습으로 고정. (나) 묽은 염산에 물중탕: 조직을 연하게 하여 세포가 잘 분리되게 함(해리). (다) 아세트산 카민 용액: 핵과 염색체를 붉게 염색.</td></tr><tr><td class="al">3</td><td class="aa">남자</td><td class="ae">성염색체가 크기와 모양이 다른 X와 Y(XY)로 구성되어 있기 때문이다.</td></tr><tr><td class="al">4</td><td class="aa">서술형</td><td class="ae">모두 체세포 분열로 세포 수가 늘어나 일어나는 현상이다(재생, 생장).</td></tr><tr><td class="al">5</td><td class="aa">(가) 전기 (나) 중기 (다) 후기 (라) 말기</td><td class="ae">전기: 핵막이 사라지고 두 가닥 염색 분체로 된 염색체가 나타남. 중기: 염색체가 세포 가운데 배열. 후기: 염색 분체가 분리되어 양극으로 이동. 말기: 핵막이 다시 나타나고 염색체가 풀어지며 세포질 분열.</td></tr><tr><td class="al">6</td><td class="aa">(1) 감수 1분열 전기</td><td class="ae">(1) 상동 염색체가 접합한 2가 염색체가 관찰되므로. (2) 감수 1분열: 상동 염색체 분리, 염색체 수 반(2n→n), DNA양 반. 감수 2분열: 염색 분체 분리, 염색체 수 변화 없음, DNA양 반. (3) 큰 염색체 하나(빨강 또는 파랑) + 작은 염색체 하나(빨강 또는 파랑) → 4가지 조합.</td></tr><tr><td class="al">7</td><td class="aa">서술형</td><td class="ae">염색체 수가 체세포의 절반인 암수 생식세포가 수정하므로 세대를 거듭해도 자손의 염색체 수가 일정하게 유지된다. 또 상동 염색체가 무작위로 분리되어 다양한 유전 정보를 가진 생식세포가 만들어져 자손이 다양해진다.</td></tr><tr><td class="al">8</td><td class="aa">㉠㉡㉢ 46 · ㉣ 1/2 ㉤ 1/4 ㉥ 1/8</td><td class="ae">(1) 난자는 양분을 많이 저장해 크고 운동성이 없으며, 정자는 작고 꼬리로 운동한다. (2) 난할은 체세포 분열이므로 염색체 수는 변하지 않고, 세포가 생장하지 않고 분열만 반복하므로 크기가 작아진다.</td></tr><tr class="grp"><td colspan="3">하이탑 · 최상위권 도전 / 실전 문제</td></tr><tr><td class="al">도1</td><td class="aa">①</td><td class="ae">㉠과 ㉡은 복제된 염색 분체 → 같은 유전자. 막대 모양 B는 분열기에 관찰.</td></tr><tr><td class="al">도2</td><td class="aa">②, ③</td><td class="ae">(가) 생식세포 분열(A 간기, B 감수 1, C 감수 2), (나) 체세포 분열(D 간기, E 분열기). (다)는 2가 염색체 → B.</td></tr><tr><td class="al">도3</td><td class="aa">④</td><td class="ae">ⓐ(DNA 1, 염색체 1) = ㉣, ⓑ(4, 2) = ㉡, ⓒ(2, 1) = ㉢.</td></tr><tr><td class="al">도4</td><td class="aa">②</td><td class="ae">A(난소 속, 배란 전): 감수 1분열 — 2가 염색체(ㄱ). B(수란관의 난할 중인 배): 체세포 분열 중기(ㄷ).</td></tr><tr><td class="al">도5</td><td class="aa">③ (ㄱ, ㄴ)</td><td class="ae">C는 증가 → 세포 수. 염색체 수는 일정(A와 같은 모양).</td></tr><tr><td class="al">실1</td><td class="aa">체세포 10개, 상염색체 8개, XY</td><td class="ae">(가)에는 모양·크기가 같은 쌍(상동 염색체)이 없으므로 생식세포(n=5)이다. 따라서 체세포는 2n=10, 성염색체 2개(수컷이므로 XY)를 제외한 상염색체는 8개이다.</td></tr><tr><td class="al">실2</td><td class="aa">A-(가) B-(라) C-(나) D-(다)</td><td class="ae">A: 핵막이 있는 간기. B: 상동 염색체 없이 두 가닥 염색체 2개 → 감수 2분열. C: 상동 염색체가 2가를 형성하지 않고 한 줄로 배열 → 체세포 분열 중기. D: 2가 염색체 → 감수 1분열.</td></tr><tr class="grp"><td colspan="3">교과서 · 탐구 / 해 보기 / 스스로 확인하기</td></tr><tr><td class="al">탐1</td><td class="aa">작은 우무 조각 2개</td><td class="ae"></td></tr><tr><td class="al">탐정1</td><td class="aa">부피 같음(16 cm³), 표면적은 작은 조각 2개(48 cm²)가 큰 조각(40 cm²)보다 크다</td><td class="ae"></td></tr><tr><td class="al">탐정2</td><td class="aa">서술형</td><td class="ae">작은 조각들은 부피에 대한 표면적의 비가 커서 색소가 스며들 수 있는 면이 넓기 때문이다.</td></tr><tr><td class="al">탐정3</td><td class="aa">서술형</td><td class="ae">세포가 작을수록 부피에 대한 표면적의 비가 커서 물질 교환에 유리하다. 따라서 세포는 어느 정도 커지면 분열하여 수를 늘린다.</td></tr><tr><td class="al">확1-1</td><td class="aa">세포 분열</td><td class="ae"></td></tr><tr><td class="al">확1-2</td><td class="aa">커</td><td class="ae"></td></tr><tr><td class="al">확1-3</td><td class="aa">6, 3, 2</td><td class="ae">세포가 작을수록 표면적/부피 값이 크다.</td></tr><tr><td class="al">해1</td><td class="aa">예시</td><td class="ae">책(염색체)과 책 속의 각 장·문장(유전자), 사진 앨범(염색체)과 사진 한 장(유전자) 등</td></tr><tr><td class="al">발문</td><td class="aa">서술형</td><td class="ae">분열 전에 DNA가 복제되어 두 가닥의 염색 분체가 만들어지고, 분열할 때 염색 분체가 분리되어 각 딸세포로 하나씩 들어가기 때문이다.</td></tr><tr><td class="al">탐2</td><td class="aa">(1) 핵(염색체)</td><td class="ae">(2) 핵이 뚜렷한 간기 세포가 가장 많고, 막대 모양 염색체의 모양·행동으로 전기·중기·후기·말기를 구분한다.</td></tr><tr><td class="al">확2-1</td><td class="aa">염색체</td><td class="ae"></td></tr><tr><td class="al">확2-2</td><td class="aa">같다</td><td class="ae"></td></tr><tr><td class="al">확2-3</td><td class="aa">서술형</td><td class="ae">가늘고 긴 실 모양의 유전 물질이 서로 엉키거나 끊어져 딸세포에 유전 물질이 똑같이 나누어지지 못한다. 그래서 막대 모양으로 응축된 상태로 분리된다.</td></tr><tr><td class="al">발문2</td><td class="aa">감수 1분열: 절반으로 감소 / 감수 2분열: 변화 없음</td><td class="ae"></td></tr><tr><td class="al">해2</td><td class="aa">서술형</td><td class="ae">감수 분열은 상동 염색체가 결합했다가 분리되고, 2회 연속 분열하여 염색체 수가 절반인 딸세포 4개가 생긴다. 체세포 분열은 염색 분체가 분리되어 염색체 수가 같은 딸세포 2개가 생긴다.</td></tr><tr><td class="al">확3-1</td><td class="aa">상동 염색체</td><td class="ae"></td></tr><tr><td class="al">확3-2</td><td class="aa">2, 4</td><td class="ae"></td></tr><tr><td class="al">확3-3</td><td class="aa">서술형</td><td class="ae">감수 1분열에서 상동 염색체가 분리되어 서로 다른 딸세포로 들어가고, 감수 2분열 전에 DNA 복제가 일어나지 않기 때문이다.</td></tr><tr><td class="al">해3</td><td class="aa">서술형</td><td class="ae">분열 후 딸세포가 자라지 않고 빠르게 분열을 반복하므로, 세포 수는 늘지만 세포 하나의 크기는 점점 작아진다.</td></tr><tr><td class="al">확4-1</td><td class="aa">체세포</td><td class="ae"></td></tr><tr><td class="al">확4-2</td><td class="aa">난할</td><td class="ae"></td></tr><tr><td class="al">확4-3</td><td class="aa">서술형</td><td class="ae">세포 분열로 세포 수가 늘어나고, 세포들이 여러 종류로 분화하여 조직과 기관을 이루므로 세포의 종류가 다양해진다.</td></tr><tr class="grp"><td colspan="3">교과서 · 스스로 정리하기</td></tr><tr><td class="al">정1</td><td class="aa">(1)○ (2)× (3)×</td><td class="ae"></td></tr><tr><td class="al">정2</td><td class="aa">(1)감 (2)체 (3)체 (4)감</td><td class="ae"></td></tr><tr><td class="al">정3</td><td class="aa">ㄱ, ㄷ</td><td class="ae"></td></tr><tr class="grp"><td colspan="3">교과서 · 스스로 최종 점검하기 (생식 문항)</td></tr><tr><td class="al">점❶</td><td class="aa">세포 수</td><td class="ae"></td></tr><tr><td class="al">점❷</td><td class="aa">유전자</td><td class="ae"></td></tr><tr><td class="al">점❸</td><td class="aa">체세포 분열</td><td class="ae"></td></tr><tr><td class="al">점❹</td><td class="aa">4</td><td class="ae"></td></tr><tr><td class="al">점❺</td><td class="aa">발생</td><td class="ae"></td></tr><tr><td class="al">01</td><td class="aa">④</td><td class="ae"></td></tr><tr><td class="al">02</td><td class="aa">③</td><td class="ae"></td></tr><tr><td class="al">05</td><td class="aa">서술형</td><td class="ae">세포가 커지면 부피에 비해 표면적이 상대적으로 작아져(표면적/부피 감소) 세포 표면을 통한 물질 교환이 불리해진다. 따라서 어느 정도 커지면 분열하여 수를 늘린다.</td></tr><tr><td class="al">06</td><td class="aa">서술형</td><td class="ae">딸세포의 수는 늘어나지만 세포가 자라지 않고 분열하므로 크기는 점점 작아진다. 체세포 분열이므로 딸세포의 염색체 수는 수정란과 같다.</td></tr></tbody></table></section><header class="part v2"><div class="pk">Ⅴ. 생식과 유전 · 2</div><h2>유전의 원리</h2><p>멘델의 실험 · 우열의 원리 · 분리의 법칙 · 독립의 법칙</p></header><h2 class="sec">개념 정리 <small>기본 → 응용 → 발전 → 심화</small></h2><section class="level lv-b"><div class="lv-head"><span class="lv-badge">기본</span><h3>유전 용어와 완두의 대립 형질 — 정확한 정의</h3></div><div class="lv-body"><table class="t"><tr><th style="width:18%">용어</th><th>뜻</th><th style="width:28%">예</th></tr>
+<tr><td>유전</td><td class="l">어버이의 형질이 자손에게 전해지는 현상</td><td class="l"></td></tr>
+<tr><td>형질</td><td class="l">생물이 지닌 고유한 특성 (모양, 색, 크기 등)</td><td class="l">완두씨의 모양, 색깔</td></tr>
+<tr><td>대립 형질</td><td class="l">하나의 형질에 대해 서로 <b>뚜렷하게 대비</b>되는 특성</td><td class="l">둥근 씨 ↔ 주름진 씨</td></tr>
+<tr><td>표현형</td><td class="l">겉으로 드러나는 형질</td><td class="l">둥글다, 노란색</td></tr>
+<tr><td>유전자형</td><td class="l">형질을 나타내는 유전자 구성을 <b>기호</b>로 표시한 것</td><td class="l">RR, Rr, rr</td></tr>
+<tr><td>대립유전자</td><td class="l">대립 형질을 결정하는 유전자, <b>상동 염색체의 같은 위치</b>에 있음. 우성 = 대문자, 열성 = 소문자</td><td class="l">R 와 r</td></tr>
+<tr><td>순종</td><td class="l">몇 세대를 자가 수분해도 계속 같은 형질만 나타나는 개체 (대립유전자 구성이 같음)</td><td class="l">RR, rr, RRYY, rryy</td></tr>
+<tr><td>잡종</td><td class="l">대립 형질이 다른 순종끼리 교배하여 얻은 자손 (대립유전자 구성이 다름)</td><td class="l">Rr, RrYy</td></tr>
+<tr><td>우성 / 열성</td><td class="l">대립 형질이 다른 순종끼리 교배했을 때 잡종 1대에 <b>나타나는 형질 / 나타나지 않는 형질</b></td><td class="l">둥근(우성) / 주름진(열성)</td></tr>
+<tr><td>자가 수분 / 타가 수분</td><td class="l">한 그루 안에서의 수분 / 다른 그루의 꽃가루를 옮겨 수분</td><td class="l"></td></tr></table><div class="two"><figure class="fig"><img src="img/v_pea7.jpg" alt="멘델이 연구한 완두의 7가지 대립 형질 (위: 우성, 아래: 열성)"><figcaption>멘델이 연구한 완두의 7가지 대립 형질 (위: 우성, 아래: 열성)</figcaption></figure><div><table class="t"><tr><th>형질</th><th>우성</th><th>열성</th></tr><tr><td>씨 모양</td><td>둥글다</td><td>주름지다</td></tr><tr><td>씨 색깔</td><td>노란색</td><td>초록색</td></tr>
+<tr><td>꽃 색깔</td><td>보라색</td><td>흰색</td></tr><tr><td>콩깍지 모양</td><td>매끈하다</td><td>잘록하다</td></tr><tr><td>콩깍지 색깔</td><td>초록색</td><td>노란색</td></tr>
+<tr><td>꽃 위치</td><td>줄기 옆</td><td>줄기 끝</td></tr><tr><td>줄기의 키</td><td>크다</td><td>작다</td></tr></table>
+<p class="small">씨 색깔은 <b>노란색</b>이 우성이지만 콩깍지 색깔은 <b>초록색</b>이 우성 — 헷갈림 주의!</p></div></div><div class="box key"><div class="box-t">멘델이 완두를 실험 재료로 선택한 까닭</div><div class="box-b">① 주변에서 구하기 쉽고 재배가 쉽다 ② <b>한 세대가 짧다</b> ③ <b>자손의 수가 많아</b> 통계적 분석에 유리 ④ <b>대립 형질이 뚜렷</b> ⑤ 자가 수분과 타가 수분(인위적 교배)이 모두 가능 → 순종을 얻기 쉽다</div></div><div class="box warn"><div class="box-t">우성 ≠ 우수</div><div class="box-b">우성은 "잡종 1대에서 나타나는 형질"일 뿐, 더 좋거나 더 흔한 형질이라는 뜻이 아니다.</div></div></div></section>
+<section class="level lv-a"><div class="lv-head"><span class="lv-badge">응용</span><h3>한 가지 형질의 유전 — 우열의 원리 · 분리의 법칙</h3></div><div class="lv-body"><h4>① 한 가지 형질의 유전 (순종 둥근 × 순종 주름진)</h4><div class="two"><figure class="fig"><img src="img/v_mono_exp.jpg" alt="멘델의 실험"><figcaption>멘델의 실험</figcaption></figure><div><div class="flow"><span>어버이 RR × rr</span><i>→</i><span class="k">잡종 1대: 모두 둥근 (Rr)</span><i>→ 자가 수분 →</i><span class="k">잡종 2대: 둥근 5474 : 주름진 1850 ≈ 3 : 1</span></div><table class="t" style="max-width:300px;margin:8px auto"><tr><th>♀ \ ♂</th><th>R</th><th>r</th></tr>
+<tr><th>R</th><td style="background:#ffe27a"><b>RR</b></td><td style="background:#ffe27a"><b>Rr</b></td></tr>
+<tr><th>r</th><td style="background:#ffe27a"><b>Rr</b></td><td style="background:#cfd8e3"><b>rr</b></td></tr></table>
+<p style="text-align:center;font-size:9.5pt">유전자형 RR : Rr : rr = 1 : 2 : 1 · 표현형 둥근 : 주름진 = 3 : 1</p></div></div><div class="box exp"><div class="box-t">멘델의 가설 (교과서)</div><div class="box-b">1. 한 가지 형질은 <b>한 쌍의 유전 인자</b>(=유전자)에 의해 결정되며, 유전 인자는 부모에게서 하나씩 자손으로 전달된다.<br>2. 한 쌍의 유전 인자가 서로 다를 때 <b>하나만 형질로 표현</b>되고 나머지는 표현되지 않는다.<br>3. 한 쌍의 유전 인자는 생식세포가 만들어질 때 <b>나뉘어</b> 각 생식세포로 들어가고, 수정될 때 다시 쌍을 이룬다.</div></div><table class="t"><tr><th style="width:20%">원리</th><th>내용</th><th style="width:30%">확인되는 곳</th></tr>
+<tr><td><b>우열의 원리</b></td><td class="l">대립 형질이 다른 순종끼리 교배하면 잡종 1대에서 <b>우성 형질만</b> 나타난다</td><td class="l">잡종 1대가 모두 둥근 완두 (Rr)</td></tr>
+<tr><td><b>분리의 법칙</b></td><td class="l">생식세포를 만들 때(감수 분열) 쌍을 이루던 <b>대립유전자가 분리</b>되어 서로 다른 생식세포로 들어간다</td><td class="l">잡종 1대(Rr)가 R : r = 1 : 1로 생식세포를 만들어 잡종 2대 3 : 1</td></tr></table><div class="box tip"><div class="box-t">분리의 법칙 ↔ 감수 1분열</div><div class="box-b">대립유전자는 상동 염색체의 같은 위치에 있다 → <b>감수 1분열 후기에 상동 염색체가 분리</b>될 때 대립유전자도 분리된다.</div></div><h4>② 검정 교배 — 우성 개체가 순종인지 잡종인지 알아내기</h4><p>우성 표현형 개체를 <b>열성 순종(rr)</b>과 교배한다.</p><table class="t"><tr><th>자손</th><th>판단</th><th>까닭</th></tr><tr><td>모두 우성</td><td><b>RR</b> (순종)</td><td class="l">R만 만들어 자손이 모두 Rr</td></tr><tr><td>우성 : 열성 = 1 : 1</td><td><b>Rr</b> (잡종)</td><td class="l">R : r = 1 : 1 생식세포 → Rr : rr = 1 : 1</td></tr></table><p class="small">자가 수분으로도 알 수 있다: 자손이 모두 우성이면 순종, 우성 : 열성 = 3 : 1이면 잡종.</p></div></section>
+<section class="level lv-d"><div class="lv-head"><span class="lv-badge">발전</span><h3>두 가지 형질의 유전 — 독립의 법칙 · 16칸 해석</h3></div><div class="lv-body"><h4>① 두 가지 형질의 유전 (순종 둥글고 노란색 RRYY × 순종 주름지고 초록색 rryy)</h4><div class="two"><figure class="fig"><img src="img/v_di_exp.jpg" alt="멘델의 두 가지 형질 교배 실험"><figcaption>멘델의 두 가지 형질 교배 실험</figcaption></figure><div><div class="flow"><span>잡종 1대: 모두 둥글고 노란색 (RrYy)</span></div><p>잡종 1대의 생식세포: <b>RY : Ry : rY : ry = 1 : 1 : 1 : 1</b><br>잡종 2대: 둥노 315 : 둥초 108 : 주노 101 : 주초 32 ≈ <b>9 : 3 : 3 : 1</b></p>
+<ul class="pt"><li>씨 모양만: 둥근 (315+108) : 주름진 (101+32) = 423 : 133 ≈ <b>3 : 1</b></li><li>씨 색깔만: 노란 (315+101) : 초록 (108+32) = 416 : 140 ≈ <b>3 : 1</b></li></ul>
+<p><b>독립의 법칙</b>: 두 쌍 이상의 대립유전자가 <b>서로 영향을 미치지 않고</b> 각각 분리의 법칙에 따라 독립적으로 유전된다.</p></div></div><table class="t" style="max-width:520px;margin:8px auto"><tr><th>♀ \ ♂</th><th>RY</th><th>Ry</th><th>rY</th><th>ry</th></tr><tr><th>RY</th><td style="background:#ffe27a;font-weight:700">RRYY</td><td style="background:#ffe27a;font-weight:700">RRYy</td><td style="background:#ffe27a;font-weight:700">RrYY</td><td style="background:#ffe27a;font-weight:700">RrYy</td></tr><tr><th>Ry</th><td style="background:#ffe27a;font-weight:700">RRYy</td><td style="background:#b9e59a;font-weight:700">RRyy</td><td style="background:#ffe27a;font-weight:700">RrYy</td><td style="background:#b9e59a;font-weight:700">Rryy</td></tr><tr><th>rY</th><td style="background:#ffe27a;font-weight:700">RrYY</td><td style="background:#ffe27a;font-weight:700">RrYy</td><td style="background:#ffc98a;font-weight:700">rrYY</td><td style="background:#ffc98a;font-weight:700">rrYy</td></tr><tr><th>ry</th><td style="background:#ffe27a;font-weight:700">RrYy</td><td style="background:#b9e59a;font-weight:700">Rryy</td><td style="background:#ffc98a;font-weight:700">rrYy</td><td style="background:#8fcf8f;font-weight:700">rryy</td></tr></table><p style="text-align:center;font-size:9.5pt"><span style="background:#ffe27a;padding:1px 8px;border-radius:4px;margin:2px;display:inline-block">둥글고 노란색</span> <span style="background:#b9e59a;padding:1px 8px;border-radius:4px;margin:2px;display:inline-block">둥글고 초록색</span> <span style="background:#ffc98a;padding:1px 8px;border-radius:4px;margin:2px;display:inline-block">주름지고 노란색</span> <span style="background:#8fcf8f;padding:1px 8px;border-radius:4px;margin:2px;display:inline-block">주름지고 초록색</span><br>둥글고 노란색 9 : 둥글고 초록색 3 : 주름지고 노란색 3 : 주름지고 초록색 1</p><h4>② 잡종 2대 16칸 해부</h4><table class="t"><tr><th>표현형 (비)</th><th>유전자형 (칸 수)</th><th>그중 순종</th></tr><tr><td>둥글고 노란색 (9)</td><td>RRYY 1, RRYy 2, RrYY 2, RrYy 4</td><td>RRYY → 1/9</td></tr><tr><td>둥글고 초록색 (3)</td><td>RRyy 1, Rryy 2</td><td>RRyy → 1/3</td></tr><tr><td>주름지고 노란색 (3)</td><td>rrYY 1, rrYy 2</td><td>rrYY → 1/3</td></tr><tr><td>주름지고 초록색 (1)</td><td>rryy 1</td><td>rryy → 1 (모두 순종)</td></tr></table><p class="small">잡종 2대 전체에서 순종(RRYY, RRyy, rrYY, rryy)은 4/16 = 1/4. 유전자형의 종류는 9가지, 표현형은 4가지.</p><h4>③ 모의 실험</h4><div class="two"><figure class="fig"><img src="img/v_go_stones.jpg" alt="바둑알 모의 실험 (하이탑)"><figcaption>바둑알 모의 실험 (하이탑)</figcaption></figure><ul class="pt">
+<li>주머니 2개 = 암술(난세포)·수술(꽃가루)의 <b>잡종 1대(Rr)</b>, 바둑알 = <b>생식세포</b>, R(검정)·r(흰) = 씨 모양 대립유전자</li>
+<li>보지 않고 하나씩 꺼냄 = 생식세포 형성 시 <b>대립유전자의 분리</b>(분리의 법칙) · 짝 짓기 = <b>수정</b></li>
+<li>20회 결과 예: RR 5 : Rr 10 : rr 5 → 1 : 2 : 1, 표현형 3 : 1</li>
+<li>교과서는 <b>동전 2개(Y/y)</b>를 동시에 던짐 → 학급 전체를 합할수록 1 : 2 : 1에 가까워진다 (시행 횟수가 많을수록 이론값에 가까움)</li></ul></div></div></section>
+<section class="level lv-s"><div class="lv-head"><span class="lv-badge">심화</span><h3>확률 계산 · 역추적 · 염색체와의 연결 — 고난도 대비</h3></div><div class="lv-body"><h4>① 확률로 푸는 유전 계산 (곱의 법칙)</h4><p>독립적으로 유전되는 두 형질은 <b>각각의 확률을 곱한다</b>.</p><table class="t"><tr><th>질문 (RrYy 자가 수분)</th><th>계산</th><th>답</th></tr><tr><td class="l">둥글고 노란색</td><td>3/4 × 3/4</td><td>9/16</td></tr><tr><td class="l">주름지고 노란색</td><td>1/4 × 3/4</td><td>3/16</td></tr><tr><td class="l">유전자형이 RrYy</td><td>1/2 × 1/2</td><td>1/4</td></tr><tr><td class="l">잡종 2대 1600개 중 둥글고 초록색</td><td>1600 × 3/16</td><td>300개</td></tr><tr><td class="l">둥근 완두(잡종 2대) 중 잡종(Rr)</td><td>Rr 2 / (RR 1 + Rr 2)</td><td>2/3</td></tr><tr><td class="l">AaBbDd의 생식세포 종류</td><td>2 × 2 × 2</td><td>8가지</td></tr></table><h4>② 자손의 비로 부모 유전자형 거꾸로 찾기</h4><table class="t"><tr><th>자손의 표현형 비</th><th>부모 유전자형</th></tr><tr><td>모두 우성</td><td>AA × AA, AA × Aa, AA × aa (한쪽이 AA)</td></tr><tr><td>우성 : 열성 = 3 : 1</td><td>Aa × Aa</td></tr><tr><td>우성 : 열성 = 1 : 1</td><td>Aa × aa (검정 교배)</td></tr><tr><td>모두 열성</td><td>aa × aa</td></tr><tr><td>9 : 3 : 3 : 1</td><td>AaBb × AaBb</td></tr><tr><td>1 : 1 : 1 : 1</td><td>AaBb × aabb 또는 Aabb × aaBb</td></tr><tr><td>3 : 1 : 3 : 1</td><td>AaBb × Aabb (또는 AaBb × aaBb)</td></tr></table><p class="small">예) 둥글고 노란색 (가) × rryy → 둥노 : 주노 = 1 : 1 → 씨 모양이 1:1이므로 Rr, 색은 모두 노란색이므로 YY → (가) = <b>RrYY</b>.</p><h4>③ 유전자와 염색체</h4><div class="two"><figure class="fig"><img src="img/v_indep_side.jpg" style="width:70%" alt="독립의 법칙과 염색체"><figcaption>독립의 법칙과 염색체</figcaption></figure><ul class="pt">
+<li><b>서턴</b>: 유전 인자의 행동 = 감수 분열 때 염색체의 행동 → 유전자는 염색체에 있다 (염색체설)</li>
+<li><b>모건</b>: 초파리 연구 → 유전자는 염색체의 일정한 위치에 있다 (유전자설)</li>
+<li>독립의 법칙은 두 유전자가 <b>서로 다른 상동 염색체</b>에 있을 때만 성립한다. 같은 염색체에 있으면 함께 이동하므로(RrYy가 RY, ry 두 종류만 생성) 9:3:3:1이 나오지 않는다.</li></ul></div><div class="box exp"><div class="box-t">멘델 원리의 예외 — 중간 유전 (교과서 최종 점검 09)</div><div class="box-b">분꽃 빨간색(RR) × 흰색(WW) → 자손 1대 <b>분홍색(RW)</b> → 자가 수분 → 빨강 : 분홍 : 흰 = <b>1 : 2 : 1</b>.<br>두 대립유전자 사이의 <b>우열 관계가 뚜렷하지 않아</b> 우열의 원리는 따르지 않지만, 대립유전자가 분리되어 생식세포로 들어가므로 <b>분리의 법칙은 따른다</b>. (표현형 비 = 유전자형 비)</div></div><h4>④ 멘델 유전 실험의 의의</h4><p>형질이 물감처럼 <b>섞여서 유전되지 않음</b>을 증명(당시의 혼합설 반박)하고, <b>유전 인자(유전자)</b>를 바탕으로 유전 원리를 설명하였다. 오늘날에도 여러 생물의 유전 현상을 연구하는 기본 원리이다.</p><div class="box warn"><div class="box-t">실수 방지 체크리스트</div><div class="box-b"><ul class="pt">
+<li>잡종 1대 Rr은 둥근 대립유전자만 가진 것이 아니다 — <b>r도 가지고 있다</b> (표현만 안 됨)</li>
+<li>잡종 2대의 둥근 완두가 모두 순종인 것은 아니다 (RR 1 : Rr 2)</li>
+<li>순종 판정: RR, rr, RRYY, <b>aaBBdd</b>(모든 쌍이 같으면 순종) / Rryy는 잡종</li>
+<li>3 : 1은 <b>표현형</b> 비, 1 : 2 : 1은 <b>유전자형</b> 비</li>
+<li>우열의 원리는 잡종 1대, 분리의 법칙은 잡종 2대(와 생식세포 형성), 독립의 법칙은 두 형질 이상에서 확인</li>
+<li>"유전 인자는 염색체에 있다"는 멘델이 아니라 <b>서턴</b>의 주장 · 멘델은 한 세대가 <b>짧은</b> 완두를 사용</li>
+<li>주름진 유전자와 초록색 유전자가 항상 함께 행동하지 않는다 (독립)</li></ul></div></div></div></section><header class="part v2"><div class="pk">Ⅴ-2 유전의 원리</div><h2>문제 정리</h2><p>하이탑 전 문항 + 교과서 전 문항</p></header><h3 class="sub">하이탑 ① 학습 내용 Check <span class="src">빈칸 채우기</span></h3><ul class="fills">
+<li><span class="num s">C1</span> 완두 씨의 색깔이라는 형질에 대해 노란색과 초록색처럼 서로 대비되는 형질을 <span class="blank"></span>이라고 한다.</li>
+<li><span class="num s">C2</span> 겉으로 드러나는 형질을 <span class="blank"></span>, 유전자 구성을 기호로 표시한 것을 <span class="blank"></span>이라고 한다.</li>
+<li><span class="num s">C3</span> 순종인 둥근 완두와 주름진 완두를 교배하여 얻은 잡종 1대의 완두가 모두 둥글다면 둥근 형질이 <span class="blank"></span>이고, 주름진 형질이 <span class="blank"></span>이다.</li>
+<li><span class="num s">C4</span> 순종의 노란색 완두와 초록색 완두를 교배하였을 때 잡종 1대에서 우성 형질인 노란색 완두만 나타나는 것을 <span class="blank"></span>의 원리라고 한다.</li>
+<li><span class="num s">C5</span> 하나의 형질을 결정하는 대립유전자가 생식세포 형성 시 서로 다른 생식세포로 들어가는 것을 <span class="blank"></span>이라고 한다.</li>
+<li><span class="num s">C6</span> 완두 씨의 모양과 색깔을 결정하는 대립유전자가 서로 영향을 미치지 않고 분리의 법칙에 따라 독립적으로 유전되는 것을 <span class="blank"></span>이라고 한다.</li>
+</ul>
+<h3 class="sub">하이탑 ② 탐구 확인 문제 <span class="src">멘델의 유전 원리에 관한 모의 실험</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">T1</span>2개의 주머니에 하나는 암술, 다른 하나는 수술이라고 표시하고, 각 주머니에 R이라고 쓴 검은색 바둑알과 r이라고 쓴 흰색 바둑알을 1개씩 넣었다. 주머니 속을 보지 않고 각 주머니에서 바둑알을 하나씩 꺼내 짝 지은 뒤 다시 넣는 과정을 20회 반복하였다. 옳은 것은 ○, 옳지 않은 것은 × 하시오.</div>
+<div class="pfig"><img src="img/v_go_table.jpg" alt="v_go_table"></div>
+<div class="given">(1) 바둑알은 생식세포를 의미한다.<br>(2) 바둑알에 쓰여 있는 R와 r는 완두 씨 모양의 대립유전자이다.<br>(3) 과정 ③에서 바둑알을 하나씩 꺼내는 것은 체세포 분열이 일어나는 것을 의미한다.<br>(4) 자손의 표현형의 분리비는 둥근 완두 : 주름진 완두가 1 : 1이다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">T2</span><span class="tag">적용</span>위 탐구 내용과 관련이 <u>없는</u> 것은?</div>
+<ol class="ch c1"><li>① 하나의 형질은 한 쌍의 대립유전자에 의해 결정된다.</li><li>② 한 쌍의 대립유전자는 부모로부터 각각 하나씩 물려받은 것이다.</li><li>③ 쌍을 이룬 대립유전자가 다를 경우 우성 형질만 표현되고 열성 형질은 표현되지 않는다.</li><li>④ 쌍을 이룬 대립유전자가 생식세포가 만들어질 때 분리되어 서로 다른 생식세포로 들어간다.</li><li>⑤ 두 가지 이상의 형질이 동시에 유전될 때 각각의 형질을 결정하는 대립유전자는 독립적으로 유전된다.</li></ol>
+</div>
+</div>
+<h3 class="sub">하이탑 ③ 개념 확인 문제 <span class="src">01~12</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">01</span>멘델이 완두를 유전 실험 재료로 사용한 까닭으로 적절하지 <u>않은</u> 것은?</div>
+<ol class="ch c1"><li>① 구하기 쉽다.</li><li>② 한 세대가 길다.</li><li>③ 자유롭게 교배할 수 있다.</li><li>④ 대립 형질이 뚜렷하다.</li><li>⑤ 자손의 수가 많아서 통계적으로 분석하기 쉽다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span>다음 중 순종인 것을 모두 고르시오.</div>
+<div class="given">ㄱ. RR　　ㄴ. rrYY　　ㄷ. Rryy　　ㄹ. aaBBdd</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span><span class="tag">중요</span>유전 용어에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<ol class="ch c1"><li>① 표현형은 겉으로 드러나는 형질이다.</li><li>② 대립 형질은 같은 종류의 특성에 대해 서로 대비되는 형질이다.</li><li>③ 형질은 생물이 지니는 크기, 모양, 색깔 등의 고유한 특성이다.</li><li>④ 순종은 몇 세대를 자가 수분해도 계속 같은 형질만 나타나는 개체이다.</li><li>⑤ 우성은 대립 형질이 다른 순종끼리 교배할 때 잡종 1대에서 나타나지 않는 형질이다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">04</span><span class="tag">중요</span>[04~05] 순종의 둥근 완두와 순종의 주름진 완두를 교배하여 잡종 1대를 얻었다. 잡종 1대의 완두에 대한 설명으로 옳은 것은?</div>
+<ol class="ch c1"><li>① 모두 둥근 완두이다.</li><li>② 모두 주름진 완두이다.</li><li>③ 둥근 대립유전자만 가지고 있다.</li><li>④ 주름진 대립유전자만 가지고 있다.</li><li>⑤ 둥근 완두와 주름진 완두가 1 : 1의 비율로 나타난다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">05</span>잡종 1대를 자가 수분하여 얻은 잡종 2대 800개의 완두 중에서 둥근 완두는 이론적으로 몇 개인가?</div>
+<ol class="ch c5"><li>① 0개</li><li>② 200개</li><li>③ 400개</li><li>④ 600개</li><li>⑤ 800개</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">06</span>멘델의 가설로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 유전 인자는 염색체에 있다.</li><li><b>ㄴ.</b> 한 쌍의 유전 인자가 서로 다를 때 하나의 유전 인자만 형질로 표현된다.</li><li><b>ㄷ.</b> 한 쌍의 유전 인자는 생식세포를 만들 때 각 생식세포로 나뉘어 들어간다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">07</span>멘델이 연구한 완두의 대립 형질(콩깍지 모양 매끈함>잘록함, 콩깍지 색 초록>노랑, 꽃 색 보라>흰, 꽃 위치 줄기 옆>줄기 끝, 키 큼>작음)에 대한 설명으로 옳은 것은? (단, 앞쪽이 우성)</div>
+<ol class="ch c1"><li>① 매끈한 콩깍지를 가진 완두끼리 교배하면 항상 매끈한 콩깍지만 나온다.</li><li>② 노란색 콩깍지를 가진 완두 중에는 초록색 대립유전자를 가진 것이 있다.</li><li>③ 보라색 꽃과 흰색 꽃을 가진 완두를 교배하면 보라색 꽃만 나온다.</li><li>④ 줄기 끝에 꽃이 피는 완두를 자가 수분하면 모두 줄기 끝에 꽃이 핀다.</li><li>⑤ 순종인 키 큰 완두와 키 작은 완두를 교배하면 키 큰 완두와 작은 완두가 1 : 1로 나온다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">08</span>둥근 완두 (가), (나)를 각각 주름진 완두와 교배하였더니 (가)에서는 (다) 둥근 완두만, (나)에서는 (라) 둥근 완두와 (마) 주름진 완두가 1 : 1로 나왔다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)는 Rr, (나)는 RR이다.</li><li><b>ㄴ.</b> (다)는 주름진 유전자를 갖는다.</li><li><b>ㄷ.</b> (라)와 (마)를 교배하면 둥근 완두 : 주름진 완두 = 1 : 1로 나온다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">09</span>[09~12] 순종의 둥글고 노란색 완두(RRYY)와 주름지고 초록색 완두(rryy)를 교배하여 잡종 1대를 얻고, 잡종 1대를 자가 수분하여 잡종 2대를 얻었다. 잡종 1대의 유전자형을 쓰시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">10</span>잡종 1대에서 만들어지는 생식세포의 유전자형을 모두 쓰시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">11</span>잡종 2대의 표현형 분리비(둥글고 노란색 : 둥글고 초록색 : 주름지고 노란색 : 주름지고 초록색)로 옳은 것은?</div>
+<ol class="ch c3"><li>① 1 : 0 : 0 : 1</li><li>② 1 : 1 : 1 : 1</li><li>③ 3 : 0 : 0 : 1</li><li>④ 3 : 1 : 3 : 1</li><li>⑤ 9 : 3 : 3 : 1</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">12</span><span class="tag">중요</span>이 실험에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 씨의 모양과 색깔은 독립적으로 유전된다.</li><li><b>ㄴ.</b> 잡종 2대에서 둥글고 노란색인 완두는 모두 순종이다.</li><li><b>ㄷ.</b> 씨의 모양과 색깔은 분리의 법칙을 따르지 않는다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄱ, ㄷ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+</div>
+<h3 class="sub">하이탑 ④ 실력 강화 문제 <span class="src">01~04</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">01</span>표는 어떤 동물의 털 색깔 유전을 알아보기 위한 교배 실험 결과이다. 이 동물의 털 색깔은 멘델의 유전 원리를 따른다. (단, 털 색깔의 우성 대립유전자는 B, 열성 대립유전자는 b로 나타낸다.) 옳은 것을 모두 고르면? (정답 2개)</div>
+<div class="pfig"><img src="img/g_s01.jpg" alt="g_s01"></div>
+<ol class="ch c1"><li>① 털 색깔은 흰색이 우성이고, 회색이 열성이다.</li><li>② (가)와 (나)는 모두 털 색깔 유전자형이 Bb로 같다.</li><li>③ (다)와 (라)는 모두 털 색깔 유전자형이 순종이다.</li><li>④ (마)와 (바)는 모두 털 색깔 유전자형이 순종이다.</li><li>⑤ (사)와 (아)는 각각 두 종류의 생식세포를 형성한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">02</span>그림은 멘델의 유전 원리를 따르는 완두의 꽃 색깔에 대한 교배 실험을 나타낸 것이다. (단, 어버이는 모두 순종이다.) 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><img src="img/g_s02.jpg" alt="g_s02"></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 꽃 색깔은 보라색이 흰색에 대해 우성이다.</li><li><b>ㄴ.</b> 잡종 1대는 흰색 대립유전자를 가지고 있다.</li><li><b>ㄷ.</b> 잡종 2대의 보라색 꽃 중에서 유전자형이 순종인 것과 잡종인 것의 비율은 1 : 2이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄱ, ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span>[03~04] 그림과 같이 순종의 둥글고 노란색인 완두(RRYY)와 주름지고 초록색인 완두(rryy)를 교배하여 잡종 1대를 얻고, 잡종 1대를 자가 수분하여 잡종 2대를 얻었다. 옳은 것을 모두 고르면? (정답 2개)</div>
+<div class="pfig"><img src="img/g_s03.jpg" alt="g_s03"></div>
+<ol class="ch c1"><li>① 어버이의 둥글고 노란색 완두에서 4종류의 생식세포가 만들어진다.</li><li>② 잡종 1대의 표현형은 우열의 원리에 따라 둥글고 노란색으로 나타난다.</li><li>③ 잡종 2대에서 둥근 완두와 주름진 완두는 3 : 1의 비율로 나타난다.</li><li>④ 잡종 2대의 주름지고 노란색인 완두의 유전자형은 모두 순종이다.</li><li>⑤ 완두 씨를 주름지게 하는 유전자와 초록색을 나타내는 유전자는 항상 함께 행동한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">04</span>잡종 2대의 어떤 둥글고 노란색인 완두 (가)를 주름지고 초록색인 완두와 교배하였더니 그림과 같은 결과가 나왔다(둥글고 노란색 : 둥글고 초록색 = 1 : 1). (가)의 유전자형을 쓰시오.</div>
+<div class="pfig"><img src="img/g_s04.jpg" alt="g_s04"></div>
+</div>
+</div>
+<h3 class="sub">하이탑 ⑤ 서술형 문제 <span class="src">1~3</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">1</span>그림은 순종의 노란색 완두(YY)와 초록색 완두(yy)를 교배하여 잡종 1대를 얻고, 잡종 1대를 자가 수분하여 잡종 2대를 얻는 과정이다. (1) 완두 씨 색깔은 노란색과 초록색 중 어떤 것이 우성인지 근거를 들어 설명하시오. (2) 잡종 1대에서 생식세포를 만들 때 대립유전자 Y나 y가 하나씩 들어가는 것과 관련 있는 멘델의 유전 원리를 설명하시오. (3) 잡종 2대에서 (가)~(라)의 유전자형을 각각 쓰고, 유전자형과 표현형의 분리비를 설명하시오.</div>
+<div class="pfig"><img src="img/g_w1.jpg" alt="g_w1"></div>
+<div class="lines"><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">2</span>완두의 콩깍지는 오른쪽 그림과 같이 초록색이 있으며, 초록색이 노란색에 대해 우성이다. (1) 콩깍지 색깔이 초록색인 완두와 노란색인 완두의 유전자형으로 가능한 것을 각각 모두 쓰시오. (단, 초록색 대립유전자는 G, 노란색 대립유전자는 g로 표시한다.) (2) 콩깍지가 초록색인 어떤 완두의 유전자형을 알아보기 위한 방법을 설명하시오.</div>
+<div class="pfig"><img src="img/g_w2.jpg" alt="g_w2"></div>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">3</span>그림은 순종의 둥글고 노란색인 완두(RRYY)와 주름지고 초록색인 완두(rryy)를 교배한 실험 결과이다. 잡종 2대의 결과를 분석하여 알 수 있는 멘델의 유전 원리를 설명하시오. <span class="small">[Keyword] 형질, 분리, 독립</span></div>
+<div class="pfig"><img src="img/g_w3.jpg" alt="g_w3"></div>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+</div><h3 class="sub">교과서 ① 해 보기 · 스스로 확인하기</h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">해1</span><b>[해 보기] 한 가지 형질에 대한 순종 완두의 교배 실험</b> — 씨의 색깔이 노란색인 순종 완두와 초록색인 순종 완두의 꽃 중 한쪽의 수술을 제거한 다음, 이 꽃의 암술에 다른 완두꽃의 꽃가루를 옮겨 수분하였더니 자손 1대에서 노란색 완두씨만 나왔다. 이 교배 결과로 알 수 있는 사실을 토의해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해2</span><b>[해 보기] 분리의 법칙 확인하기</b> — 동전 2개의 양면에 각각 Y와 y를 붙이고 두 사람이 동시에 동전을 던져 앞면의 유전자를 합하여 자손의 유전자형을 정하는 과정을 5회 반복한 뒤 학급 전체 결과를 합하였다. 동전 던지기로 분리의 법칙을 설명할 수 있는 까닭을 생각해 보고, 활동 결과를 멘델의 완두 교배 실험 결과와 비교해 보자.</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-1</span>부모의 형질이 자손에게 전달되는 현상을 무엇이라고 하는가?</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-2</span>쌍을 이루던 대립유전자가 감수 분열이 일어날 때 분리되어 서로 다른 생식세포로 들어가는 유전 원리를 (　　　)의 법칙이라고 한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확1-3</span><span class="tag">과학적 사고력</span>분리의 법칙에 따라 1쌍의 대립유전자가 분리되는 것은 감수 분열과 관련지을 때 어떤 단계에 해당하는지 설명해 보자.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">해3</span><b>[해 보기] 멘델의 유전 원리가 적용되는 사례 조사하기</b> — 모둠별로 자료를 조사한 후 멘델의 유전 원리가 어떻게 적용되는지 발표해 보자.</div>
+<div class="lines"><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-1</span>2쌍 이상의 대립유전자가 서로 영향을 미치지 않고 각각 분리의 법칙에 따라 유전되는 원리를 (　　　)의 법칙이라고 한다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">확2-2</span><span class="tag">과학적 사고력</span>씨의 모양이 둥글고 색깔이 노란색이며 유전자형이 RrYy인 완두를 씨가 주름지고 초록색이며 유전자형이 rryy인 완두와 교배하였을 때 자손 1대에서 나타나는 표현형의 비를 설명해 보자.</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+</div>
+<h3 class="sub">교과서 ② 스스로 정리하기 · 스스로 최종 점검하기 <span class="src">멘델 관련 문항</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">정1</span>멘델의 유전 원리에 대한 설명으로 옳은 것은 ○, 옳지 않은 것은 ×로 표시하시오.</div>
+<div class="given">(1) 하나의 형질에서 구분되는 변이를 대립 형질이라고 한다.<br>(2) 2가지 형질이 유전될 때 각 형질의 대립유전자는 분리의 법칙을 따르지 않는다.<br>(3) 완두씨의 색깔에서 노란색이 우성이고 초록색이 열성이라면 씨의 색깔이 노란색인 순종 완두와 초록색인 순종 완두를 교배했을 때 자손 1대에서 씨가 초록색인 완두만 나타난다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">정2</span>씨의 색깔이 노란색인 순종 완두와 초록색인 순종 완두를 교배하여 자손 1대를 얻고, 이를 자가 수분하여 얻은 자손 2대에서 유전자형이 Yy인 완두가 나올 확률은?</div>
+<ol class="ch c5"><li>① 20 %</li><li>② 25 %</li><li>③ 50 %</li><li>④ 75 %</li><li>⑤ 100 %</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❻</span>(　　　)은 생물이 지니고 있는 여러 가지 특성이다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❼</span>멘델이 생각한 유전 인자는 (　　　)이다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">점❽</span>(　　　)의 법칙에 따르면 완두씨의 모양과 색깔에 대한 대립유전자 쌍이 서로 영향을 미치지 않고 각각 분리의 법칙에 따라 유전된다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">03</span>그림은 씨의 모양이 둥근 순종 완두(RR)와 주름진 순종 완두(rr)의 교배 실험 결과이다. 이에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<ol class="ch c1"><li>① 씨의 모양이 둥근 것이 우성이다.</li><li>② 이 유전 현상은 멘델의 분리의 법칙을 따른다.</li><li>③ 자손 1대의 유전자형은 Rr이다.</li><li>④ 자손 1대에서는 유전자형이 다른 2 종류의 생식세포가 만들어진다.</li><li>⑤ 자손 2대에서 둥근 완두의 유전자형은 모두 같다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">07</span><span class="tag">과학적 사고력</span>그림은 씨의 모양이 둥글고 색깔이 노란색인 순종 완두(RRYY)와 주름지고 초록색인 순종 완두(rryy)를 교배하여 자손을 얻는 과정이다. 완두씨의 모양은 둥근 모양이 우성이고, 색깔은 노란색이 우성이라면 자손 1대인 (가)의 표현형을 쓰고, (가)에서 만들어지는 생식세포의 유전자형을 설명하시오.</div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">09</span><span class="tag">과학적 의사소통 능력</span>분꽃의 꽃잎 색깔: 빨간색(RR) × 흰색(WW) → 자손 1대 분홍색(RW) → 자가 수분 → 자손 2대 빨간색 : 분홍색 : 흰색 = 1 : 2 : 1. (1) 자손 1대에서 부모 세대에 없는 분홍색 꽃잎이 나타난 까닭을 빨간색 꽃잎 유전자와 흰색 꽃잎 유전자의 우열 관계와 관련지어 예상하시오. (2) 분꽃의 꽃잎 색깔이 멘델의 유전 원리에 따라 유전되는지에 대한 자신의 생각을 설명하시오.</div>
+<div class="lines"><div></div><div></div><div></div><div></div></div>
+</div>
+</div><section class="akey"><h3 class="akey-h">Ⅴ-2 유전의 원리 · 정답과 해설</h3><table class="ak"><thead><tr><th>번호</th><th>정답</th><th>해설 · 포인트</th></tr></thead><tbody><tr class="grp"><td colspan="3">하이탑 · 학습 내용 Check</td></tr><tr><td class="al">C1</td><td class="aa">대립 형질</td><td class="ae"></td></tr><tr><td class="al">C2</td><td class="aa">표현형, 유전자형</td><td class="ae"></td></tr><tr><td class="al">C3</td><td class="aa">우성, 열성</td><td class="ae"></td></tr><tr><td class="al">C4</td><td class="aa">우열</td><td class="ae"></td></tr><tr><td class="al">C5</td><td class="aa">분리의 법칙</td><td class="ae"></td></tr><tr><td class="al">C6</td><td class="aa">독립의 법칙</td><td class="ae"></td></tr><tr class="grp"><td colspan="3">하이탑 · 탐구 확인 문제</td></tr><tr><td class="al">T1</td><td class="aa">(1)○ (2)○ (3)× (4)×</td><td class="ae">하나씩 꺼내는 것은 생식세포 형성 시 대립유전자의 분리. 결과 RR 5 : Rr 10 : rr 5 → 표현형 3 : 1.</td></tr><tr><td class="al">T2</td><td class="aa">⑤</td><td class="ae">한 가지 형질만 다룬 실험이므로 독립의 법칙과는 관련이 없다.</td></tr><tr class="grp"><td colspan="3">하이탑 · 개념 확인 문제</td></tr><tr><td class="al">01</td><td class="aa">②</td><td class="ae">한 세대가 짧다.</td></tr><tr><td class="al">02</td><td class="aa">ㄱ, ㄴ, ㄹ</td><td class="ae">모든 대립유전자 쌍이 같은 기호로 이루어져야 순종.</td></tr><tr><td class="al">03</td><td class="aa">⑤</td><td class="ae">잡종 1대에서 나타나는 형질이 우성, 나타나지 않는 형질이 열성.</td></tr><tr><td class="al">04</td><td class="aa">①</td><td class="ae">잡종 1대는 Rr → 모두 둥근 완두.</td></tr><tr><td class="al">05</td><td class="aa">④</td><td class="ae">800 × 3/4 = 600</td></tr><tr><td class="al">06</td><td class="aa">④</td><td class="ae">유전 인자가 염색체에 있다는 것은 서턴의 주장.</td></tr><tr><td class="al">07</td><td class="aa">④</td><td class="ae">줄기 끝(열성)은 항상 순종(aa) → 자가 수분하면 모두 열성. 노란색 콩깍지는 열성이라 초록 유전자를 가질 수 없다.</td></tr><tr><td class="al">08</td><td class="aa">④</td><td class="ae">(가) RR, (나) Rr. (다) Rr, (라) Rr × (마) rr → 1 : 1.</td></tr><tr><td class="al">09</td><td class="aa">RrYy</td><td class="ae"></td></tr><tr><td class="al">10</td><td class="aa">RY, Ry, rY, ry</td><td class="ae">1 : 1 : 1 : 1</td></tr><tr><td class="al">11</td><td class="aa">⑤</td><td class="ae"></td></tr><tr><td class="al">12</td><td class="aa">①</td><td class="ae">잡종 2대 둥글고 노란색 중 순종(RRYY)은 1/9뿐. 각 형질은 분리의 법칙을 따른다.</td></tr><tr class="grp"><td colspan="3">하이탑 · 실력 강화 문제</td></tr><tr><td class="al">01</td><td class="aa">②, ④</td><td class="ae">회색이 우성. (가)×(나) → 3:1이므로 둘 다 Bb. (다)×(라) → 모두 회색이므로 적어도 하나는 BB(둘 다 순종인지는 알 수 없음). (마)×흰(바) → 모두 회색이므로 (마) BB, (바) bb. (사) Bb, (아) bb → (아)는 한 종류.</td></tr><tr><td class="al">02</td><td class="aa">⑤</td><td class="ae"></td></tr><tr><td class="al">03</td><td class="aa">②, ③</td><td class="ae">RRYY는 RY 한 종류만. 주름지고 노란색은 rrYY 1 : rrYy 2.</td></tr><tr><td class="al">04</td><td class="aa">RRYy</td><td class="ae">자손이 모두 둥글다 → RR, 노란색 : 초록색 = 1 : 1 → Yy.</td></tr><tr class="grp"><td colspan="3">하이탑 · 서술형 문제</td></tr><tr><td class="al">1</td><td class="aa">(3) (가) YY (나) Yy (다) Yy (라) yy</td><td class="ae">(1) 노란색: 순종끼리 교배한 잡종 1대에서 노란색만 나타났으므로. (2) 분리의 법칙: 쌍을 이루던 대립유전자가 생식세포를 만들 때 분리되어 서로 다른 생식세포로 들어간다. (3) 유전자형 YY : Yy : yy = 1 : 2 : 1, 표현형 노란색 : 초록색 = 3 : 1.</td></tr><tr><td class="al">2</td><td class="aa">(1) 초록색 GG, Gg / 노란색 gg</td><td class="ae">(2) 노란색 콩깍지 완두(gg)와 교배(검정 교배)한다. 자손이 모두 초록색이면 GG, 초록색 : 노란색 = 1 : 1이면 Gg이다.</td></tr><tr><td class="al">3</td><td class="aa">서술형</td><td class="ae">씨 모양(둥근 : 주름진 = 12 : 4 = 3 : 1)과 씨 색깔(노란색 : 초록색 = 3 : 1)이 각각 분리의 법칙을 따르며, 두 형질의 대립유전자가 서로 영향을 미치지 않고 독립적으로 유전된다(독립의 법칙).</td></tr><tr class="grp"><td colspan="3">교과서 · 해 보기 / 스스로 확인하기</td></tr><tr><td class="al">해1</td><td class="aa">서술형</td><td class="ae">씨 색깔에서 노란색이 우성, 초록색이 열성이다. 대립 형질이 다른 순종끼리 교배하면 자손 1대에서 한 가지(우성) 형질만 나타난다(우열의 원리).</td></tr><tr><td class="al">해2</td><td class="aa">서술형</td><td class="ae">동전을 던지면 Y와 y 중 하나만 나오듯, 생식세포를 만들 때 대립유전자 쌍 중 하나만 각 생식세포로 들어가기 때문이다(확률 1/2). 학급 전체 결과를 합하면 YY : Yy : yy가 약 1 : 2 : 1로 멘델의 결과와 비슷하다.</td></tr><tr><td class="al">확1-1</td><td class="aa">유전</td><td class="ae"></td></tr><tr><td class="al">확1-2</td><td class="aa">분리</td><td class="ae"></td></tr><tr><td class="al">확1-3</td><td class="aa">감수 1분열</td><td class="ae">대립유전자는 상동 염색체의 같은 위치에 있으므로, 감수 1분열(후기)에서 상동 염색체가 분리될 때 대립유전자도 분리된다.</td></tr><tr><td class="al">해3</td><td class="aa">예시</td><td class="ae">기니피그 털색(검은색 우성), 초파리 날개 모양·눈 색, 옥수수 알갱이 색 등에서 우열의 원리와 3 : 1, 9 : 3 : 3 : 1 분리비가 나타난다.</td></tr><tr><td class="al">확2-1</td><td class="aa">독립</td><td class="ae"></td></tr><tr><td class="al">확2-2</td><td class="aa">둥글고 노란색 : 둥글고 초록색 : 주름지고 노란색 : 주름지고 초록색 = 1 : 1 : 1 : 1</td><td class="ae">RrYy는 RY, Ry, rY, ry 생식세포를 1 : 1 : 1 : 1로 만들고 rryy는 ry만 만들므로 자손은 RrYy : Rryy : rrYy : rryy = 1 : 1 : 1 : 1.</td></tr><tr class="grp"><td colspan="3">교과서 · 스스로 정리하기 / 최종 점검 (멘델 문항)</td></tr><tr><td class="al">정1</td><td class="aa">(1)○ (2)× (3)×</td><td class="ae"></td></tr><tr><td class="al">정2</td><td class="aa">③</td><td class="ae">YY : Yy : yy = 1 : 2 : 1 → Yy = 2/4</td></tr><tr><td class="al">점❻</td><td class="aa">형질</td><td class="ae"></td></tr><tr><td class="al">점❼</td><td class="aa">유전자</td><td class="ae"></td></tr><tr><td class="al">점❽</td><td class="aa">독립</td><td class="ae"></td></tr><tr><td class="al">03</td><td class="aa">⑤</td><td class="ae">자손 2대의 둥근 완두는 RR 또는 Rr.</td></tr><tr><td class="al">07</td><td class="aa">둥글고 노란색</td><td class="ae">(가)는 RrYy이므로 RY, Ry, rY, ry 4종류의 생식세포가 1 : 1 : 1 : 1의 비로 만들어진다.</td></tr><tr><td class="al">09</td><td class="aa">서술형</td><td class="ae">(1) 빨간색과 흰색 유전자 사이의 우열 관계가 뚜렷하지 않아 두 형질의 중간인 분홍색이 나타난다(중간 유전). (2) 자손 1대에서 한 가지 형질만 나타나지 않으므로 우열의 원리는 따르지 않지만, 자손 2대에서 1 : 2 : 1로 나타나므로 대립유전자가 분리되어 생식세포로 들어가는 분리의 법칙은 따른다.</td></tr></tbody></table></section><header class="part nw"><div class="pk">CHALLENGE</div><h2>변형 문제 52</h2><p>하이탑·교과서 문제의 조건·자료·질문을 바꿔 만든 응용 · 발전 · 심화 문제</p></header><div class="legend"><span class="a">응용</span><span class="d">발전</span><span class="s">심화</span></div><h3 class="sub">Ⅳ-1 감각 기관 변형 문제 <span class="src">N01~N17</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">N01</span><span class="tag lvA">응용</span>그림의 눈 구조(A~J)에 대한 설명과 기호를 옳게 짝 지은 것은? <span class="small">(개념확인 01 변형)</span></div>
+<div class="pfig"><img src="img/iv_c01.jpg" alt="iv_c01"></div>
+<ol class="ch c1"><li>① 눈으로 들어오는 빛의 양을 조절한다. - A</li><li>② 물체의 상이 맺히는 곳이다. - I</li><li>③ 수정체의 두께를 조절한다. - D</li><li>④ 검은색 색소가 있어 눈 속을 어둡게 한다. - G</li><li>⑤ 눈의 가장 바깥쪽 흰색 막이다. - H</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N02</span><span class="tag lvA">응용</span>어두운 영화관에서 가까운 휴대 전화 화면을 보던 사람이 밝은 바깥으로 나와 멀리 있는 산을 보았다. 이때 눈의 변화로 옳은 것은? <span class="small">(교과서 확인 1-3 변형)</span></div>
+<table class="t"><tr><th></th><th>홍채</th><th>동공</th><th>섬모체</th><th>수정체</th></tr><tr><td>①</td><td>확장</td><td>커짐</td><td>수축</td><td>두꺼워짐</td></tr><tr><td>②</td><td>확장</td><td>작아짐</td><td>이완</td><td>얇아짐</td></tr><tr><td>③</td><td>축소</td><td>작아짐</td><td>이완</td><td>얇아짐</td></tr><tr><td>④</td><td>축소</td><td>커짐</td><td>수축</td><td>두꺼워짐</td></tr><tr><td>⑤</td><td>확장</td><td>작아짐</td><td>수축</td><td>얇아짐</td></tr></table>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N03</span><span class="tag lvA">응용</span>물체에서 나온 빛이 시각 세포에 도달하기까지 지나는 구조를 순서대로 나열하시오.</div>
+<div class="given">ㄱ. 유리체　ㄴ. 각막　ㄷ. 수정체　ㄹ. 망막　ㅁ. 동공</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N04</span><span class="tag lvA">응용</span>그림은 귀의 구조이다. (가), (나) 사람의 증상과 가장 관련 있는 손상 부위를 옳게 짝 지은 것은? <span class="small">(개념확인 10~12 변형)</span></div>
+<div class="pfig"><img src="img/iv_c10.jpg" alt="iv_c10"></div>
+<div class="given">(가) 소리는 잘 듣지만, 눈을 감고 회전의자에 앉아 있을 때 의자를 돌려도 회전 방향을 느끼지 못한다.<br>(나) 고막과 귓속뼈는 정상적으로 진동하고 평형 감각도 정상이지만, 소리를 듣지 못한다.</div>
+<ol class="ch c3"><li>① (가) B, (나) H</li><li>② (가) C, (나) H</li><li>③ (가) B, (나) G</li><li>④ (가) C, (나) A</li><li>⑤ (가) A, (나) E</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N05</span><span class="tag lvA">응용</span>다음 중 전정 기관과 가장 관련 깊은 현상을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 엘리베이터가 올라가기 시작할 때 몸이 무거워지는 느낌이 든다.</li><li><b>ㄴ.</b> 회전목마를 타면 도는 방향을 느낄 수 있다.</li><li><b>ㄷ.</b> 달리던 버스가 급정거하면 몸이 앞으로 쏠리는 것을 느낀다.</li><li><b>ㄹ.</b> 제자리에서 여러 바퀴 돈 후 멈추면 어지럽다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ, ㄴ</li><li>② ㄱ, ㄷ</li><li>③ ㄴ, ㄹ</li><li>④ ㄷ, ㄹ</li><li>⑤ ㄱ, ㄷ, ㄹ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N06</span><span class="tag lvA">응용</span>향수 가게에 처음 들어가면 향기가 강하게 느껴지지만, 한참 있으면 향기를 거의 느끼지 못한다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 향수의 냄새 물질은 기체 상태로 후각 세포를 자극한다.</li><li><b>ㄴ.</b> 후각 세포가 쉽게 피로해지기 때문이다.</li><li><b>ㄷ.</b> 이때 혀의 미각도 함께 피로해져 맛을 느끼지 못한다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N07</span><span class="tag lvA">응용</span>미각이 아니라 피부 감각(감각점)으로 느끼는 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 고추의 매운 느낌</li><li><b>ㄴ.</b> 설탕의 단맛</li><li><b>ㄷ.</b> 덜 익은 감의 떫은 느낌</li><li><b>ㄹ.</b> 레몬의 신맛</li><li><b>ㅁ.</b> 조미료의 감칠맛</li></ul></div>
+<ol class="ch c5"><li>① ㄱ, ㄴ</li><li>② ㄱ, ㄷ</li><li>③ ㄴ, ㄹ</li><li>④ ㄷ, ㅁ</li><li>⑤ ㄱ, ㄷ, ㅁ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N08</span><span class="tag lvD">발전</span>그래프는 어떤 사람이 한 물체를 주시할 때 수정체 두께의 변화를 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(실력 04~05, 최상위 1 변형)</span></div>
+<div class="pfig"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" style="max-width:320px"><style>.a{stroke:#1f2430;stroke-width:1.3}.t{font-size:11px;fill:#1f2430}.s{font-size:10px;fill:#5b6272}</style><line class="a" x1="40" y1="140" x2="288" y2="140"/><line class="a" x1="40" y1="12" x2="40" y2="140"/><text class="t" x="12" y="85.0" transform="rotate(-90 12 85.0)" text-anchor="middle">수정체 두께</text><text class="t" x="286" y="164" text-anchor="end">시간(초)</text><text class="s" x="40" y="154" text-anchor="middle">0</text><text class="s" x="88" y="154" text-anchor="middle">2</text><text class="s" x="160" y="154" text-anchor="middle">5</text><text class="s" x="280" y="154" text-anchor="middle">8</text><text class="s" x="34" y="108" text-anchor="end">얇음</text><line x1="40" x2="288" y1="104" y2="104" stroke="#e3e6ec"/><text class="s" x="34" y="48" text-anchor="end">두꺼움</text><line x1="40" x2="288" y1="44" y2="44" stroke="#e3e6ec"/><polyline points="40,44 88,44 160,104 280,104" fill="none" stroke="#d6453d" stroke-width="2.6"/></svg></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 2~5초 동안 물체와 눈 사이의 거리는 멀어지고 있다.</li><li><b>ㄴ.</b> 2~5초 동안 섬모체는 수축하고 있다.</li><li><b>ㄷ.</b> 5~8초 동안 물체의 상은 망막에 맺힌다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N09</span><span class="tag lvD">발전</span>그래프는 어떤 사람의 동공 크기 변화를 나타낸 것이다. 2초일 때 주변 환경에 변화가 있었다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="pfig"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" style="max-width:320px"><style>.a{stroke:#1f2430;stroke-width:1.3}.t{font-size:11px;fill:#1f2430}.s{font-size:10px;fill:#5b6272}</style><line class="a" x1="40" y1="140" x2="288" y2="140"/><line class="a" x1="40" y1="12" x2="40" y2="140"/><text class="t" x="12" y="85.0" transform="rotate(-90 12 85.0)" text-anchor="middle">동공 크기</text><text class="t" x="286" y="164" text-anchor="end">시간(초)</text><text class="s" x="40" y="154" text-anchor="middle">0</text><text class="s" x="88" y="154" text-anchor="middle">2</text><text class="s" x="160" y="154" text-anchor="middle">5</text><text class="s" x="280" y="154" text-anchor="middle">8</text><text class="s" x="34" y="120" text-anchor="end">작음</text><line x1="40" x2="288" y1="116" y2="116" stroke="#e3e6ec"/><text class="s" x="34" y="48" text-anchor="end">큼</text><line x1="40" x2="288" y1="44" y2="44" stroke="#e3e6ec"/><polyline points="40,116 88,116 160,44 280,44" fill="none" stroke="#d6453d" stroke-width="2.6"/></svg></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 2초일 때 주변이 어두워졌다.</li><li><b>ㄴ.</b> 2~5초 동안 홍채가 확장하고 있다.</li><li><b>ㄷ.</b> 2~5초 동안 동공 크기 조절에 섬모체가 관여한다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄷ</li><li>④ ㄱ, ㄴ</li><li>⑤ ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N10</span><span class="tag lvD">발전</span>표는 몸의 부위별로 두 점을 구별할 수 있는 최소 거리이다. 촉점이 가장 조밀한 부위와 가장 드문 부위를 순서대로 쓰고, 입술과 이마 중 더 예민한 곳을 쓰시오. <span class="small">(탐구 확인 적용 변형)</span></div>
+<table class="t"><tr><th>부위</th><td>입술</td><td>손가락 끝</td><td>코끝</td><td>손바닥</td><td>이마</td><td>등</td></tr><tr><th>거리(mm)</th><td>3</td><td>2.5</td><td>6</td><td>10</td><td>17</td><td>42</td></tr></table>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N11</span><span class="tag lvD">발전</span>왼손은 10℃, 오른손은 40℃의 물에 1분 동안 담근 뒤 두 손을 동시에 25℃의 물에 넣었다. 옳은 것은? <span class="small">(서술형 9 변형)</span></div>
+<ol class="ch c1"><li>① 두 손 모두 같은 온도로 느낀다.</li><li>② 왼손은 냉점이 자극을 받아 차갑게 느낀다.</li><li>③ 오른손은 온점이 자극을 받아 따뜻하게 느낀다.</li><li>④ 왼손은 따뜻하게, 오른손은 차갑게 느낀다.</li><li>⑤ 피부는 물의 실제 온도를 정확하게 감지한다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N12</span><span class="tag lvD">발전</span>다음 세 사람 중 뼈 전도 이어폰을 사용하면 소리를 들을 수 있는 사람을 고르고, 그 까닭을 설명하시오. <span class="small">(교과서 확인 2-3 변형)</span></div>
+<div class="given">A: 사고로 고막이 손상되었다.<br>B: 달팽이관의 청각 세포가 손상되었다.<br>C: 청각 신경이 손상되었다.</div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N13</span><span class="tag lvD">발전</span>감기로 코가 꽉 막힌 학생이 눈을 감고 딸기 우유와 바나나 우유를 마시면 둘 다 "달다"고만 느끼고 구별하지 못한다. 그 까닭을 설명하시오. <span class="small">(실력 09 변형)</span></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N14</span><span class="tag lvS">심화</span>표는 C, D 두 사람이 물체를 볼 때 상이 맺히는 위치이다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(최상위 3 변형)</span></div>
+<table class="t"><tr><th></th><th>가까운 물체</th><th>먼 물체</th></tr><tr><td>C</td><td>망막 뒤</td><td>망막 위</td></tr><tr><td>D</td><td>망막 위</td><td>망막 앞</td></tr></table>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> C는 볼록 렌즈로 시력을 교정할 수 있다.</li><li><b>ㄴ.</b> D는 가까운 곳이 잘 보이지 않는다.</li><li><b>ㄷ.</b> D의 안경을 통해 글자를 보면 실제보다 작게 보인다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N15</span><span class="tag lvS">심화</span>눈을 감고 회전의자에 앉아 한 방향으로 일정하게 돌다가 갑자기 멈추었다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(실전 2 변형)</span></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 회전을 시작한 직후 림프는 관성 때문에 관에 대해 회전 반대 방향으로 흐르는 효과가 나타난다.</li><li><b>ㄴ.</b> 일정한 속도로 오래 돌면 림프도 함께 돌게 되어 회전 감각이 점점 약해진다.</li><li><b>ㄷ.</b> 멈춘 직후 느끼는 어지러움은 전정 기관의 림프 때문이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄷ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N16</span><span class="tag lvS">심화</span>맹점 실험에서 한쪽 눈을 감으면 병아리가 사라지는 위치가 있지만, 두 눈을 모두 뜨고 같은 실험을 하면 병아리가 사라지지 않는다. 그 까닭을 설명하시오. <span class="small">(서술형 4 변형)</span></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N17</span><span class="tag lvS">심화</span>감각 기관과 자극, 감각 세포, 신경을 연결한 것으로 옳은 것은?</div>
+<ol class="ch c1"><li>① 귀 - 몸의 회전 - 달팽이관의 청각 세포 - 청각 신경</li><li>② 코 - 액체 상태의 화학 물질 - 후각 세포 - 후각 신경</li><li>③ 혀 - 액체 상태의 화학 물질 - 맛세포 - 미각 신경</li><li>④ 피부 - 절대적인 온도 - 온점 - 피부 감각 신경</li><li>⑤ 눈 - 빛 - 맥락막의 시각 세포 - 시각 신경</li></ol>
+</div>
+</div><h3 class="sub">Ⅴ-1 생장과 생식 변형 문제 <span class="src">N18~N36</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">N18</span><span class="tag lvA">응용</span>한 변이 3 cm인 정육면체 우무 1개(가)와, 같은 크기의 우무를 한 변이 1 cm가 되도록 27개로 자른 것(나)을 비교하였다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(실력 01 변형)</span></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)와 (나)의 총부피는 같다.</li><li><b>ㄴ.</b> (나)의 총표면적은 (가)의 3배이다.</li><li><b>ㄷ.</b> 세포라고 가정하면 물질 교환 효율은 (가)가 더 높다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N19</span><span class="tag lvA">응용</span>개의 체세포 염색체 수는 78개이다. 개의 정자, 수정란, 피부 세포, 난자의 염색체 수를 순서대로 옳게 나타낸 것은?</div>
+<ol class="ch c2"><li>① 39, 39, 78, 39</li><li>② 39, 78, 78, 39</li><li>③ 78, 78, 78, 78</li><li>④ 39, 78, 39, 39</li><li>⑤ 78, 156, 78, 78</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N20</span><span class="tag lvA">응용</span>사람의 체세포 분열 중기 세포 1개에 들어 있는 ㉠ 염색체 수, ㉡ 염색 분체 수, ㉢ 상동 염색체 쌍의 수, ㉣ 2가 염색체 수를 각각 쓰시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N21</span><span class="tag lvA">응용</span>체세포 분열의 각 시기 특징을 순서 없이 나타낸 것이다. 전기부터 순서대로 나열하시오.</div>
+<div class="given">(가) 염색 분체가 분리되어 양 끝으로 이동한다.<br>(나) 핵막이 사라지고 막대 모양의 염색체가 나타난다.<br>(다) 염색체가 세포 가운데에 배열된다.<br>(라) 핵막이 다시 나타나고 염색체가 풀어진다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N22</span><span class="tag lvA">응용</span>양파 뿌리 끝 관찰 과정을 순서 없이 나타낸 것이다. 실험 순서대로 나열하고, B 과정의 목적을 쓰시오. <span class="small">(개념확인 11 변형)</span></div>
+<div class="given">A. 아세트산 카민 용액을 떨어뜨린다.<br>B. 에탄올과 아세트산을 3 : 1로 섞은 용액에 담가 둔다.<br>C. 덮개 유리 위에 거름종이를 대고 엄지로 지그시 누른다.<br>D. 묽은 염산에 넣고 55~60℃로 물중탕한다.<br>E. 해부 침으로 뿌리 끝을 잘게 찢는다.</div>
+<div class="lines"><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N23</span><span class="tag lvD">발전</span>양파 뿌리 끝을 관찰하여 시기별 세포 수를 세었더니 간기 160개, 전기 20개, 중기 8개, 후기 6개, 말기 6개였다. 세포 주기가 20시간이고 각 시기의 세포 수가 그 시기의 소요 시간에 비례한다고 할 때, 간기의 소요 시간은?</div>
+<ol class="ch c5"><li>① 8시간</li><li>② 12시간</li><li>③ 16시간</li><li>④ 18시간</li><li>⑤ 20시간</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N24</span><span class="tag lvD">발전</span>체세포의 염색체 수가 6개(2n = 6)인 동물에서 ㉠ 감수 1분열 전기에 관찰되는 2가 염색체 수, ㉡ 생식세포의 염색체 수, ㉢ 만들어질 수 있는 생식세포의 염색체 조합 수를 쓰시오. (단, 교차는 고려하지 않는다.)</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N25</span><span class="tag lvD">발전</span>그래프는 어떤 동물의 세포 분열 과정에서 핵 1개당 DNA 상대량 변화를 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(최상위 2 변형)</span></div>
+<div class="pfig"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" style="max-width:320px"><style>.a{stroke:#1f2430;stroke-width:1.3}.t{font-size:11px;fill:#1f2430}.s{font-size:10px;fill:#5b6272}</style><line class="a" x1="40" y1="140" x2="288" y2="140"/><line class="a" x1="40" y1="12" x2="40" y2="140"/><text class="t" x="12" y="85.0" transform="rotate(-90 12 85.0)" text-anchor="middle">DNA 상대량</text><text class="t" x="286" y="164" text-anchor="end">시간</text><text class="s" x="59" y="154" text-anchor="middle">(가)</text><text class="s" x="95" y="154" text-anchor="middle">(나)</text><text class="s" x="136" y="154" text-anchor="middle">(다)</text><text class="s" x="189" y="154" text-anchor="middle">(라)</text><text class="s" x="251" y="154" text-anchor="middle">(마)</text><text class="s" x="34" y="120" text-anchor="end">1</text><line x1="40" x2="288" y1="116" y2="116" stroke="#e3e6ec"/><text class="s" x="34" y="96" text-anchor="end">2</text><line x1="40" x2="288" y1="92" y2="92" stroke="#e3e6ec"/><text class="s" x="34" y="48" text-anchor="end">4</text><line x1="40" x2="288" y1="44" y2="44" stroke="#e3e6ec"/><polyline points="40,92 76,92 112,44 160,44 160,92 220,92 220,116 280,116" fill="none" stroke="#d6453d" stroke-width="2.6"/></svg></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (나) 시기에 DNA가 복제된다.</li><li><b>ㄴ.</b> (다) 시기에 2가 염색체가 관찰될 수 있다.</li><li><b>ㄷ.</b> (라) 시기에 상동 염색체가 분리된다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N26</span><span class="tag lvD">발전</span>사람의 생식 기관과 기능을 짝 지은 것으로 옳지 <u>않은</u> 것은?</div>
+<ol class="ch c2"><li>① 정소 - 정자 생성</li><li>② 부정소 - 정자가 잠시 머물며 성숙</li><li>③ 수란관 - 수정이 일어나는 곳</li><li>④ 자궁 - 난자 생성</li><li>⑤ 난소 - 배란</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N27</span><span class="tag lvD">발전</span>사람의 수정과 발생에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 수정은 주로 자궁에서 일어난다.</li><li><b>ㄴ.</b> 착상은 수정 후 약 1주일 뒤 포배 상태에서 일어난다.</li><li><b>ㄷ.</b> 수정 후 8주 이후부터 태아라고 한다.</li><li><b>ㄹ.</b> 태아는 수정 후 약 266일이 지나면 출산된다.</li></ul></div>
+<ol class="ch c3"><li>① ㄱ, ㄴ</li><li>② ㄴ, ㄷ</li><li>③ ㄱ, ㄷ, ㄹ</li><li>④ ㄴ, ㄷ, ㄹ</li><li>⑤ ㄱ, ㄴ, ㄷ, ㄹ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N28</span><span class="tag lvD">발전</span>사람의 수정란이 난할하여 32세포배가 되었을 때 세포 하나의 ㉠ 염색체 수와 ㉡ 상대적 크기(수정란 = 1)를 쓰고, ㉢ 배 전체의 크기는 수정란과 비교하여 어떠한지 쓰시오. <span class="small">(서술형 8 변형)</span></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N29</span><span class="tag lvD">발전</span>상동 염색체를 가지고 있는 세포를 보기에서 모두 고르시오.</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 사람의 피부 세포</li><li><b>ㄴ.</b> 정자</li><li><b>ㄷ.</b> 수정란</li><li><b>ㄹ.</b> 감수 1분열 중기의 세포</li><li><b>ㅁ.</b> 감수 2분열 중기의 세포</li><li><b>ㅂ.</b> 4세포배의 세포</li></ul></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N30</span><span class="tag lvS">심화</span>표는 어떤 동물(2n)의 정소에 있는 세포 ⓐ~ⓓ의 핵 1개당 DNA 상대량과 염색체 수(상댓값)이다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(최상위 3 변형)</span></div>
+<table class="t"><tr><th>세포</th><td>ⓐ</td><td>ⓑ</td><td>ⓒ</td><td>ⓓ</td></tr><tr><th>DNA 상대량</th><td>4</td><td>2</td><td>2</td><td>1</td></tr><tr><th>염색체 수</th><td>2</td><td>2</td><td>1</td><td>1</td></tr></table>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> ⓐ는 2가 염색체를 가질 수 있다.</li><li><b>ㄴ.</b> ⓒ에는 상동 염색체가 있다.</li><li><b>ㄷ.</b> ⓒ가 ⓓ로 되는 과정에서 염색 분체가 분리된다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N31</span><span class="tag lvS">심화</span>그림 (가)~(다)는 2n = 4인 어떤 동물의 세포 분열 중 한 시기를 나타낸 것이다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(실력 05, 실전 2 변형)</span></div>
+<div class="pfig"><svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" style="max-width:420px"><g><circle cx="70" cy="70" r="54" fill="#fdf1e3" stroke="#e0b98a" stroke-width="2"/><line x1="70" y1="18" x2="70" y2="122" stroke="#d9c4a6" stroke-dasharray="3 3"/><rect x="65" y="33.0" width="4.5" height="34" rx="2.2" fill="#d6453d"/><rect x="70.5" y="33.0" width="4.5" height="34" rx="2.2" fill="#d6453d"/><rect x="65" y="48.5" width="10" height="3" fill="#d6453d"/><rect x="65" y="82.0" width="4.5" height="20" rx="2.2" fill="#2f6fd6"/><rect x="70.5" y="82.0" width="4.5" height="20" rx="2.2" fill="#2f6fd6"/><rect x="65" y="90.5" width="10" height="3" fill="#2f6fd6"/><text x="70" y="142" text-anchor="middle" font-size="12" font-weight="700">(가)</text></g><g><circle cx="210" cy="70" r="54" fill="#fdf1e3" stroke="#e0b98a" stroke-width="2"/><line x1="210" y1="18" x2="210" y2="122" stroke="#d9c4a6" stroke-dasharray="3 3"/><rect x="199" y="33.0" width="4.5" height="34" rx="2.2" fill="#d6453d"/><rect x="204.5" y="33.0" width="4.5" height="34" rx="2.2" fill="#d6453d"/><rect x="199" y="48.5" width="10" height="3" fill="#d6453d"/><rect x="211" y="33.0" width="4.5" height="34" rx="2.2" fill="#2f6fd6"/><rect x="216.5" y="33.0" width="4.5" height="34" rx="2.2" fill="#2f6fd6"/><rect x="211" y="48.5" width="10" height="3" fill="#2f6fd6"/><rect x="199" y="84.0" width="4.5" height="20" rx="2.2" fill="#d6453d"/><rect x="204.5" y="84.0" width="4.5" height="20" rx="2.2" fill="#d6453d"/><rect x="199" y="92.5" width="10" height="3" fill="#d6453d"/><rect x="211" y="84.0" width="4.5" height="20" rx="2.2" fill="#2f6fd6"/><rect x="216.5" y="84.0" width="4.5" height="20" rx="2.2" fill="#2f6fd6"/><rect x="211" y="92.5" width="10" height="3" fill="#2f6fd6"/><text x="210" y="142" text-anchor="middle" font-size="12" font-weight="700">(나)</text></g><g><circle cx="350" cy="70" r="54" fill="#fdf1e3" stroke="#e0b98a" stroke-width="2"/><line x1="350" y1="18" x2="350" y2="122" stroke="#d9c4a6" stroke-dasharray="3 3"/><rect x="345" y="21.0" width="4.5" height="26" rx="2.2" fill="#d6453d"/><rect x="350.5" y="21.0" width="4.5" height="26" rx="2.2" fill="#d6453d"/><rect x="345" y="32.5" width="10" height="3" fill="#d6453d"/><rect x="345" y="49.0" width="4.5" height="26" rx="2.2" fill="#2f6fd6"/><rect x="350.5" y="49.0" width="4.5" height="26" rx="2.2" fill="#2f6fd6"/><rect x="345" y="60.5" width="10" height="3" fill="#2f6fd6"/><rect x="345" y="80.0" width="4.5" height="16" rx="2.2" fill="#d6453d"/><rect x="350.5" y="80.0" width="4.5" height="16" rx="2.2" fill="#d6453d"/><rect x="345" y="86.5" width="10" height="3" fill="#d6453d"/><rect x="345" y="100.0" width="4.5" height="16" rx="2.2" fill="#2f6fd6"/><rect x="350.5" y="100.0" width="4.5" height="16" rx="2.2" fill="#2f6fd6"/><rect x="345" y="106.5" width="10" height="3" fill="#2f6fd6"/><text x="350" y="142" text-anchor="middle" font-size="12" font-weight="700">(다)</text></g></svg></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)는 정소나 난소에서 관찰된다.</li><li><b>ㄴ.</b> (나)의 분열 결과 생기는 딸세포의 염색체 수는 2개이다.</li><li><b>ㄷ.</b> (다)의 분열 결과 생기는 딸세포에는 상동 염색체가 없다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N32</span><span class="tag lvS">심화</span>사람의 난자는 감수 1분열만 마친 상태로 배란된다. 복제 전 간기의 체세포 핵 1개의 DNA 상대량을 2라고 할 때, 표의 빈칸을 채우시오. <span class="small">(최상위 4 변형)</span></div>
+<table class="t"><tr><th></th><th>배란된 세포</th><th>정자</th><th>수정란(복제 전)</th></tr><tr><th>염색체 수</th><td>㉠</td><td>23</td><td>㉢</td></tr><tr><th>DNA 상대량</th><td>㉡</td><td>1</td><td>㉣</td></tr></table>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N33</span><span class="tag lvS">심화</span>만약 사람의 생식세포가 감수 분열이 아닌 체세포 분열로 만들어진다면, 자손의 체세포 염색체 수는 세대가 거듭될수록 어떻게 변할지 설명하시오. <span class="small">(서술형 7 변형)</span></div>
+<div class="lines"><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N34</span><span class="tag lvS">심화</span>유전자형이 AaBb인 어떤 동물의 체세포가 있다(A와 B는 서로 다른 상동 염색체에 있다). 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 이 세포가 체세포 분열하여 생긴 딸세포의 유전자형은 AaBb이다.</li><li><b>ㄴ.</b> 감수 1분열에서 A와 a가 분리된다.</li><li><b>ㄷ.</b> 만들어지는 생식세포는 AB, Ab, aB, ab 4종류이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄷ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N35</span><span class="tag lvA">응용</span>세포 분열에 대한 설명으로 옳지 <u>않은</u> 것은?</div>
+<ol class="ch c1"><li>① 식물은 뿌리 끝 생장점에서 체세포 분열이 활발하다.</li><li>② 동물 세포는 세포판을 만들어 세포질을 나눈다.</li><li>③ 식물의 생식세포 분열은 꽃밥과 밑씨에서 일어난다.</li><li>④ 사람의 생식세포 분열은 정소와 난소에서 일어난다.</li><li>⑤ 형성층에서는 체세포 분열이 일어난다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N36</span><span class="tag lvS">심화</span>수정란이 난할을 거듭하는 동안 변하지 <u>않는</u> 것을 보기에서 모두 고른 것은? <span class="small">(최상위 5 변형)</span></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 세포 1개당 염색체 수</li><li><b>ㄴ.</b> 배 전체의 크기</li><li><b>ㄷ.</b> 세포 1개의 크기</li><li><b>ㄹ.</b> 세포 1개당 세포질의 양</li></ul></div>
+<ol class="ch c5"><li>① ㄱ, ㄴ</li><li>② ㄱ, ㄷ</li><li>③ ㄴ, ㄹ</li><li>④ ㄷ, ㄹ</li><li>⑤ ㄱ, ㄴ, ㄹ</li></ol>
+</div>
+</div><h3 class="sub">Ⅴ-2 유전의 원리 변형 문제 <span class="src">N37~N52</span></h3><div class="pgrid">
+<div class="prob">
+<div class="q"><span class="num">N37</span><span class="tag lvA">응용</span>완두의 씨 모양(둥근 R, 주름진 r)과 관련된 용어 설명으로 옳지 <u>않은</u> 것은?</div>
+<ol class="ch c1"><li>① RR과 rr은 순종이다.</li><li>② Rr은 잡종이다.</li><li>③ "둥글다"는 표현형이다.</li><li>④ R와 r는 대립유전자로 상동 염색체의 같은 위치에 있다.</li><li>⑤ 둥근 완두와 노란색 완두는 대립 형질이다.</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N38</span><span class="tag lvA">응용</span>순종의 키 큰 완두(TT)와 키 작은 완두(tt)를 교배하여 얻은 잡종 1대를 자가 수분하여 잡종 2대 1200개를 얻었다. 이론적으로 ㉠ 키 큰 완두의 수와 ㉡ 그중 순종인 것의 수를 쓰시오. <span class="small">(개념확인 05 변형)</span></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N39</span><span class="tag lvA">응용</span>우성과 열성에 대한 설명으로 옳은 것은 ○, 옳지 않은 것은 × 하시오.</div>
+<div class="given">(1) 우성 형질은 자연에서 항상 더 많이 나타난다.<br>(2) 열성 형질을 나타내는 개체는 항상 순종이다.<br>(3) 잡종 1대는 열성 대립유전자를 가지고 있다.<br>(4) 우성 형질을 나타내는 개체는 항상 순종이다.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N40</span><span class="tag lvA">응용</span>보라색 꽃(P)은 흰색 꽃(p)에 대해 우성이다. 보라색 꽃 (가)를 흰색 꽃과 교배하였더니 보라색 꽃 48그루, 흰색 꽃 52그루가 나왔다. (가)의 유전자형과 이와 같은 교배 방법의 이름을 쓰시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N41</span><span class="tag lvD">발전</span>잡종 1대(Rr)를 자가 수분하여 얻은 잡종 2대에 대하여 ㉠ 둥근 완두 중 잡종의 비율을 쓰고, ㉡ 잡종 2대의 둥근 완두만 모두 골라 각각 자가 수분시켰을 때 다음 세대에서 주름진 완두가 나올 비율을 구하시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N42</span><span class="tag lvD">발전</span>RrYy인 완두를 자가 수분하여 자손 1600개를 얻었다. ㉠ 주름지고 노란색인 완두의 비율, ㉡ 그중 순종의 비율, ㉢ 둥글고 초록색인 완두의 개수를 쓰시오. <span class="small">(개념확인 09~12 변형)</span></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N43</span><span class="tag lvD">발전</span>유전자형이 RrYy인 완두와 Rryy인 완두를 교배하였을 때 자손의 표현형 비(둥글고 노란색 : 둥글고 초록색 : 주름지고 노란색 : 주름지고 초록색)는?</div>
+<ol class="ch c3"><li>① 9 : 3 : 3 : 1</li><li>② 1 : 1 : 1 : 1</li><li>③ 3 : 3 : 1 : 1</li><li>④ 3 : 1 : 3 : 1</li><li>⑤ 1 : 3 : 1 : 3</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N44</span><span class="tag lvD">발전</span>어떤 동물의 털색은 검은색(B)이 흰색(b)에 대해 우성이다. 교배 결과를 보고 옳은 것을 보기에서 모두 고른 것은? <span class="small">(실력 01 변형)</span></div>
+<table class="t"><tr><th>교배</th><th>자손 (검은색 : 흰색)</th></tr><tr><td>검은색 (가) × 흰색 (나)</td><td>1 : 1</td></tr><tr><td>검은색 (다) × 검은색 (라)</td><td>3 : 1</td></tr><tr><td>검은색 (마) × 흰색 (바)</td><td>1 : 0</td></tr></table>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> (가)는 Bb이다.</li><li><b>ㄴ.</b> (다)와 (라)는 모두 Bb이다.</li><li><b>ㄷ.</b> (마)는 BB이다.</li><li><b>ㄹ.</b> (가)와 (마)를 교배하면 흰색 자손이 나올 수 있다.</li></ul></div>
+<ol class="ch c3"><li>① ㄱ, ㄴ</li><li>② ㄴ, ㄹ</li><li>③ ㄱ, ㄴ, ㄷ</li><li>④ ㄱ, ㄷ, ㄹ</li><li>⑤ ㄱ, ㄴ, ㄷ, ㄹ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N45</span><span class="tag lvD">발전</span>유전자형이 Rr인 완두에서 생식세포가 만들어질 때에 대한 설명으로 옳은 것을 보기에서 모두 고른 것은? <span class="small">(교과서 확인 1-3 변형)</span></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> R와 r는 감수 1분열에서 상동 염색체가 분리될 때 분리된다.</li><li><b>ㄴ.</b> 감수 2분열에서는 복제된 같은 유전자(R와 R, 또는 r와 r)가 분리된다.</li><li><b>ㄷ.</b> 만들어지는 생식세포는 R : r = 3 : 1이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄷ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N46</span><span class="tag lvD">발전</span>바둑알 모의 실험에서 "암술" 주머니에는 R, r 바둑알을 1개씩, "수술" 주머니에는 r 바둑알만 2개 넣고 하나씩 꺼내 짝 짓는 과정을 40회 반복하였다. 옳은 것을 보기에서 모두 고른 것은? <span class="small">(탐구 변형)</span></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 수술 주머니는 유전자형이 rr인 개체를 나타낸다.</li><li><b>ㄴ.</b> Rr과 rr이 각각 약 20회씩 나올 것으로 예상된다.</li><li><b>ㄷ.</b> 이 실험은 검정 교배를 흉내 낸 것이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N47</span><span class="tag lvS">심화</span>둥글고 노란색인 완두 (가), (나)를 각각 주름지고 초록색인 완두(rryy)와 교배하였다. (가)에서는 둥글고 노란색 : 주름지고 노란색 = 1 : 1, (나)에서는 네 가지 표현형이 1 : 1 : 1 : 1로 나왔다. (가), (나)의 유전자형을 쓰시오. <span class="small">(실력 04 변형)</span></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N48</span><span class="tag lvS">심화</span>세 쌍의 대립유전자가 서로 다른 염색체에 있는 유전자형 AaBbDd인 개체가 있다. ㉠ 만들 수 있는 생식세포의 종류 수, ㉡ 이 개체를 자가 교배했을 때 자손이 aabbdd일 확률, ㉢ 자손이 세 형질 모두 우성 형질을 나타낼 확률을 쓰시오.</div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N49</span><span class="tag lvS">심화</span>분꽃의 꽃잎 색깔은 빨간색(RR), 분홍색(RW), 흰색(WW)으로 나타난다. ㉠ 분홍색 × 흰색 교배 자손의 표현형 비와 ㉡ 분홍색 × 분홍색 교배로 얻은 200그루 중 빨간색의 예상 개수를 쓰시오. <span class="small">(교과서 최종 점검 09 변형)</span></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N50</span><span class="tag lvS">심화</span>어떤 식물에서 대립유전자 A와 B가 한 염색체에, a와 b가 그 상동 염색체에 함께 있다(AB/ab). 이 식물이 생식세포를 만들 때 유전자가 서로 떨어지지 않는다면, 옳은 것을 보기에서 모두 고른 것은? <span class="small">(심화 개념 적용)</span></div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 만들어지는 생식세포는 AB와 ab 두 종류뿐이다.</li><li><b>ㄴ.</b> 이 식물을 자가 수분하면 자손의 표현형은 9 : 3 : 3 : 1로 나타난다.</li><li><b>ㄷ.</b> A와 B는 독립의 법칙을 따르지 않는다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄷ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N51</span><span class="tag lvS">심화</span>둥근 완두 한 그루가 순종(RR)인지 잡종(Rr)인지 알아내는 방법 두 가지를 쓰고, 각각 예상되는 결과를 설명하시오. <span class="small">(서술형 2 변형)</span></div>
+<div class="lines"><div></div><div></div><div></div></div>
+</div>
+<div class="prob">
+<div class="q"><span class="num">N52</span><span class="tag lvS">심화</span>기니피그의 털은 검은색(B)이 흰색(b)에 대해, 짧은 털(S)이 긴 털(s)에 대해 우성이며 두 형질은 독립적으로 유전된다. BbSs인 기니피그와 bbss인 기니피그를 교배하였다. 옳은 것을 보기에서 모두 고른 것은?</div>
+<div class="bogi"><span class="bogi-t">보기</span><ul><li><b>ㄱ.</b> 자손의 표현형은 4가지가 1 : 1 : 1 : 1로 나타난다.</li><li><b>ㄴ.</b> 자손 중 검은색이면서 짧은 털인 개체는 모두 BbSs이다.</li><li><b>ㄷ.</b> 자손 중 흰색이면서 긴 털인 개체의 비율은 1/16이다.</li></ul></div>
+<ol class="ch c5"><li>① ㄱ</li><li>② ㄴ</li><li>③ ㄱ, ㄴ</li><li>④ ㄴ, ㄷ</li><li>⑤ ㄱ, ㄴ, ㄷ</li></ol>
+</div>
+</div><section class="akey"><h3 class="akey-h">변형 문제 52 · 정답과 해설</h3><table class="ak"><thead><tr><th>번호</th><th>정답</th><th>해설 · 포인트</th></tr></thead><tbody><tr class="grp"><td colspan="3">Ⅳ-1 감각 기관 변형 문제</td></tr><tr><td class="al">N01</td><td class="aa">②</td><td class="ae">A 섬모체, D 홍채, G 공막, H 맥락막, I 망막. 빛의 양 조절 = D, 두께 조절 = A, 검은 색소 = H, 흰 막 = G.</td></tr><tr><td class="al">N02</td><td class="aa">②</td><td class="ae">밝아짐 → 홍채 확장·동공 축소, 먼 곳 → 섬모체 이완·수정체 얇아짐. ⑤는 섬모체 수축이면 수정체가 두꺼워져야 하므로 모순.</td></tr><tr><td class="al">N03</td><td class="aa">ㄴ → ㅁ → ㄷ → ㄱ → ㄹ</td><td class="ae">각막 → 동공 → 수정체 → 유리체 → 망막(시각 세포)</td></tr><tr><td class="al">N04</td><td class="aa">①</td><td class="ae">(가) 회전 감지 = B 반고리관. (나) 진동은 전달되나 청각 세포가 있는 H 달팽이관(또는 D 청각 신경)의 이상.</td></tr><tr><td class="al">N05</td><td class="aa">②</td><td class="ae">ㄱ, ㄷ은 몸의 기울어짐·움직임(중력 자극) → 전정 기관. ㄴ, ㄹ은 회전 → 반고리관.</td></tr><tr><td class="al">N06</td><td class="aa">③</td><td class="ae">후각 피로는 미각과 무관하며, 다른 냄새는 여전히 맡을 수 있다.</td></tr><tr><td class="al">N07</td><td class="aa">②</td><td class="ae">매운맛 = 통점(+온점), 떫은맛 = 압점 → 피부 감각.</td></tr><tr><td class="al">N08</td><td class="aa">③</td><td class="ae">수정체가 얇아짐 = 섬모체 이완 = 물체가 멀어짐. 조절이 끝난 뒤 상은 망막에 맺힌다.</td></tr><tr><td class="al">N09</td><td class="aa">①</td><td class="ae">동공이 커짐 = 홍채 축소 = 어두워짐. 동공 크기는 홍채가 조절(섬모체는 수정체 두께 담당).</td></tr><tr><td class="al">N10</td><td class="aa">손가락 끝, 등 / 입술</td><td class="ae">최소 거리가 짧을수록 촉점이 많아 예민하다.</td></tr><tr><td class="al">N11</td><td class="aa">④</td><td class="ae">왼손은 온도가 높아져 온점, 오른손은 온도가 낮아져 냉점이 자극을 받는다(상대적 온도 변화 감지).</td></tr><tr><td class="al">N12</td><td class="aa">A</td><td class="ae">뼈 전도 이어폰은 머리뼈의 진동을 직접 달팽이관에 전달하므로 고막·귓속뼈를 거치지 않는다. 청각 세포나 청각 신경이 손상되면 자극을 받아들이거나 뇌로 전달할 수 없다.</td></tr><tr><td class="al">N13</td><td class="aa">서술형</td><td class="ae">혀의 맛세포는 기본 맛(단맛 등)만 감지하고, 딸기·바나나의 고유한 향은 후각으로 느낀다. 코가 막혀 후각 정보가 뇌로 전달되지 않으므로 뇌에서 맛을 종합하지 못한다.</td></tr><tr><td class="al">N14</td><td class="aa">③</td><td class="ae">C는 원시(볼록 렌즈), D는 근시(먼 곳이 안 보임, 오목 렌즈 → 상이 작게 보임).</td></tr><tr><td class="al">N15</td><td class="aa">③</td><td class="ae">회전 감각은 반고리관 속 림프의 관성 때문. 멈추면 림프가 원래 방향으로 계속 흘러 감각모를 휘게 한다.</td></tr><tr><td class="al">N16</td><td class="aa">서술형</td><td class="ae">한쪽 눈의 맹점에 맺힌 부분의 상이 다른 쪽 눈에서는 맹점이 아닌 망막(시각 세포가 있는 곳)에 맺히므로, 뇌가 두 눈의 정보를 종합해 빈 곳 없이 볼 수 있다.</td></tr><tr><td class="al">N17</td><td class="aa">③</td><td class="ae">회전은 반고리관, 코는 기체, 피부는 온도 변화, 시각 세포는 망막.</td></tr><tr class="grp"><td colspan="3">Ⅴ-1 생장과 생식 변형 문제</td></tr><tr><td class="al">N18</td><td class="aa">③</td><td class="ae">부피 27 = 27. 표면적 54 vs 27×6 = 162 (3배). 표면적/부피 2 vs 6 → (나)가 효율적.</td></tr><tr><td class="al">N19</td><td class="aa">②</td><td class="ae">생식세포 n = 39, 수정란·체세포 2n = 78</td></tr><tr><td class="al">N20</td><td class="aa">㉠ 46 ㉡ 92 ㉢ 23 ㉣ 0</td><td class="ae">체세포 분열에서는 상동 염색체가 있지만 접합하지 않아 2가 염색체가 없다.</td></tr><tr><td class="al">N21</td><td class="aa">(나) → (다) → (가) → (라)</td><td class="ae">전기 → 중기 → 후기 → 말기</td></tr><tr><td class="al">N22</td><td class="aa">B → D → A → E → C</td><td class="ae">B는 고정: 세포를 살아 있을 때의 모습으로 유지.</td></tr><tr><td class="al">N23</td><td class="aa">③</td><td class="ae">간기 비율 = 160/200 = 0.8 → 20 × 0.8 = 16시간. 간기가 가장 길기 때문에 간기 세포가 가장 많이 관찰된다.</td></tr><tr><td class="al">N24</td><td class="aa">㉠ 3개 ㉡ 3개 ㉢ 8가지</td><td class="ae">상동 염색체 3쌍 → 2가 3개, n = 3, 조합 2³ = 8.</td></tr><tr><td class="al">N25</td><td class="aa">③</td><td class="ae">DNA가 2 → 4 → 2 → 1: 생식세포 분열. (다) 감수 1분열(2가, 상동 분리), (라) 감수 2분열(염색 분체 분리).</td></tr><tr><td class="al">N26</td><td class="aa">④</td><td class="ae">자궁은 태아가 자라는 곳. 난자는 난소에서 생성.</td></tr><tr><td class="al">N27</td><td class="aa">④</td><td class="ae">수정은 수란관에서 일어난다.</td></tr><tr><td class="al">N28</td><td class="aa">㉠ 46개 ㉡ 1/32 ㉢ 거의 같다</td><td class="ae">난할은 체세포 분열 → 염색체 수 일정, 생장 없이 분열 → 크기 1/32.</td></tr><tr><td class="al">N29</td><td class="aa">ㄱ, ㄷ, ㄹ, ㅂ</td><td class="ae">감수 1분열이 끝나면 상동 염색체가 분리되어 없어진다(감수 2분열 세포, 정자·난자).</td></tr><tr><td class="al">N30</td><td class="aa">③</td><td class="ae">ⓐ 복제 후(감수 1분열 전), ⓑ 복제 전 간기, ⓒ 감수 2분열 세포(n, 상동 없음), ⓓ 정자.</td></tr><tr><td class="al">N31</td><td class="aa">③</td><td class="ae">(가) 상동 없음 → 감수 2분열 중기. (나) 2가 염색체 → 감수 1분열 중기(딸세포 n = 2). (다) 상동 쌍이 2가 없이 일렬 → 체세포 분열 중기(딸세포 2n = 4, 상동 있음).</td></tr><tr><td class="al">N32</td><td class="aa">㉠ 23 ㉡ 2 ㉢ 46 ㉣ 2</td><td class="ae">감수 1분열 후에는 n이지만 염색 분체가 두 가닥이라 DNA 2. 정자가 들어오면 감수 2분열을 완료한 뒤 수정.</td></tr><tr><td class="al">N33</td><td class="aa">세대마다 2배로 증가</td><td class="ae">정자·난자가 46개씩 가지므로 자녀는 92개, 그다음 세대는 184개 … 로 계속 늘어난다. 감수 분열은 이를 막아 염색체 수를 일정하게 유지한다.</td></tr><tr><td class="al">N34</td><td class="aa">⑤</td><td class="ae">대립유전자는 상동 염색체에 있어 감수 1분열에서 분리되고, 두 쌍이 독립적으로 배열되어 4종류가 1 : 1 : 1 : 1.</td></tr><tr><td class="al">N35</td><td class="aa">②</td><td class="ae">세포판은 식물 세포. 동물 세포는 세포질이 바깥에서 안으로 함입.</td></tr><tr><td class="al">N36</td><td class="aa">①</td><td class="ae">세포 크기와 세포질 양은 분열할수록 줄어든다.</td></tr><tr class="grp"><td colspan="3">Ⅴ-2 유전의 원리 변형 문제</td></tr><tr><td class="al">N37</td><td class="aa">⑤</td><td class="ae">대립 형질은 같은 형질(씨 모양)에서 대비되는 특성. 둥근 ↔ 주름진이 대립 형질이다.</td></tr><tr><td class="al">N38</td><td class="aa">㉠ 900개 ㉡ 300개</td><td class="ae">TT : Tt : tt = 1 : 2 : 1 → 키 큰 3/4 = 900, TT 1/4 = 300</td></tr><tr><td class="al">N39</td><td class="aa">(1)× (2)○ (3)○ (4)×</td><td class="ae">열성 형질은 aa일 때만 나타난다. 우성 형질은 AA 또는 Aa.</td></tr><tr><td class="al">N40</td><td class="aa">Pp, 검정 교배</td><td class="ae">약 1 : 1 → (가)는 잡종. 자손이 모두 보라색이었다면 PP.</td></tr><tr><td class="al">N41</td><td class="aa">㉠ 2/3 ㉡ 1/6</td><td class="ae">㉡ RR(1/3)은 주름진 자손 없음, Rr(2/3)에서 1/4 → 2/3 × 1/4 = 1/6</td></tr><tr><td class="al">N42</td><td class="aa">㉠ 3/16 ㉡ 1/3 ㉢ 300개</td><td class="ae">주노 = 1/4 × 3/4 = 3/16, 그중 rrYY 1 : rrYy 2. 둥초 = 3/4 × 1/4 × 1600 = 300.</td></tr><tr><td class="al">N43</td><td class="aa">③</td><td class="ae">모양 Rr×Rr → 3 : 1, 색 Yy×yy → 1 : 1 → 둥노 3/8 : 둥초 3/8 : 주노 1/8 : 주초 1/8</td></tr><tr><td class="al">N44</td><td class="aa">③</td><td class="ae">(가) Bb × (마) BB → 자손 모두 검은색.</td></tr><tr><td class="al">N45</td><td class="aa">③</td><td class="ae">생식세포는 R : r = 1 : 1.</td></tr><tr><td class="al">N46</td><td class="aa">⑤</td><td class="ae">Rr × rr → Rr : rr = 1 : 1 (둥근 : 주름진 = 1 : 1)</td></tr><tr><td class="al">N47</td><td class="aa">(가) RrYY (나) RrYy</td><td class="ae">(가): 모양 1 : 1 → Rr, 색 모두 노란색 → YY.</td></tr><tr><td class="al">N48</td><td class="aa">㉠ 8가지 ㉡ 1/64 ㉢ 27/64</td><td class="ae">㉡ (1/4)³ ㉢ (3/4)³</td></tr><tr><td class="al">N49</td><td class="aa">㉠ 분홍색 : 흰색 = 1 : 1 ㉡ 50그루</td><td class="ae">중간 유전: 우열의 원리는 따르지 않지만 분리의 법칙은 따른다. ㉡ 1 : 2 : 1 → 200 × 1/4</td></tr><tr><td class="al">N50</td><td class="aa">③</td><td class="ae">AB/ab 자가 수분 → AABB : AaBb : aabb = 1 : 2 : 1 → 표현형 A_B_ : aabb = 3 : 1.</td></tr><tr><td class="al">N51</td><td class="aa">자가 수분 / 검정 교배</td><td class="ae">① 자가 수분: 자손이 모두 둥글면 RR, 둥근 : 주름진 = 3 : 1이면 Rr. ② 주름진 완두(rr)와 검정 교배: 모두 둥글면 RR, 1 : 1이면 Rr.</td></tr><tr><td class="al">N52</td><td class="aa">③</td><td class="ae">bbss의 비율은 1/2 × 1/2 = 1/4.</td></tr></tbody></table></section><header class="part ap"><div class="pk">APPENDIX</div><h2>부록</h2><p>시험 직전에 필요한 것들</p></header><h2 class="sec">A. 시험 직전 1장 요약 <small>시험 전 10분 동안 이것만 본다</small></h2><div class="cheat">
+<div class="c"><h4>👁 눈</h4><div>빛 → 각막 → 수정체 → 유리체 → <b>망막(시각 세포)</b> → 시각 신경 → 뇌<br>밝음: 홍채 <b>확장</b> → 동공 <b>축소</b> · 어두움: 홍채 축소 → 동공 확대<br>가까이: 섬모체 <b>수축</b> → 수정체 <b>두꺼움</b> · 멀리: 이완 → 얇음<br>황반 = 시각 세포 많음 / 맹점 = 없음 / 맥락막 = 검은 색소</div></div>
+<div class="c"><h4>👂 귀</h4><div>소리 → 귓바퀴 → 외이도 → <b>고막(진동)</b> → <b>귓속뼈(증폭)</b> → <b>달팽이관(청각 세포)</b> → 청각 신경 → 뇌<br>전정 기관 = <b>기울어짐</b> · 반고리관 = <b>회전</b> · 귀인두관 = <b>압력 조절</b></div></div>
+<div class="c"><h4>👃👅✋ 코·혀·피부</h4><div>코: <b>기체</b>, 후각 상피, 쉽게 <b>피로</b> · 혀: <b>액체</b>, 유두 → 맛봉오리 → 맛세포<br>기본 맛: 단·짠·신·쓴·<b>감칠</b> (매운맛 = 통점!)<br>감각점: 촉·압·냉·온·통 (통점 최다), 부위마다 <b>분포 밀도</b> 다름, 온도 <b>변화</b> 감지</div></div>
+<div class="c"><h4>🔬 세포 분열</h4><div>작을수록 표면적/부피 ↑ → 물질 교환 유리<br>염색체 = DNA + 단백질 · 염색 분체 = 복제본(같은 정보) · 상동 = 부모 각 1개<br>사람 46 = 44 + XX / 44 + XY<br>전기 핵막 소실 → 중기 가운데 → 후기 염색 분체 분리 → 말기 핵막</div></div>
+<div class="c"><h4>🧬 감수 분열</h4><div>2회 분열, 딸세포 4개, 2n → n<br>감수 1: <b>2가 → 상동 염색체 분리</b> (염색체 수 절반)<br>감수 2: 복제 없이 → <b>염색 분체 분리</b> (수 변화 없음)<br>DNA: 2 → 4 → 2 → 1 · 체세포: 2 → 4 → 2</div></div>
+<div class="c"><h4>👶 발생</h4><div>배란(난소) → 수정(<b>수란관</b>) → 난할 → 착상(<b>포배</b>, 약 1주) → 태아(8주~) → 출산(약 266일)<br>난할: 체세포 분열, 세포 수↑ 크기↓ 염색체 수 그대로, 배 전체 크기 일정</div></div>
+<div class="c"><h4>🌱 멘델 1</h4><div>우열의 원리(잡종 1대 우성만) · 분리의 법칙(대립유전자 분리, 감수 1분열)<br>RR × rr → Rr → RR : Rr : rr = 1 : 2 : 1, 표현형 3 : 1<br>검정 교배: × rr → 모두 우성 = RR, 1 : 1 = Rr</div></div>
+<div class="c"><h4>🌱 멘델 2</h4><div>RRYY × rryy → RrYy → 생식세포 RY : Ry : rY : ry = 1 : 1 : 1 : 1<br>잡종 2대 9 : 3 : 3 : 1, 각 형질 3 : 1 → <b>독립의 법칙</b><br>확률은 곱한다: 주노 = 1/4 × 3/4 = 3/16</div></div>
+</div>
+<h2 class="sec">B. 헷갈리는 짝 비교표</h2><table class="t"><tr><th>헷갈리는 것</th><th>A</th><th>B</th></tr><tr><td>홍채 vs 동공</td><td class="l">근육으로 된 막, 크기를 <b>조절하는 주체</b></td><td class="l">구멍(빛의 통로), 조절 <b>당하는 대상</b> — 홍채와 반대로 변함</td></tr><tr><td>섬모체 수축 vs 이완</td><td class="l">수축 → 수정체 두꺼움 → 가까운 곳</td><td class="l">이완 → 수정체 얇음 → 먼 곳</td></tr><tr><td>황반 vs 맹점</td><td class="l">시각 세포 밀집, 상이 가장 선명</td><td class="l">시각 신경이 나가는 곳, 시각 세포 없음</td></tr><tr><td>맥락막 vs 공막</td><td class="l">검은 색소, 눈 속을 어둡게</td><td class="l">흰자위, 눈 보호·형태 유지</td></tr><tr><td>전정 기관 vs 반고리관</td><td class="l">기울어짐 (중력)</td><td class="l">회전 (림프의 관성)</td></tr><tr><td>고막 vs 귓속뼈</td><td class="l">소리에 의해 최초로 진동</td><td class="l">진동을 증폭</td></tr><tr><td>후각 vs 미각</td><td class="l">기체, 매우 예민, 쉽게 피로</td><td class="l">액체, 기본 맛 5가지</td></tr><tr><td>온점 vs 냉점</td><td class="l">온도가 높아지는 변화</td><td class="l">온도가 낮아지는 변화</td></tr><tr><td>염색 분체 vs 상동 염색체</td><td class="l">복제로 생긴 두 가닥, 유전 정보 같음</td><td class="l">부모에게서 하나씩, 모양·크기 같지만 정보 다를 수 있음</td></tr><tr><td>감수 1분열 vs 감수 2분열</td><td class="l">상동 염색체 분리, 염색체 수 절반</td><td class="l">염색 분체 분리, 염색체 수 그대로</td></tr><tr><td>세포판 vs 세포질 함입</td><td class="l">식물 세포 (안 → 밖)</td><td class="l">동물 세포 (밖 → 안)</td></tr><tr><td>수정 vs 착상</td><td class="l">수란관, 정자 + 난자</td><td class="l">자궁 안쪽 벽, 포배 상태</td></tr><tr><td>표현형 vs 유전자형</td><td class="l">겉으로 드러나는 형질 (둥글다)</td><td class="l">기호로 나타낸 유전자 구성 (Rr)</td></tr><tr><td>대립 형질 vs 대립유전자</td><td class="l">대비되는 특성 (둥근 ↔ 주름진)</td><td class="l">그 형질을 결정하는 유전자 (R ↔ r)</td></tr><tr><td>분리의 법칙 vs 독립의 법칙</td><td class="l">한 쌍의 대립유전자가 나뉨 (3 : 1)</td><td class="l">두 쌍 이상이 서로 영향 없이 유전 (9 : 3 : 3 : 1)</td></tr></table>
+<h2 class="sec">C. 서술형 답안 템플릿 <small>키워드를 빠짐없이 넣는 문장 틀</small></h2>
+<div class="tmpl"><b>동공 크기 변화</b> — 주변이 (밝아/어두워)지면 홍채가 (확장/축소)하여 동공이 (작아/커)지고, 눈으로 들어오는 빛의 양이 (감소/증가)한다.</div>
+<div class="tmpl"><b>원근 조절</b> — (가까운/먼) 곳을 볼 때 섬모체가 (수축/이완)하여 수정체가 (두꺼워/얇아)진다.</div>
+<div class="tmpl"><b>맹점</b> — 물체의 상이 맹점에 맺혔기 때문이다. 맹점은 시각 신경이 모여 나가는 곳으로 시각 세포가 없어 자극이 뇌로 전달되지 않는다.</div>
+<div class="tmpl"><b>시력 교정</b> — 근시는 상이 망막 앞에 맺히므로 빛을 퍼지게 하는 오목 렌즈로, 원시는 상이 망막 뒤에 맺히므로 빛을 모으는 볼록 렌즈로 교정한다.</div>
+<div class="tmpl"><b>소리 듣는 과정</b> — 소리 → 귓바퀴 → 외이도 → 고막(진동) → 귓속뼈(증폭) → 달팽이관의 청각 세포 → 청각 신경 → 뇌</div>
+<div class="tmpl"><b>다양한 맛</b> — 음식의 맛은 혀의 미각(기본 맛 5가지)과 코의 후각 등을 뇌에서 종합하여 느끼기 때문이다.</div>
+<div class="tmpl"><b>온도 감각</b> — 온점과 냉점은 절대 온도가 아니라 상대적인 온도 변화를 감지한다.</div>
+<div class="tmpl"><b>세포 분열 필요성</b> — 세포가 커지면 부피 증가율보다 표면적 증가율이 작아 표면적/부피가 감소하고 물질 교환이 비효율적이 되므로, 분열하여 세포 수를 늘린다.</div>
+<div class="tmpl"><b>체세포 분열 결과</b> — 분열 전 DNA가 복제되고 염색 분체가 분리되어 각 딸세포로 들어가므로 딸세포는 모세포와 염색체 수·유전 정보가 같다.</div>
+<div class="tmpl"><b>생식세포 분열 의의</b> — 염색체 수가 절반인 생식세포가 수정하므로 세대를 거듭해도 염색체 수가 일정하게 유지되고, 다양한 생식세포가 만들어져 자손이 다양해진다.</div>
+<div class="tmpl"><b>난할</b> — 체세포 분열이므로 염색체 수는 변하지 않지만, 세포가 생장하지 않고 분열하므로 세포 수는 늘고 크기는 작아진다.</div>
+<div class="tmpl"><b>우성 판단</b> — 대립 형질이 다른 순종끼리 교배한 잡종 1대에서 ○○ 형질만 나타났으므로 ○○이 우성이다.</div>
+<div class="tmpl"><b>분리의 법칙</b> — 쌍을 이루던 대립유전자가 생식세포를 만들 때(감수 1분열) 분리되어 서로 다른 생식세포로 들어간다.</div>
+<div class="tmpl"><b>독립의 법칙</b> — 두 형질이 각각 3 : 1로 분리되며, 두 쌍의 대립유전자가 서로 영향을 미치지 않고 독립적으로 유전된다.</div>
+<div class="tmpl"><b>유전자형 알아내기</b> — 열성 순종과 교배(검정 교배)하여 자손이 모두 우성이면 순종, 우성 : 열성 = 1 : 1이면 잡종이다.</div>
+<h2 class="sec">D. 계산 공식 모음</h2><table class="t"><tr><th>구하는 것</th><th>공식 / 요령</th></tr><tr><td>정육면체 표면적 · 부피</td><td class="l">6 × (한 변)² · (한 변)³ → 표면적/부피 = 6 ÷ 한 변</td></tr><tr><td>잘린 조각들의 총표면적</td><td class="l">조각 1개의 표면적 × 조각 수 (총부피는 그대로)</td></tr><tr><td>시기별 소요 시간</td><td class="l">세포 주기 × (그 시기 세포 수 ÷ 전체 세포 수)</td></tr><tr><td>생식세포 염색체 조합</td><td class="l">2<sup>상동 염색체 쌍의 수</sup></td></tr><tr><td>난할 세포 크기</td><td class="l">1 ÷ 세포 수 (염색체 수는 그대로)</td></tr><tr><td>잡종의 생식세포 종류</td><td class="l">2<sup>잡종인 대립유전자 쌍의 수</sup> (AaBbDd → 8)</td></tr><tr><td>두 형질의 확률</td><td class="l">각 형질의 확률을 곱한다 (독립일 때)</td></tr><tr><td>기댓값(개수)</td><td class="l">전체 개수 × 확률</td></tr></table>
+<h2 class="sec">E. 7일 학습 계획 & 오답 체크표</h2><table class="t"><tr><th>D-day</th><th>할 일</th><th>체크</th></tr><tr><td>D-7</td><td class="l">Ⅳ-1 개념 4단계 읽기 → 하이탑 Check·개념 확인 풀기</td><td>☐</td></tr><tr><td>D-6</td><td class="l">Ⅳ-1 실력 강화·서술형·최상위 + 교과서 문제, 틀린 것 표시</td><td>☐</td></tr><tr><td>D-5</td><td class="l">Ⅴ-1 개념 4단계 → 하이탑 Check·탐구·개념 확인</td><td>☐</td></tr><tr><td>D-4</td><td class="l">Ⅴ-1 실력 강화·서술형·최상위 + 교과서 문제</td><td>☐</td></tr><tr><td>D-3</td><td class="l">Ⅴ-2 개념 → 하이탑·교과서 문제 전부</td><td>☐</td></tr><tr><td>D-2</td><td class="l">변형 문제 52개 풀이 (시간 재기: 1문제 1분 30초)</td><td>☐</td></tr><tr><td>D-1</td><td class="l">오답만 다시 · 부록 A~D 암기 · 서술형 템플릿 소리 내어 읽기</td><td>☐</td></tr></table><table class="t wrong"><tr><th style="width:14%">문제 번호</th><th style="width:22%">틀린 이유 (개념/계산/실수)</th><th>바른 개념 한 줄</th><th style="width:10%">재풀이</th></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr><tr><td></td><td></td><td></td><td>☐</td></tr></table>
+</main></body></html>
