@@ -90,7 +90,7 @@ def main(src, out):
         tw = pymupdf.Font(fontfile=FONT).text_length(label, fontsize=7.5)
         pg.insert_text(((w - tw) / 2, 823), label, fontname='nkr', fontsize=7.5, color=(0.53, 0.53, 0.53))
     res.set_metadata({'title': '국어 정리노트 (필기 보충판)'})
-    res.save(out, garbage=3, deflate=True)
+    res.save(out, garbage=4, deflate=True, deflate_fonts=True, use_objstms=1)
     print('pages', total, {k: first.get(k) for k in first}, rows)
 
 
