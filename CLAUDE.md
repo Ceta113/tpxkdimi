@@ -20,7 +20,9 @@
 - 한글 폰트: Google Fonts에서 Noto Sans KR / Noto Serif KR / Black Han Sans / Cormorant Garamond ttf를 받아 `~/.fonts`에 설치 (jsdelivr는 막혀 있음).
 - PDF 조판: HTML → Playwright(Chromium) `page.pdf()`.
 
-## 폴더
-- `science-midterm-note/` 과학 중간고사 정리노트 (`python3 science-midterm-note/src/build.py`)
-- `korean-midterm-note/` 국어 정리노트 필기 보충판
-- `korean-workbook-222/` 국어 기출 222 문제집 (`python3 korean-workbook-222/src/build.py`, private/ 필요)
+## 폴더 (브랜치 `내신`)
+- 이 저장소는 디미고 관련 자료 전체를 분류하는 곳. 내신 자료는 `내신` 브랜치의 `중학내신/` 아래에 **시기 → 과목** 순으로 정리한다.
+- `중학내신/3학년-2학기-1차고사/과학/정리노트` (`python3 <폴더>/src/build.py`)
+- `중학내신/3학년-2학기-1차고사/국어/정리노트-필기보충판`
+- `중학내신/3학년-2학기-1차고사/국어/기출222` (`python3 <폴더>/src/build.py`, private/ 필요)
+- 각 시기 폴더에 `대화기록.md`로 요청·결정 사항을 남긴다.
