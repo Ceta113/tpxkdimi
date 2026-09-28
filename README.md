@@ -11,3 +11,7 @@
 ## korean-midterm-note — 중3 국어 정리노트 (필기 보충판)
 - `국어정리노트_필기보충판.pdf` : 기존 39쪽 정리노트에 손글씨 필기 내용을 반영한 보충 페이지 10쪽을 끼워 넣은 49쪽 완성본
 - 다시 만들기: `python3 korean-midterm-note/src/build.py <원본노트.pdf> <출력.pdf>`
+
+## korean-workbook-222 — 국어 기출 222 (4단계 문제집)
+- `국어기출222_문제집.pdf` : 표지 · 구성/채점표 · STEP 1~4 (222문항) · 빠른 정답 · 해설 · 뒤표지 (34쪽)
+- 문항 데이터: `src/s1.py`~`s4.py` · 다시 만들기: `python3 korean-workbook-222/src/build.py`
