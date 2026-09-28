@@ -1,0 +1,26 @@
+# 이 저장소에서 작업할 때 기억할 것
+
+## 사용자
+- 중학교 3학년. 정기시험 대비 자료(정리노트·문제집)를 만든다.
+- 답변은 한국어로, 짧고 편하게.
+
+## 자료 만들 때 기본 규칙
+- 개념 정리는 **4단계(기본·응용·발전·심화)**로, 그림/표를 곁들인다.
+- 문제집은 시중 문제집처럼: 표지 → 구성 → 단계별 문제(2단 시험지) → 빠른 정답 → 해설 → 뒤표지(마지막 체크).
+- 문학·비문학 문제는 **본문을 넣고 (가)·(나)·(다)로 나눈 세트형**으로, ㉠·ⓐ 표시를 붙여 출제.
+- 학습지 원본(사용자가 올린 사진)과 필기가 **정답 기준**. 노트와 다르면 학습지를 따른다.
+- 표지는 **깔끔한 미니멀**(흰 바탕 + 남색 띠, 큰 제목, 군더더기 문구 없음). 실제 출판사 이름·로고는 쓰지 않는다.
+- 결과물은 PDF로 만들어 채팅에 직접 보내 준다.
+
+## 저작권
+- 교과서·학습지 본문 전문, 사진·그림은 `*/private/`에 두고 **저장소에 올리지 않는다** (.gitignore). 완성 PDF는 채팅으로만 전달.
+
+## 빌드 환경 메모
+- 스캔 PDF는 pymupdf로 페이지를 이미지로 렌더링해 읽는다 (`pip install pymupdf pillow`).
+- 한글 폰트: Google Fonts에서 Noto Sans KR / Noto Serif KR / Black Han Sans / Cormorant Garamond ttf를 받아 `~/.fonts`에 설치 (jsdelivr는 막혀 있음).
+- PDF 조판: HTML → Playwright(Chromium) `page.pdf()`.
+
+## 폴더
+- `science-midterm-note/` 과학 중간고사 정리노트 (`python3 science-midterm-note/src/build.py`)
+- `korean-midterm-note/` 국어 정리노트 필기 보충판
+- `korean-workbook-222/` 국어 기출 222 문제집 (`python3 korean-workbook-222/src/build.py`, private/ 필요)
