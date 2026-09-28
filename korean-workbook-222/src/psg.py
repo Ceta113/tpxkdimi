@@ -31,9 +31,13 @@ def poem(label, lines, au, marks=None, note=''):
     return f'<div class="sec"><span class="lb">{label}</span><div class="poem">{"".join(out)}</div><div class="au2">{au}</div>{n}</div>'
 
 
-def prose(label, paras, marks=None, au=''):
-    marks = marks or {}
+def prose(label, paras, marks=None, au='', figs=None):
+    marks, figs = marks or {}, figs or {}
     body = ''.join(f'<p>{p}</p>' for p in paras)
     body = _mark(body, marks)
+    parts = body.split('<p>')  # parts[0] == ''
+    for i, f in figs.items():
+        parts[i + 1] = f + parts[i + 1]
+    body = '<p>'.join(parts)
     a = f'<div class="au2">{au}</div>' if au else ''
-    return f'<div class="sec"><span class="lb">{label}</span><div class="prose">{body}</div>{a}</div>'
+    return f'<div class="sec"><span class="lb">{label}</span><div class="prose">{body}<div style="clear:both"></div></div>{a}</div>'
