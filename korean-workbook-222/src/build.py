@@ -78,50 +78,7 @@ body{margin:0;font-family:'Noto Sans KR',sans-serif;color:#1b1d22;font-size:9.4p
 .shd{font-family:'Black Han Sans';font-weight:400;font-size:15pt;margin:4px 0 6px;padding:3px 10px;color:#fff;border-radius:6px;column-span:all;break-after:avoid}
 """
 
-COVER = r"""
-<style>@page{size:A4;margin:0}body{margin:0}*{box-sizing:border-box}
-.cv{width:210mm;height:297mm;position:relative;overflow:hidden;background:#0f2b46;color:#fff;font-family:'Noto Sans KR'}
-.cv .band{position:absolute;left:0;right:0;top:0;height:14mm;background:#ffcf33;color:#0f2b46;display:flex;align-items:center;justify-content:space-between;padding:0 14mm;font-weight:900;font-size:10pt;letter-spacing:.08em}
-.cv .circ{position:absolute;border-radius:50%}
-.cv .c1{width:170mm;height:170mm;right:-55mm;top:40mm;background:#1c4f7d}
-.cv .c2{width:95mm;height:95mm;right:18mm;top:78mm;background:#ff6b57}
-.cv .c3{width:40mm;height:40mm;right:88mm;top:170mm;background:#ffcf33}
-.cv .num{position:absolute;right:14mm;top:92mm;font-family:'Black Han Sans';font-size:150pt;line-height:1;color:#fff;letter-spacing:-.02em;text-shadow:0 3mm 0 rgba(0,0,0,.18)}
-.cv .ser{position:absolute;left:14mm;top:26mm;font-size:11pt;font-weight:700;opacity:.9}
-.cv h1{position:absolute;left:14mm;top:34mm;margin:0;font-family:'Black Han Sans';font-weight:400;font-size:58pt;line-height:1.02}
-.cv h1 small{display:block;font-size:22pt;color:#ffcf33;margin-top:4mm}
-.cv .step{position:absolute;left:14mm;top:118mm;display:flex;flex-direction:column;gap:3mm}
-.cv .step div{display:flex;align-items:center;gap:3mm;font-size:11pt;font-weight:700}
-.cv .step span{font-family:'Black Han Sans';font-size:12pt;padding:1mm 3mm;border-radius:2mm;min-width:22mm;text-align:center}
-.cv .badge{position:absolute;left:14mm;top:178mm;width:62mm;height:62mm;border-radius:50%;background:#ff6b57;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-8deg);box-shadow:0 2mm 0 rgba(0,0,0,.2)}
-.cv .badge b{font-family:'Black Han Sans';font-weight:400;font-size:21pt;line-height:1.15}
-.cv .badge i{font-style:normal;font-size:9.5pt;font-weight:700;margin-top:1.5mm}
-.cv .scope{position:absolute;left:84mm;right:14mm;top:218mm;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.25);border-radius:4mm;padding:4mm 5mm;font-size:9.3pt;line-height:1.7}
-.cv .scope b{color:#ffcf33}
-.cv .foot{position:absolute;left:0;right:0;bottom:0;height:24mm;background:#081a2b;display:flex;align-items:center;justify-content:space-between;padding:0 14mm}
-.cv .foot .nm{border:1px solid rgba(255,255,255,.45);border-radius:2mm;padding:2mm 4mm;font-size:10pt;min-width:70mm}
-.cv .foot .im{font-family:'Black Han Sans';font-size:14pt;letter-spacing:.04em}
-.cv .foot .im small{display:block;font-family:'Noto Sans KR';font-size:7pt;opacity:.7;letter-spacing:0}
-.cv .chips{position:absolute;left:14mm;top:250mm;display:flex;gap:2mm;flex-wrap:wrap;width:66mm}
-.cv .chips span{font-size:8pt;border:1px solid rgba(255,255,255,.5);border-radius:10mm;padding:.6mm 3mm}
-</style>
-<div class="cv">
- <div class="band"><span>중학 국어 3-2 · 1차 정기시험 대비</span><span>2026</span></div>
- <div class="circ c1"></div><div class="circ c2"></div><div class="circ c3"></div>
- <div class="ser">학습지·교과서 완벽 분석 | 4단계 실전 문제집</div>
- <h1>국어<br>기출<small>시험 직전 필수 문항</small></h1>
- <div class="num">222</div>
- <div class="step">
-  <div><span style="background:#1f9d62">STEP 1</span>기본 · 개념 다지기 56</div>
-  <div><span style="background:#2f6fd6">STEP 2</span>응용 · 작품·지문 적용 58</div>
-  <div><span style="background:#7e57c2">STEP 3</span>발전 · 비교·통합·서술형 56</div>
-  <div><span style="background:#d6334a">STEP 4</span>심화 · 실전·고난도 52</div>
- </div>
- <div class="badge"><b>학습지<br>필기 100%<br>반영</b><i>정답과 해설 수록</i></div>
- <div class="scope"><b>출제 범위</b><br>Ⅰ 문학과 삶 — 마음이 어린 후이니 · 내 언제 신이 업서 · 어져 내 일이야 · 님이 오마 하거늘 · 연탄 한 장 · 담쟁이<br>Ⅱ 논증 — 기다려라, 그 순간을 위해! · 논증 방법 · 논증의 오류 12<br>Ⅲ 문장과 글쓰기 — 문장 성분 · 이어진문장 · 안은문장</div>
- <div class="chips"><span>빈출</span><span>함정</span><span>고난도</span><span>서술형</span><span>외적 준거</span></div>
- <div class="foot"><div class="nm">이름 :</div><div class="im">SELF STUDY EDITION<small>개인 학습용 · 비매품</small></div></div>
-</div>"""
+from cover import COVER
 
 
 def ch_cls(ch):
@@ -213,22 +170,7 @@ def build_body():
     return ''.join(out)
 
 
-BACK = r"""<style>@page{size:A4;margin:0}body{margin:0}*{box-sizing:border-box}</style>
-<div style="width:210mm;height:297mm;background:#0f2b46;color:#fff;font-family:'Noto Sans KR';position:relative;padding:30mm 18mm">
-<div style="font-family:'Black Han Sans';font-size:26pt;color:#ffcf33">시험장 들어가기 전 마지막 체크</div>
-<ol style="font-size:11.5pt;line-height:2.1;margin-top:8mm">
-<li>시조 종장 첫 음보는 <b>3음절</b> — 사설시조(모쳐라)도 지킨다</li>
-<li>어린 = <b>어리석은</b> · 만중운산 = <b>공간적</b> · 월침삼경 = <b>시간적·시각</b> · 낸들 어이하리오 = <b>설의법</b></li>
-<li>어져 = <b>감탄사(영탄법)</b> · 제 구태여 = 임이면 <b>도치</b>, 나면 <b>행간 걸침</b></li>
-<li>위렁충창 = <b>의성어</b> · 곰븨님븨·천방지방 = <b>의태어</b> · 주추리 삼대 = 착각 대상</li>
-<li>연탄 한 장: 촉각·<b>청각</b> 이미지, '-네', 도치(몰랐었네, 나는), 시선 외부→내면</li>
-<li>담쟁이: 오른다→나아간다→올라간다→넘는다(<b>점층</b>), 푸르게 = <b>희망</b>, 잎 하나 = <b>선구자</b></li>
-<li>기다려라: 서론 <b>연역</b> · 본론 <b>귀납</b>(브레송·세잔·정선) · 결론 <b>유추</b>(음식 ≈ 삶)</li>
-<li>오류: 허수아비 = 바꿔 치기 / 비탈길 = 연쇄 / 결합 = 부분 합침 / 성급한 일반화 = 소수 사례</li>
-<li>보어 = <b>되다·아니다</b> 앞 '이/가' · 주어+[주어+서술어] = <b>서술절</b></li>
-<li>-이(없이) = 품사 변화 O / -게(나게) = 품사 변화 X · 간접 인용 = 조사 '고'</li></ol>
-<div style="position:absolute;right:18mm;bottom:22mm;font-family:'Black Han Sans';font-size:90pt;opacity:.15">222</div>
-<div style="position:absolute;left:18mm;bottom:22mm;font-size:9pt;opacity:.7">국어 기출 222 · SELF STUDY EDITION · 개인 학습용</div></div>"""
+from cover import BACK
 
 JS = """
 const { chromium } = require('playwright');
