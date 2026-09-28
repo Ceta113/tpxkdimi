@@ -13,5 +13,6 @@
 - 다시 만들기: `python3 korean-midterm-note/src/build.py <원본노트.pdf> <출력.pdf>`
 
 ## korean-workbook-222 — 국어 기출 222 (4단계 문제집)
-- `국어기출222_문제집.pdf` : 표지 · 구성/채점표 · STEP 1~4 (222문항) · 빠른 정답 · 해설 · 뒤표지 (34쪽)
+- 표지 · 구성/채점표 · STEP 1~4 (222문항, 현대시·「기다려라」는 본문 전문을 넣은 세트형) · 빠른 정답 · 해설 · 뒤표지
+- 본문 전문(`private/fulltext.py`)과 완성 PDF는 저작권 보호 작품이 들어 있어 저장소에 올리지 않음 (개인 학습용으로만 전달)
 - 문항 데이터: `src/s1.py`~`s4.py` · 다시 만들기: `python3 korean-workbook-222/src/build.py`

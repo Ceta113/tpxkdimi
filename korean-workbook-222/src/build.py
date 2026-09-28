@@ -35,7 +35,7 @@ body{margin:0;font-family:'Noto Sans KR',sans-serif;color:#1b1d22;font-size:9.4p
 .area span{background:var(--l);color:var(--c);border:1.5px solid var(--c);font-weight:900;border-radius:14px;padding:1px 12px;font-size:9.5pt}
 .area i{flex:1;border-top:1px dashed #bbb}
 .cols{columns:2;column-gap:9mm;column-rule:1px solid #d5d9e0}
-.grp{break-inside:avoid;margin:0 0 9px}
+.grp{margin:0 0 9px}.grp .gh{break-after:avoid}.psg .sec{position:relative;padding-left:30px;margin:2px 0 7px}.psg .sec+.sec{border-top:1px dashed #b8bec8;padding-top:7px}.psg .lb{position:absolute;left:0;top:0;font-weight:900;font-family:'Noto Sans KR'}.psg .sec+.sec .lb{top:7px}.psg .poem div{min-height:1.2em}.psg .sgap{height:.7em}.psg .prose p{margin:0 0 3px;text-indent:.7em;text-align:left;word-break:normal;line-break:strict}.psg .au2{text-align:right;font-family:'Noto Sans KR';font-size:8pt;color:#555;margin-top:2px}.psg .pnote{font-family:'Noto Sans KR';font-size:7.4pt;color:#555;margin-top:3px;line-height:1.45}.psg .mk{font-family:'Noto Sans KR';font-weight:700;margin-right:1px}.psg u{text-underline-offset:2px}.given{border:1px solid #9aa1ad;background:#f7f8fa;border-radius:3px;padding:5px 8px;margin:5px 0 2px;font-weight:400;font-size:8.8pt}
 .grp .gh{font-weight:700;margin-bottom:4px}
 .psg{border:1px solid #9aa1ad;padding:7px 10px;font-family:'Noto Serif KR',serif;font-size:9pt;line-height:1.7;background:#fcfcfa}
 .psg .au{float:right;font-family:'Noto Sans KR';font-size:8pt;color:#555}
