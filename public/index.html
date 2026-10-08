@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 3D 옷입히기</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three/build/three.module.js",
+          "three/addons/": "/vendor/three/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>AI 3D 옷입히기</h1>
+        <p class="sub">옷 사진을 올리면 Claude가 분석해서 마네킹에 입혀 줘요</p>
+      </div>
+      <span id="ai-status" class="chip">연결 확인 중…</span>
+    </header>
+
+    <main class="layout">
+      <aside class="panel" id="wardrobe">
+        <section>
+          <h2>옷 추가</h2>
+          <label class="dropzone" id="dropzone">
+            <input type="file" id="file-input" accept="image/*" multiple hidden />
+            <strong>사진을 끌어다 놓거나 눌러서 고르기</strong>
+            <span>흰 배경에 펼쳐 놓고 정면에서 찍은 사진이 가장 잘 돼요</span>
+          </label>
+          <label class="field">
+            <span>옷 종류</span>
+            <select id="category-hint">
+              <option value="auto">자동 (Claude가 판단)</option>
+              <option value="top">상의</option>
+              <option value="outer">아우터</option>
+              <option value="dress">원피스</option>
+              <option value="pants">바지</option>
+              <option value="skirt">치마</option>
+              <option value="hat">모자</option>
+              <option value="shoes">신발</option>
+            </select>
+          </label>
+          <div class="samples">
+            <span>샘플로 체험하기</span>
+            <div id="sample-buttons" class="chips"></div>
+          </div>
+        </section>
+        <section class="grow">
+          <h2>옷장 <small id="garment-count"></small></h2>
+          <ul id="garment-list" class="garment-list"></ul>
+          <p id="wardrobe-empty" class="empty">아직 옷이 없어요. 사진을 올리거나 샘플을 눌러 보세요.</p>
+        </section>
+      </aside>
+
+      <section class="stage" id="stage">
+        <canvas id="scene"></canvas>
+        <div class="toolbar">
+          <button data-view="0">앞</button>
+          <button data-view="90">옆</button>
+          <button data-view="180">뒤</button>
+          <button id="spin" aria-pressed="false">자동 회전</button>
+          <button id="undress">모두 벗기</button>
+          <button id="snapshot">사진 저장</button>
+        </div>
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      </section>
+
+      <aside class="panel" id="editor">
+        <p id="editor-empty" class="empty">옷장에서 옷을 고르면 여기서 편집할 수 있어요.</p>
+        <div id="editor-body" hidden>
+          <section>
+            <input id="ed-name" class="title-input" aria-label="옷 이름" />
+            <p id="ed-desc" class="muted"></p>
+            <p id="ed-tips" class="tip" hidden></p>
+          </section>
+
+          <section>
+            <h2>Claude에게 리폼 요청</h2>
+            <form id="ai-edit-form" class="ai-form">
+              <textarea id="ai-edit-input" rows="2" placeholder="예: 파스텔 민트색으로 바꾸고 흰 물방울 무늬 넣어줘"></textarea>
+              <button type="submit" id="ai-edit-submit">요청</button>
+            </form>
+            <div class="chips" id="quick-edits">
+              <button type="button">검정색으로</button>
+              <button type="button">파스텔톤으로</button>
+              <button type="button">줄무늬 넣어줘</button>
+              <button type="button">빈티지하게</button>
+              <button type="button">원래대로</button>
+            </div>
+            <p id="ai-edit-reply" class="reply" hidden></p>
+          </section>
+
+          <section>
+            <h2>색 보정</h2>
+            <label class="slider"><span>색상</span><input type="range" id="adj-hue" min="-180" max="180" step="1" /><output></output></label>
+            <label class="slider"><span>채도</span><input type="range" id="adj-saturation" min="0" max="2.5" step="0.05" /><output></output></label>
+            <label class="slider"><span>밝기</span><input type="range" id="adj-brightness" min="0.3" max="1.8" step="0.02" /><output></output></label>
+            <label class="slider"><span>대비</span><input type="range" id="adj-contrast" min="0.5" max="1.8" step="0.02" /><output></output></label>
+            <label class="slider"><span>덧칠</span><input type="range" id="adj-tint" min="0" max="1" step="0.02" /><input type="color" id="adj-tint-color" /></label>
+          </section>
+
+          <section>
+            <h2>무늬</h2>
+            <div class="row">
+              <select id="pat-type" aria-label="무늬 종류">
+                <option value="none">없음</option>
+                <option value="stripes">줄무늬</option>
+                <option value="dots">물방울</option>
+                <option value="check">체크</option>
+              </select>
+              <select id="pat-scale" aria-label="무늬 크기">
+                <option value="small">작게</option>
+                <option value="medium">보통</option>
+                <option value="large">크게</option>
+              </select>
+              <input type="color" id="pat-color" aria-label="무늬 색" />
+            </div>
+            <label class="slider"><span>진하기</span><input type="range" id="pat-opacity" min="0" max="1" step="0.05" /><output></output></label>
+          </section>
+
+          <section>
+            <h2>모양</h2>
+            <div class="row">
+              <label class="field"><span>종류</span>
+                <select id="ed-category">
+                  <option value="top">상의</option>
+                  <option value="outer">아우터</option>
+                  <option value="dress">원피스</option>
+                  <option value="pants">바지</option>
+                  <option value="skirt">치마</option>
+                  <option value="hat">모자</option>
+                  <option value="shoes">신발</option>
+                </select>
+              </label>
+              <label class="field"><span>핏</span>
+                <select id="ed-fit">
+                  <option value="tight">딱 맞게</option>
+                  <option value="regular">보통</option>
+                  <option value="loose">넉넉하게</option>
+                  <option value="oversized">오버핏</option>
+                </select>
+              </label>
+              <label class="field" id="sleeve-field"><span>소매</span>
+                <select id="ed-sleeve">
+                  <option value="none">민소매</option>
+                  <option value="short">반팔</option>
+                  <option value="three_quarter">7부</option>
+                  <option value="long">긴팔</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <section>
+            <h2>기준점 맞추기</h2>
+            <p class="muted">점을 끌어서 옷의 어깨·밑단·소매 끝에 맞추면 3D 옷이 바로 바뀌어요.</p>
+            <canvas id="kp-canvas" class="kp-canvas"></canvas>
+            <button type="button" id="kp-reset" class="link">자동으로 다시 찾기</button>
+          </section>
+
+          <section>
+            <h2>배경 지우기</h2>
+            <label class="check"><input type="checkbox" id="bg-plain" /> 단색 배경 (꺼 두면 Claude가 그린 외곽선으로 잘라요)</label>
+            <label class="slider"><span>민감도</span><input type="range" id="bg-tol" min="10" max="160" step="2" /><output></output></label>
+          </section>
+
+          <section class="danger">
+            <button type="button" id="ed-delete" class="link danger">이 옷 삭제</button>
+          </section>
+        </div>
+      </aside>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

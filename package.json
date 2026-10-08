@@ -1,0 +1,17 @@
+{
+  "name": "ai-dress-up-3d",
+  "version": "1.0.0",
+  "description": "Claude(Opus)로 옷 사진을 분석해 3D 마네킹에 입혀 보는 옷입히기 프로그램",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1",
+    "three": "^0.186.1"
+  }
+}
